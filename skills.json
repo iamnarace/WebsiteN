@@ -1,115 +1,98 @@
 [
     {
-        "category": "Problem-Solving Skills",
-        "skills": [
-            {
-                "name": "Problem Solving",
-                "icon": "https://img.icons8.com/color/48/problem-solving.png"
-            },
-            {
-                "name": "Critical Thinking",
-                "icon": "https://img.icons8.com/color/48/critical-thinking.png"
-            },
-            {
-                "name": "Debugging",
-                "icon": "https://img.icons8.com/color/48/bug.png"
-            },
-            {
-                "name": "Analytical Chemistry",
-                "icon": "https://img.icons8.com/color/48/chemistry.png"
-            }
-        ]
+        "name": "Problem solving",
+        "icon": "https://img.icons8.com/color/48/000000/idea.png"
     },
     {
-        "category": "Interpersonal Skills",
-        "skills": [
-            {
-                "name": "Communication Skills",
-                "icon": "https://img.icons8.com/color/48/conversation.png"
-            },
-            {
-                "name": "Collaboration",
-                "icon": "https://img.icons8.com/color/48/collaboration.png"
-            },
-            {
-                "name": "Teamwork",
-                "icon": "https://img.icons8.com/color/48/teamwork.png"
-            },
-            {
-                "name": "Leadership",
-                "icon": "https://img.icons8.com/color/48/leadership.png"
-            },
-            {
-                "name": "Adaptability",
-                "icon": "https://img.icons8.com/color/48/adaptability.png"
-            }
-        ]
+        "name": "Attention to detail",
+        "icon": "https://img.icons8.com/color/48/000000/magnifying-glass.png"
     },
     {
-        "category": "Time Management & Organization",
-        "skills": [
-            {
-                "name": "Time Management",
-                "icon": "https://img.icons8.com/color/48/time-management.png"
-            },
-            {
-                "name": "Multitasking",
-                "icon": "https://img.icons8.com/color/48/multitasking.png"
-            },
-            {
-                "name": "Project Management",
-                "icon": "https://img.icons8.com/color/48/project.png"
-            },
-            {
-                "name": "Educational Commitment",
-                "icon": "https://img.icons8.com/color/48/student.png"
-            }
-        ]
+        "name": "Teamwork",
+        "icon": "https://img.icons8.com/color/48/000000/teamwork.png"
     },
     {
-        "category": "Technical Skills",
-        "skills": [
-            {
-                "name": "SQL",
-                "icon": "https://img.icons8.com/color/48/sql.png"
-            },
-            {
-                "name": "Programming",
-                "icon": "https://img.icons8.com/color/48/programming.png"
-            },
-            {
-                "name": "Coding",
-                "icon": "https://img.icons8.com/color/48/source-code.png"
-            },
-            {
-                "name": "Software Development",
-                "icon": "https://img.icons8.com/color/48/software-development.png"
-            },
-            {
-                "name": "Computer Science",
-                "icon": "https://img.icons8.com/color/48/computer-science.png"
-            }
-        ]
+        "name": "Communication skills",
+        "icon": "https://img.icons8.com/color/48/000000/speech-bubble.png"
     },
     {
-        "category": "Continuous Learning & Creativity",
-        "skills": [
-            {
-                "name": "Continuous Learning",
-                "icon": "https://img.icons8.com/color/48/continuous-learning.png"
-            },
-            {
-                "name": "Creativity",
-                "icon": "https://img.icons8.com/color/48/creativity.png"
-            },
-            {
-                "name": "Industry Skills",
-                "icon": "https://img.icons8.com/color/48/industry.png"
-            },
-            {
-                "name": "Attention to Detail",
-                "icon": "https://img.icons8.com/color/48/attention.png"
-            }
-        ]
+        "name": "Creativity",
+        "icon": "https://img.icons8.com/color/48/000000/creative.png"
+    },
+    {
+        "name": "Leadership",
+        "icon": "https://img.icons8.com/color/48/000000/leadership.png"
+    },
+    {
+        "name": "Adaptability",
+        "icon": "https://img.icons8.com/color/48/000000/rotate-right.png"
+    },
+    {
+        "name": "Analytical chemistry",
+        "icon": "https://img.icons8.com/color/48/000000/test-tube.png"
+    },
+    {
+        "name": "Collaboration",
+        "icon": "https://img.icons8.com/color/48/000000/collaboration.png"
+    },
+    {
+        "name": "Critical thinking",
+        "icon": "https://img.icons8.com/color/48/000000/brain.png"
+    },
+    {
+        "name": "Project management",
+        "icon": "https://img.icons8.com/color/48/000000/project.png"
+    },
+    {
+        "name": "Time management",
+        "icon": "https://img.icons8.com/color/48/000000/clock.png"
+    },
+    {
+        "name": "Continuous learning",
+        "icon": "https://img.icons8.com/color/48/000000/book.png"
+    },
+    {
+        "name": "Debugging",
+        "icon": "https://img.icons8.com/color/48/000000/bug.png"
+    },
+    {
+        "name": "Educational commitment",
+        "icon": "https://img.icons8.com/color/48/000000/mortarboard.png"
+    },
+    {
+        "name": "Software development",
+        "icon": "https://img.icons8.com/color/48/000000/code.png"
+    },
+    {
+        "name": "SQL",
+        "icon": "https://img.icons8.com/color/48/000000/sql.png"
+    },
+    {
+        "name": "Technical",
+        "icon": "https://img.icons8.com/color/48/000000/technical-support.png"
+    },
+    {
+        "name": "Computer Science",
+        "icon": "https://img.icons8.com/color/48/000000/computer.png"
+    },
+    {
+        "name": "Industry Skills",
+        "icon": "https://img.icons8.com/color/48/000000/industry.png"
+    },
+    {
+        "name": "Multitasking",
+        "icon": "https://img.icons8.com/color/48/000000/multitasking.png"
+    },
+    {
+        "name": "Communication",
+        "icon": "https://img.icons8.com/color/48/000000/conference.png"
+    },
+    {
+        "name": "Programming",
+        "icon": "https://img.icons8.com/color/48/000000/programming.png"
+    },
+    {
+        "name": "Coding",
+        "icon": "https://img.icons8.com/color/48/000000/source-code.png"
     }
 ]
