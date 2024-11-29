@@ -268,6 +268,7 @@
 <!-- experience section ends -->
 
 <!-- contact section starts -->
+<!-- contact section starts -->
 <section class="contact" id="contact">
   
   <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
@@ -277,34 +278,69 @@
       <div class="image-box">
         <img draggable="false" src="./assets/images/contact1.png" alt="">
       </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
+      <form id="contact-form">
+        
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <i class='fas fa-envelope'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="phone" id="phone" placeholder="Phone">
+            <i class='fas fa-phone-alt'></i>
+          </div>
+          <div class="message">
+            <textarea placeholder="Message" name="message" id="message" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
         </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
+
+        <div class="button-area">
+          <button type="submit">
+            Submit <i class="fa fa-paper-plane"></i>
+          </button>
         </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
   </div>
 </section>
+<!-- contact section ends -->
+
+<!-- EmailJS script and initialization -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS with your user ID
+  emailjs.init("naresh1adhikari@gmail.com");
+
+  // Handle form submission
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value
+    };
+
+    // Send email via EmailJS using your Service ID and Template ID
+    emailjs.send("service_5mev86q", "template_kghd9wc", formData) // Using your Service ID and Template ID
+      .then(function(response) {
+        console.log("Success:", response);
+        alert("Message sent successfully!");
+      }, function(error) {
+        console.error("Error:", error);
+        alert("Failed to send message.");
+      });
+  });
+</script>
+
 <!-- contact section ends -->
 
 
