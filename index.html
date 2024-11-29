@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+    document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        document.title = 'Come back to portfolio';
+    } else {
+        document.title = 'Portfolio | Naresh Adhikari'; // Updated here
+    }
+});
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Naresh Adhikari, portfolio, Naresh, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Naresh's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <meta name="description" content="Welcome to Naresh's Portfolio. Hi, I'm Naresh, an IT Engineer with a strong technical background, now passionate about transitioning into software development." />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Font Awesome -->
