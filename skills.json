@@ -1,122 +1,115 @@
 [
     {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+        "category": "Problem-Solving Skills",
+        "skills": [
+            {
+                "name": "Problem Solving",
+                "icon": "https://img.icons8.com/color/48/problem-solving.png"
+            },
+            {
+                "name": "Critical Thinking",
+                "icon": "https://img.icons8.com/color/48/critical-thinking.png"
+            },
+            {
+                "name": "Debugging",
+                "icon": "https://img.icons8.com/color/48/bug.png"
+            },
+            {
+                "name": "Analytical Chemistry",
+                "icon": "https://img.icons8.com/color/48/chemistry.png"
+            }
+        ]
     },
     {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "category": "Interpersonal Skills",
+        "skills": [
+            {
+                "name": "Communication Skills",
+                "icon": "https://img.icons8.com/color/48/conversation.png"
+            },
+            {
+                "name": "Collaboration",
+                "icon": "https://img.icons8.com/color/48/collaboration.png"
+            },
+            {
+                "name": "Teamwork",
+                "icon": "https://img.icons8.com/color/48/teamwork.png"
+            },
+            {
+                "name": "Leadership",
+                "icon": "https://img.icons8.com/color/48/leadership.png"
+            },
+            {
+                "name": "Adaptability",
+                "icon": "https://img.icons8.com/color/48/adaptability.png"
+            }
+        ]
     },
     {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+        "category": "Time Management & Organization",
+        "skills": [
+            {
+                "name": "Time Management",
+                "icon": "https://img.icons8.com/color/48/time-management.png"
+            },
+            {
+                "name": "Multitasking",
+                "icon": "https://img.icons8.com/color/48/multitasking.png"
+            },
+            {
+                "name": "Project Management",
+                "icon": "https://img.icons8.com/color/48/project.png"
+            },
+            {
+                "name": "Educational Commitment",
+                "icon": "https://img.icons8.com/color/48/student.png"
+            }
+        ]
     },
     {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        "category": "Technical Skills",
+        "skills": [
+            {
+                "name": "SQL",
+                "icon": "https://img.icons8.com/color/48/sql.png"
+            },
+            {
+                "name": "Programming",
+                "icon": "https://img.icons8.com/color/48/programming.png"
+            },
+            {
+                "name": "Coding",
+                "icon": "https://img.icons8.com/color/48/source-code.png"
+            },
+            {
+                "name": "Software Development",
+                "icon": "https://img.icons8.com/color/48/software-development.png"
+            },
+            {
+                "name": "Computer Science",
+                "icon": "https://img.icons8.com/color/48/computer-science.png"
+            }
+        ]
     },
     {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
-    },
-    {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
-    },
-    {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
-    },
-    {
-        "name": "ChakraUI",
-        "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png"
-    },
-    {
-        "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-        "name": "Sass",
-        "icon": "https://img.icons8.com/color/48/000000/sass.png"
-    },
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-    {
-        "name": "Kotlin",
-        "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
-    },
-    {
-        "name": "PHP",
-        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-        "name": "Heroku",
-        "icon": "https://img.icons8.com/color/48/000000/heroku.png"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-    {
-        "name": "DigitalOcean",
-        "icon": "https://img.icons8.com/ios-filled/48/0080FF/digitalocean.png"
-    },
-    {
-        "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
-    },
-    {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.png"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    },
-    {
-        "name": "WordPress",
-        "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
-    }    
+        "category": "Continuous Learning & Creativity",
+        "skills": [
+            {
+                "name": "Continuous Learning",
+                "icon": "https://img.icons8.com/color/48/continuous-learning.png"
+            },
+            {
+                "name": "Creativity",
+                "icon": "https://img.icons8.com/color/48/creativity.png"
+            },
+            {
+                "name": "Industry Skills",
+                "icon": "https://img.icons8.com/color/48/industry.png"
+            },
+            {
+                "name": "Attention to Detail",
+                "icon": "https://img.icons8.com/color/48/attention.png"
+            }
+        ]
+    }
 ]
