@@ -18,6 +18,7 @@
     {
         "name": "Creativity",
         "icon": "https://img.icons8.com/color/48/000000/creative.png"
+         "icon": "https://img.icons8.com/color/48/000000/creative.png"
     },
     {
         "name": "Leadership",
@@ -57,7 +58,7 @@
     },
     {
         "name": "Educational commitment",
-        "icon": "https://img.icons8.com/color/48/000000/mortarboard.png"
+        "icon": "https://img.icons8.com/color/48/000000/education.png"
     },
     {
         "name": "Software development",
