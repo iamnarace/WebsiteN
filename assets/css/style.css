@@ -98,6 +98,13 @@ header .logo i {
 header .logo:hover {
   color: #fc8c05;
 }
+.logo-img {
+    width: 40px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle; /* Vertically align logo with the text */
+}
+
 header .navbar ul {
   list-style: none;
   display: flex;
