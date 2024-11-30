@@ -99,9 +99,9 @@ header .logo:hover {
   color: #fc8c05;
 }
 .logo-img {
-    width: 40px; /* Adjust the width */
+    width: 50px; /* Adjust the width */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between logo and text */
+    margin-right: 15px; /* Space between logo and text */
     vertical-align: middle; /* Vertically align logo with the text */
 }
 
