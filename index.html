@@ -308,7 +308,35 @@
   </div>
 </section>
 <!-- contact section ends -->
+<!-- JavaScript to reset the form after submission -->
+<script>
+  // Add a listener for the form submission event
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    // Prevent the form from submitting and reloading the page
+    event.preventDefault();
 
+    // Simulate a form submission to Formspree (it will be handled automatically)
+    var form = this;
+
+    // Reset the form fields after successful submission
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form)
+    })
+    .then(function(response) {
+      // Check if the response is successful
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        form.reset(); // This will clear the form fields
+      } else {
+        alert("There was an issue with the submission.");
+      }
+    })
+    .catch(function(error) {
+      alert("There was a problem with the submission: " + error);
+    });
+  });
+</script>
 
 <!-- contact section ends -->
 
