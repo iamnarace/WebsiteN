@@ -37,39 +37,39 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- emailjs to mail contact form data -->
+    // EmailJS to mail contact form data
     $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+        event.preventDefault(); // Prevent form default behavior
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+        // Initialize EmailJS with the correct user ID
+        emailjs.init("MY5L9lgL3nRdTue_4"); // Your public key
+
+        // Send form data via EmailJS (Use correct Service ID and Template ID)
+        emailjs.sendForm('service_5mev86q', 'template_kghd9wc', '#contact-form')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
+                document.getElementById("contact-form").reset(); // Reset form fields after success
                 alert("Form Submitted Successfully");
             }, function (error) {
                 console.log('FAILED...', error);
                 alert("Form Submission Failed! Try Again");
             });
-        event.preventDefault();
     });
-    // <!-- emailjs to mail contact form data -->
+    // End EmailJS to mail contact form data
 
 });
 
-document.addEventListener('visibilitychange',
-    function () {
-        if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Naresh Adhikari";
-            $("#favicon").attr("href", "assets/images/favicon.png");
-        }
-        else {
-            document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
-        }
-    });
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === "visible") {
+        document.title = "Portfolio | Naresh Adhikari";
+        $("#favicon").attr("href", "assets/images/favicon.png");
+    } else {
+        document.title = "Come Back To Portfolio";
+        $("#favicon").attr("href", "assets/images/favhand.png");
+    }
+});
 
-
-// <!-- typed js effect starts -->
+// Typed JS effect
 var typed = new Typed(".typing-text", {
     strings: ["IT Engineer", "Passionate Developer", "Tech Enthusiast", "Problem Solver"],
     loop: true,
@@ -77,14 +77,13 @@ var typed = new Typed(".typing-text", {
     backSpeed: 25,
     backDelay: 500,
 });
-// <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
-    let response
+    let response;
     type === "skills" ?
         response = await fetch("skills.json")
         :
-        response = await fetch("./projects/projects.json")
+        response = await fetch("./projects/projects.json");
     const data = await response.json();
     return data;
 }
