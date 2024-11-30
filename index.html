@@ -268,6 +268,21 @@
 <!-- experience section ends -->
 
 <!-- contact section starts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init("MY5L9lgL3nRdTue_4"); // Replace with your actual public key
+        })();
+    </script>
+</head>
+<body>
 <!-- contact section starts -->
 <section class="contact" id="contact">
   
@@ -311,35 +326,35 @@
 <!-- contact section ends -->
 
 <!-- EmailJS script and initialization -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-<script>
-  // Initialize EmailJS with your user ID
-  emailjs.init("naresh1adhikari@gmail.com");
+            // Gather form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
 
-  // Handle form submission
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    // Get form data
-    const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value
+            // Send the form data to EmailJS
+            emailjs.send('service_5mev86q', 'template_kghd9wc', formData) // Use your actual Service ID and Template ID
+                .then((response) => {
+                    console.log('SUCCESS!', response);
+                    alert('Message sent successfully!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    alert('Failed to send message. Please try again.');
+                });
+        });
     };
-
-    // Send email via EmailJS using your Service ID and Template ID
-    emailjs.send("service_5mev86q", "template_kghd9wc", formData) // Using your Service ID and Template ID
-      .then(function(response) {
-        console.log("Success:", response);
-        alert("Message sent successfully!");
-      }, function(error) {
-        console.error("Error:", error);
-        alert("Failed to send message.");
-      });
-  });
 </script>
+
+</body>
+</html>
 
 <!-- contact section ends -->
 
