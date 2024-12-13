@@ -273,12 +273,24 @@
   <!-- Weather Widget -->
   <div class="widget weather-widget">
     <iframe 
-      src="https://forecast7.com/en/33d86n151d21/sydney/" 
+      src="https://weatherwidget.io/w/" 
+      data-label_1="SYDNEY" 
+      data-label_2="WEATHER" 
+      data-theme="original" 
       frameborder="0" 
       scrolling="no" 
       allowtransparency="true" 
-      style="border: none; width: 100%; height: 250px;">
+      style="width: 100%; height: 250px;">
     </iframe>
+    <script>
+      !function(d,s,id){
+        if(!d.getElementById(id)){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,'script','weatherwidget-io-js');
+    </script>
   </div>
   
   <!-- Calendar Widget -->
@@ -291,6 +303,7 @@
     </iframe>
   </div>
 </section>
+
 
 <!-- contact section starts -->
 <!-- contact section starts -->
