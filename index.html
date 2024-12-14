@@ -269,40 +269,74 @@
 
 </section>
 <!-- experience section ends -->
-<section id="extra-widgets" class="widgets-container">
-  <!-- Weather Widget -->
-  <div class="widget weather-widget">
-    <iframe 
-      src="https://weatherwidget.io/w/" 
-      data-label_1="SYDNEY" 
-      data-label_2="WEATHER" 
-      data-theme="original" 
-      frameborder="0" 
-      scrolling="no" 
-      allowtransparency="true" 
-      style="width: 100%; height: 250px;">
-    </iframe>
-    <script>
-      !function(d,s,id){
-        if(!d.getElementById(id)){
-          var js,fjs=d.getElementsByTagName(s)[0];
-          js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
-          fjs.parentNode.insertBefore(js,fjs);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Your other HTML content -->
+
+  <!-- Calendar Section -->
+  <section id="calendar-widget" class="widget">
+    <div class="calendar">
+      <h3 id="calendar-month"></h3>
+      <table id="calendar-table">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Calendar days will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Add JavaScript here -->
+  <script>
+    // JavaScript code from the previous section goes here
+    function generateCalendar() {
+      const date = new Date();
+      const month = date.getMonth();
+      const year = date.getFullYear();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const firstDay = new Date(year, month, 1).getDay();
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      document.getElementById("calendar-month").textContent = `${monthNames[month]} ${year}`;
+      const tbody = document.getElementById("calendar-table").getElementsByTagName("tbody")[0];
+      tbody.innerHTML = "";
+      let row = document.createElement("tr");
+      for (let i = 0; i < firstDay; i++) row.appendChild(document.createElement("td"));
+      for (let day = 1; day <= daysInMonth; day++) {
+        if ((firstDay + day - 1) % 7 === 0 && day !== 1) {
+          tbody.appendChild(row);
+          row = document.createElement("tr");
         }
-      }(document,'script','weatherwidget-io-js');
-    </script>
-  </div>
-  
-  <!-- Calendar Widget -->
-  <div class="widget calendar-widget">
-    <iframe 
-      src="https://calendar.google.com/calendar/embed?height=250&wkst=1&bgcolor=%23ffffff&ctz=Australia%2FSydney&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0" 
-      style="border-width:0; width: 100%; height: 250px;" 
-      frameborder="0" 
-      scrolling="no">
-    </iframe>
-  </div>
-</section>
+        const cell = document.createElement("td");
+        cell.textContent = day;
+        if (day === date.getDate() && month === date.getMonth() && year === date.getFullYear()) {
+          cell.classList.add("today");
+        }
+        row.appendChild(cell);
+      }
+      tbody.appendChild(row);
+    }
+    window.onload = generateCalendar;
+  </script>
+</body>
+</html>
+
 
 
 <!-- contact section starts -->
