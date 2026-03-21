@@ -1,99 +1,50 @@
 [
-    {
-        "name": "Problem solving",
-        "icon": "https://img.icons8.com/color/48/000000/idea.png"
-    },
-    {
-        "name": "Attention to detail",
-        "icon": "https://img.icons8.com/color/48/000000/magnifying-glass.png"
-    },
-    {
-        "name": "Teamwork",
-        "icon": "https://img.icons8.com/color/48/000000/teamwork.png"
-    },
-    {
-        "name": "Communication skills",
-        "icon": "https://img.icons8.com/color/48/000000/speech-bubble.png"
-    },
-    {
-        "name": "Creativity",
-        "icon": "https://img.icons8.com/color/48/000000/creative.png"
-    
-    },
-    {
-        "name": "Leadership",
-        "icon": "https://img.icons8.com/color/48/000000/leadership.png"
-    },
-    {
-        "name": "Adaptability",
-        "icon": "https://img.icons8.com/color/48/000000/rotate-right.png"
-    },
-    {
-        "name": "Analytical chemistry",
-        "icon": "https://img.icons8.com/color/48/000000/test-tube.png"
-    },
-    {
-        "name": "Collaboration",
-        "icon": "https://img.icons8.com/color/48/000000/collaboration.png"
-    },
-    {
-        "name": "Critical thinking",
-        "icon": "https://img.icons8.com/color/48/000000/brain.png"
-    },
-    {
-        "name": "Project management",
-        "icon": "https://img.icons8.com/color/48/000000/project.png"
-    },
-    {
-        "name": "Time management",
-        "icon": "https://img.icons8.com/color/48/000000/clock.png"
-    },
-    {
-        "name": "Continuous learning",
-        "icon": "https://img.icons8.com/color/48/000000/book.png"
-    },
-    {
-        "name": "Debugging",
-        "icon": "https://img.icons8.com/color/48/000000/bug.png"
-    },
-    {
-        "name": "Educational commitment",
-        "icon": "https://img.icons8.com/color/48/000000/education.png"
-    },
-    {
-        "name": "Software development",
-        "icon": "https://img.icons8.com/color/48/000000/code.png"
-    },
-    {
-        "name": "SQL",
-        "icon": "https://img.icons8.com/color/48/000000/sql.png"
-    },
-    {
-        "name": "Technical",
-        "icon": "https://img.icons8.com/color/48/000000/technical-support.png"
-    },
-    {
-        "name": "Computer Science",
-        "icon": "https://img.icons8.com/color/48/000000/computer.png"
-    },
-    {
-        "name": "Industry Skills",
-        "icon": "https://img.icons8.com/color/48/000000/industry.png"
-    },
-    {
-        "name": "Multitasking",
-        "icon": "https://img.icons8.com/color/48/000000/multitasking.png"
-    },
-    {
-        "name": "Communication",
-        "icon": "https://img.icons8.com/color/48/000000/conference.png"
-    },
-    {
-        "name": "Programming",
-        "icon": "https://img.icons8.com/color/48/000000/programming.png"
-    },
-    {
-        "name": "Coding",
-        "icon": "https://img.icons8.com/color/48/000000/source-code.png"
-    }
+  {
+    "name": "Microsoft 365",
+    "icon": "microsoft.png"
+  },
+  {
+    "name": "Azure",
+    "icon": "azure.png"
+  },
+  {
+    "name": "Windows Server",
+    "icon": "windows.png"
+  },
+  {
+    "name": "Active Directory",
+    "icon": "active-directory.png"
+  },
+  {
+    "name": "Networking",
+    "icon": "networking.png"
+  },
+  {
+    "name": "Ticketing Systems",
+    "icon": "service-desk.png"
+  },
+  {
+    "name": "Technical Support",
+    "icon": "technical-support.png"
+  },
+  {
+    "name": "Troubleshooting",
+    "icon": "problem-solving.png"
+  },
+  {
+    "name": "Virtual Machines",
+    "icon": "vm.png"
+  },
+  {
+    "name": "Customer Service",
+    "icon": "customer-service.png"
+  },
+  {
+    "name": "Hardware & Software Support",
+    "icon": "computer.png"
+  },
+  {
+    "name": "Documentation",
+    "icon": "documentation.png"
+  }
 ]
