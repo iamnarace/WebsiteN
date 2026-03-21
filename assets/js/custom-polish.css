@@ -1,0 +1,246 @@
+/* Stylish polish layer for Naresh portfolio */
+
+:root{
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --soft-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at top left, rgba(0, 170, 255, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 24%);
+}
+
+header{
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header-shadow{
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+#particles-js{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home{
+  position: relative;
+  overflow: hidden;
+}
+
+.home .content,
+.home .image{
+  position: relative;
+  z-index: 1;
+}
+
+.hero-role-line{
+  margin-top: 1rem;
+}
+
+.hero-summary{
+  max-width: 70rem;
+  margin: 1.6rem 0 2rem;
+  line-height: 1.9;
+  font-size: 1.9rem;
+  color: #e8e8e8;
+}
+
+.hero-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 0 2.2rem;
+}
+
+.hero-badges span{
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--soft-shadow);
+  font-size: 1.35rem;
+  letter-spacing: 0.02rem;
+}
+
+.hero-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.btn{
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.btn-outline{
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.btn-outline:hover{
+  background: rgba(255,255,255,0.08) !important;
+}
+
+.hero-image-wrap{
+  padding: 1.2rem;
+  border-radius: 2.4rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+
+.hero-image{
+  display: block;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.section-card .row,
+.education .box-container .box,
+.contact .container{
+  border-radius: 2rem;
+}
+
+.about .row,
+.contact .container{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--soft-shadow);
+}
+
+.profile-card-image{
+  border-radius: 2rem;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.20);
+}
+
+.about .content .tag{
+  display: inline-block;
+  margin: 0.8rem 0 1.6rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+}
+
+.about .content p{
+  line-height: 1.9;
+  margin-bottom: 1.4rem;
+}
+
+.compact-info .box{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem;
+}
+
+.skills .container{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2rem;
+  box-shadow: var(--soft-shadow);
+}
+
+.skills .container .bar{
+  border-radius: 1.6rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skills .container .bar:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.skills .container .bar .info{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skills .container .bar .info img{
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+}
+
+.education .qoute{
+  max-width: 76rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.education-box{
+  overflow: hidden;
+  box-shadow: var(--soft-shadow);
+}
+
+.education-box img{
+  transition: transform 0.35s ease;
+}
+
+.education-box:hover img{
+  transform: scale(1.04);
+}
+
+.experience .timeline .container .content{
+  border-radius: 1.8rem;
+  box-shadow: var(--soft-shadow);
+}
+
+.experience-points{
+  margin-top: 1rem;
+  padding-left: 1.8rem;
+  line-height: 1.8;
+}
+
+.footer .box p,
+.footer .box a{
+  line-height: 1.9;
+}
+
+.footer .credit{
+  margin-top: 2.2rem;
+  text-align: center;
+}
+
+.social-icons li a{
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+section{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 991px){
+  .hero-summary{
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px){
+  .hero-actions{
+    gap: 1rem;
+  }
+
+  .hero-badges span{
+    font-size: 1.25rem;
+  }
+
+  section{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
