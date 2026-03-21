@@ -1,250 +1,209 @@
 $(document).ready(function () {
+  $("#menu").click(function () {
+    $(this).toggleClass("fa-times");
+    $(".navbar").toggleClass("nav-toggle");
+  });
 
-    $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+  $(window).on("scroll load", function () {
+    $("#menu").removeClass("fa-times");
+    $(".navbar").removeClass("nav-toggle");
 
-    $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
-
-        if (window.scrollY > 60) {
-            document.querySelector('#scroll-top').classList.add('active');
-        } else {
-            document.querySelector('#scroll-top').classList.remove('active');
-        }
-
-        // scroll spy
-        $('section').each(function () {
-            let height = $(this).height();
-            let offset = $(this).offset().top - 200;
-            let top = $(window).scrollTop();
-            let id = $(this).attr('id');
-
-            if (top > offset && top < offset + height) {
-                $('.navbar ul li a').removeClass('active');
-                $('.navbar').find(`[href="#${id}"]`).addClass('active');
-            }
-        });
-    });
-
-    // smooth scrolling
-    $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top,
-        }, 500, 'linear')
-    });
-
-    // EmailJS to mail contact form data
-    $("#contact-form").submit(function (event) {
-        event.preventDefault(); // Prevent form default behavior
-
-        // Initialize EmailJS with the correct user ID
-        emailjs.init("MY5L9lgL3nRdTue_4"); // Your public key
-
-        // Send form data via EmailJS (Use correct Service ID and Template ID)
-        emailjs.sendForm('service_5mev86q', 'template_kghd9wc', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset(); // Reset form fields after success
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-    });
-    // End EmailJS to mail contact form data
-
-});
-
-document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === "visible") {
-        document.title = "Portfolio | Naresh Adhikari";
-        $("#favicon").attr("href", "assets/images/favicon.png");
+    if (window.scrollY > 60) {
+      document.querySelector("#scroll-top").classList.add("active");
+      document.querySelector("header").classList.add("header-shadow");
     } else {
-        document.title = "Come Back To Portfolio";
-        $("#favicon").attr("href", "assets/images/favhand.png");
+      document.querySelector("#scroll-top").classList.remove("active");
+      document.querySelector("header").classList.remove("header-shadow");
     }
+
+    $("section").each(function () {
+      const height = $(this).outerHeight();
+      const offset = $(this).offset().top - 200;
+      const top = $(window).scrollTop();
+      const id = $(this).attr("id");
+
+      if (top > offset && top < offset + height) {
+        $(".navbar ul li a").removeClass("active");
+        $('.navbar').find(`[href="#${id}"]`).addClass("active");
+      }
+    });
+  });
+
+  $('a[href*="#"]').on("click", function (e) {
+    const target = $(this).attr("href");
+    if (target.startsWith("#") && $(target).length) {
+      e.preventDefault();
+      $("html, body").animate(
+        { scrollTop: $(target).offset().top },
+        500,
+        "linear"
+      );
+    }
+  });
+
+  $("#contact-form").submit(function (event) {
+    event.preventDefault();
+
+    emailjs.init({
+      publicKey: "MY5L9lgL3nRdTue_4",
+    });
+
+    emailjs
+      .sendForm("service_5mev86q", "template_kghd9wc", "#contact-form")
+      .then(
+        function () {
+          document.getElementById("contact-form").reset();
+          alert("Thanks. Your message has been sent.");
+        },
+        function () {
+          alert("Message could not be sent right now. Please try again.");
+        }
+      );
+  });
 });
 
-// Typed JS effect
+document.addEventListener("visibilitychange", function () {
+  document.title = "Portfolio | Naresh Adhikari";
+  $("#favicon").attr("href", "assets/images/favicon.png");
+});
+
 var typed = new Typed(".typing-text", {
-    strings: ["IT Engineer", "Passionate Developer", "Tech Enthusiast", "Problem Solver"],
-    loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
+  strings: [
+    "IT Support Specialist",
+    "Systems Engineer",
+    "Microsoft 365 Administrator",
+    "Azure Administrator"
+  ],
+  loop: true,
+  typeSpeed: 55,
+  backSpeed: 28,
+  backDelay: 1200,
 });
 
 async function fetchData(type = "skills") {
-    let response;
-    type === "skills" ?
-        response = await fetch("skills.json")
-        :
-        response = await fetch("./projects/projects.json");
-    const data = await response.json();
-    return data;
+  const response =
+    type === "skills"
+      ? await fetch("skills.json")
+      : await fetch("./projects/projects.json");
+  return response.json();
 }
 
 function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
+  const skillsContainer = document.getElementById("skillsContainer");
+  let skillHTML = "";
+
+  skills.forEach((skill) => {
+    skillHTML += `
+      <div class="bar">
+        <div class="info">
+          <img src="./assets/images/skills/${skill.icon}" alt="${skill.name}" />
+          <span>${skill.name}</span>
+        </div>
+      </div>
+    `;
+  });
+
+  skillsContainer.innerHTML = skillHTML;
 }
 
 function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
-    let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-        projectHTML += `
+  const projectsContainer = document.querySelector("#work .box-container");
+  if (!projectsContainer) return;
+
+  let projectHTML = "";
+  projects
+    .slice(0, 6)
+    .filter((project) => project.category !== "android")
+    .forEach((project) => {
+      projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <img draggable="false" src="/assets/images/projects/${project.image}" alt="${project.name}" />
+          <div class="content">
+            <div class="tag">
+              <h3>${project.name}</h3>
+            </div>
+            <div class="desc">
+              <p>${project.desc}</p>
+              <div class="btns">
+                <a href="${project.links.view}" class="btn" target="_blank" rel="noreferrer">View</a>
+                <a href="${project.links.code}" class="btn" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectHTML;
-
-    // <!-- tilt js effect starts -->
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
-    // <!-- tilt js effect ends -->
-
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
+      `;
     });
 
-    /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
-
+  projectsContainer.innerHTML = projectHTML;
+  VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.12,
+  });
 }
 
-fetchData().then(data => {
-    showSkills(data);
+fetchData().then((data) => {
+  showSkills(data);
 });
 
-fetchData("projects").then(data => {
-    showProjects(data);
+fetchData("projects").then((data) => {
+  showProjects(data);
 });
 
-// <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
+  max: 10,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.12,
 });
-// <!-- tilt js effect ends -->
 
-
-// pre loader start
-// function loader() {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
-// function fadeOut() {
-//     setInterval(loader, 500);
-// }
-// window.onload = fadeOut;
-// pre loader end
-
-// disable developer mode
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
+if (document.getElementById("particles-js")) {
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 45, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.18, random: true },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.08,
+        width: 1
+      },
+      move: { enable: true, speed: 1.5, direction: "none", random: false }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: { onhover: { enable: false }, onclick: { enable: false }, resize: true }
+    },
+    retina_detect: true
+  });
 }
 
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/674c44832480f5b4f5a6611b/1ie0un92l';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
-
-
-/* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
+  origin: "top",
+  distance: "50px",
+  duration: 900,
+  reset: false,
 });
 
-/* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
+srtop.reveal(".home .content h2", { delay: 120 });
+srtop.reveal(".home .content .hero-role-line", { delay: 170 });
+srtop.reveal(".home .content .hero-summary", { delay: 210 });
+srtop.reveal(".home .content .hero-badges", { delay: 250 });
+srtop.reveal(".home .content .hero-actions", { delay: 290 });
+srtop.reveal(".home .content .socials", { delay: 330 });
+srtop.reveal(".home .image", { delay: 220 });
 
-srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+srtop.reveal(".about .content h3", { delay: 120 });
+srtop.reveal(".about .content .tag", { delay: 160 });
+srtop.reveal(".about .content p", { interval: 90 });
+srtop.reveal(".about .content .compact-info", { delay: 220 });
 
-/* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
-
-
-/* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
-
-/* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
-
-/* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
-
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });
+srtop.reveal(".skills .container .bar", { interval: 80 });
+srtop.reveal(".education .box", { interval: 120 });
+srtop.reveal(".experience .timeline .container", { interval: 120 });
+srtop.reveal(".contact .container", { delay: 160 });
