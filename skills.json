@@ -1,50 +1,66 @@
 [
   {
     "name": "Microsoft 365",
-    "icon": "microsoft.png"
+    "fa": "fa-brands fa-microsoft"
   },
   {
-    "name": "Azure",
-    "icon": "azure.png"
-  },
-  {
-    "name": "Windows Server",
-    "icon": "windows.png"
+    "name": "Azure Administration",
+    "fa": "fa-solid fa-cloud"
   },
   {
     "name": "Active Directory",
-    "icon": "active-directory.png"
+    "fa": "fa-solid fa-users-gear"
+  },
+  {
+    "name": "Windows Support",
+    "fa": "fa-brands fa-windows"
   },
   {
     "name": "Networking",
-    "icon": "networking.png"
+    "fa": "fa-solid fa-network-wired"
+  },
+  {
+    "name": "Helpdesk Support",
+    "fa": "fa-solid fa-headset"
   },
   {
     "name": "Ticketing Systems",
-    "icon": "service-desk.png"
+    "fa": "fa-solid fa-ticket"
   },
   {
-    "name": "Technical Support",
-    "icon": "technical-support.png"
+    "name": "VPN Support",
+    "fa": "fa-solid fa-shield-halved"
   },
   {
-    "name": "Troubleshooting",
-    "icon": "problem-solving.png"
+    "name": "Hardware Troubleshooting",
+    "fa": "fa-solid fa-laptop-medical"
+  },
+  {
+    "name": "Software Support",
+    "fa": "fa-solid fa-screwdriver-wrench"
+  },
+  {
+    "name": "Backup and Recovery",
+    "fa": "fa-solid fa-database"
   },
   {
     "name": "Virtual Machines",
-    "icon": "vm.png"
+    "fa": "fa-solid fa-server"
   },
   {
-    "name": "Customer Service",
-    "icon": "customer-service.png"
+    "name": "Office 365",
+    "fa": "fa-solid fa-envelope-open-text"
   },
   {
-    "name": "Hardware & Software Support",
-    "icon": "computer.png"
+    "name": "User Access Management",
+    "fa": "fa-solid fa-user-check"
   },
   {
     "name": "Documentation",
-    "icon": "documentation.png"
+    "fa": "fa-solid fa-file-lines"
+  },
+  {
+    "name": "Customer Service",
+    "fa": "fa-solid fa-handshake-angle"
   }
 ]
