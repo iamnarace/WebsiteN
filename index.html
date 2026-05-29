@@ -1,215 +1,795 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Naresh Adhikari | IT Support and Systems Engineer Portfolio" />
-  <meta name="theme-color" content="#2506ad" />
-  <title>Naresh Adhikari | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional IT support, computer repairs & smart home automation for Sydney homes and small businesses. Enterprise-grade expertise in plain English. 100% ad-hoc, No Fix No Fee. By systems engineer Naresh Adhikari.">
+<meta name="keywords" content="IT support Sydney, computer repairs Sydney, smart home automation, Microsoft 365 support Sydney, Intune device management, custom PC builds, Western Sydney IT support, Parramatta IT support, NBN Wi-Fi setup">
+<meta name="author" content="Naresh Adhikari">
+<meta property="og:title" content="Naresh Adhikari | IT & Systems Support — Sydney">
+<meta property="og:description" content="Enterprise-grade IT support for Sydney homes & businesses. 100% ad-hoc, No Fix No Fee, evenings & weekends.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nareshadhikari.com.au/">
+<meta property="og:image" content="https://nareshadhikari.com.au/assets/images/social-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Naresh Adhikari | IT & Systems Support">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Naresh Adhikari | IT & Systems Support — Sydney">
+<meta name="twitter:description" content="Enterprise-grade IT support for Sydney homes & businesses. 100% ad-hoc, No Fix No Fee.">
+<meta name="twitter:image" content="https://nareshadhikari.com.au/assets/images/social-share.png">
+<meta name="theme-color" content="#4F46E5">
+<title>Naresh Adhikari | Professional IT & Systems Support — Sydney</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#FAFAF8;
+  --paper2:#FFFFFF;
+  --ink:#0B0B0F;
+  --ink2:#3A3A44;
+  --muted:#6B6B78;
+  --line:#ECEAE4;
+  --line2:#E2DFD7;
+  --indigo:#4F46E5;
+  --violet:#7C3AED;
+  --coral:#FF6B4A;
+  --mint:#C7F0DB;
+  --mintD:#0F7A52;
+  --lilac:#E6DEFF;
+  --lilacD:#5B3FC4;
+  --peach:#FFE0D2;
+  --peachD:#C2440E;
+  --sky:#D6E9FF;
+  --skyD:#1659B0;
+  --lemon:#FFF0B8;
+  --lemonD:#9A7A00;
+  --grad:linear-gradient(120deg,#4F46E5,#7C3AED);
+  --r:22px;
+  --rs:14px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+::selection{background:var(--coral);color:#fff}
+::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--paper)}::-webkit-scrollbar-thumb{background:#D8D5CD;border-radius:10px}::-webkit-scrollbar-thumb:hover{background:var(--indigo)}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.025em;color:var(--ink)}
+a{text-decoration:none;color:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 2rem}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mark{position:relative;white-space:nowrap}
+.mark::after{content:'';position:absolute;left:-2px;right:-2px;bottom:.06em;height:.36em;background:var(--coral);opacity:.35;z-index:-1;border-radius:4px}
 
-  <link rel="icon" type="image/png" href="./assets/images/favicon.png" id="favicon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/custom-polish.css" />
+/* soft floating blobs */
+.blobs{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.sb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.sb1{width:420px;height:420px;background:var(--lilac);top:-120px;right:-80px;animation:dr 24s ease-in-out infinite}
+.sb2{width:380px;height:380px;background:var(--peach);top:40%;left:-120px;animation:dr2 28s ease-in-out infinite}
+.sb3{width:340px;height:340px;background:var(--sky);bottom:-100px;right:15%;animation:dr 30s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,40px)}}
+@keyframes dr2{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px)}}
+.wrap{position:relative;z-index:2}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000}
+.nav-inner{max-width:1180px;margin:.9rem auto;padding:.65rem 1.4rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.7);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:100px;transition:all .35s;box-shadow:0 4px 24px rgba(0,0,0,.03)}
+nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px rgba(0,0,0,.07)}
+.brand{display:flex;align-items:center;gap:10px;cursor:pointer;font-family:'Space Grotesk';font-weight:700}
+.blogo{width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.blogo svg{width:38px;height:38px;display:block;filter:drop-shadow(0 4px 10px rgba(79,70,229,.3))}
+.brand .sub{color:var(--muted);font-weight:400;font-size:.82rem}
+.nav-links{display:flex;gap:.3rem;list-style:none;align-items:center}
+.nav-links a{padding:.55rem 1rem;border-radius:100px;font-size:.9rem;color:var(--ink2);font-weight:500;cursor:pointer;transition:all .2s}
+.nav-links a:hover{background:var(--paper);color:var(--ink)}
+.nav-cta{background:var(--ink)!important;color:#fff!important;font-weight:600!important;transition:all .3s!important}
+.nav-cta:hover{background:var(--indigo)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2.5px;background:var(--ink);border-radius:3px;transition:.3s}
+.mobile-menu{position:fixed;top:78px;left:1rem;right:1rem;z-index:999;background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.25rem;flex-direction:column;gap:.4rem;display:none;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.mobile-menu a{padding:.85rem 1rem;border-radius:14px;color:var(--ink2);font-weight:500;cursor:pointer}
+.mobile-menu a:hover{background:var(--paper)}
+
+.page{display:none;animation:pi .5s ease}.page.active{display:block}
+@keyframes pi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* HERO */
+.hero{padding:9.5rem 0 4rem}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--paper2);border:1px solid var(--line2);padding:.5rem 1rem;border-radius:100px;font-size:.82rem;font-weight:500;margin-bottom:1.75rem;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--mintD);box-shadow:0 0 0 4px rgba(15,122,82,.15);animation:pl 2s infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(2.5rem,5.5vw,4.6rem);margin-bottom:1.5rem}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:block;animation:su .85s cubic-bezier(.16,1,.3,1) both}
+.hero h1 .ln:nth-child(2) span{animation-delay:.1s}.hero h1 .ln:nth-child(3) span{animation-delay:.2s}
+@keyframes su{from{transform:translateY(110%)}to{transform:none}}
+.hero .lede{font-size:1.18rem;color:var(--ink2);max-width:540px;margin-bottom:2.25rem;animation:fi 1s .5s both}
+@keyframes fi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;animation:fi 1s .65s both}
+.btn{padding:.95rem 1.85rem;border-radius:14px;font-weight:600;font-size:.98rem;cursor:pointer;transition:all .28s;border:none;font-family:'Inter';display:inline-flex;align-items:center;gap:8px}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--indigo);transform:translateY(-2px);box-shadow:0 12px 28px rgba(79,70,229,.3)}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,107,74,.35)}
+.btn-out{background:#fff;color:var(--ink);border:1.5px solid var(--line2)}
+.btn-out:hover{border-color:var(--ink);transform:translateY(-2px)}
+.hero-trust{display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;animation:fi 1s .8s both}
+.hero-trust .t{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--ink2);font-weight:500}
+.chk{width:20px;height:20px;border-radius:50%;background:var(--mint);color:var(--mintD);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}
+
+/* hero card */
+.hcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:1.6rem;box-shadow:0 30px 70px rgba(0,0,0,.08);animation:fi 1.1s .55s both,fl 6s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hcard-top{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
+.hcard-av{width:46px;height:46px;border-radius:13px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk';overflow:hidden;flex-shrink:0}
+.hcard-av img{width:100%;height:100%;object-fit:cover}
+.hcard-top b{display:block;font-size:.92rem}.hcard-top small{color:var(--muted);font-size:.78rem}
+.hrow{display:flex;align-items:center;gap:11px;padding:.7rem;border-radius:14px;background:var(--paper);margin-bottom:.5rem;transition:.3s}
+.hrow:hover{transform:translateX(4px)}
+.hrow .i{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.hrow .x{flex:1}.hrow .x b{font-size:.85rem;display:block}.hrow .x small{font-size:.72rem;color:var(--muted)}
+.hrow .s{font-size:.68rem;font-weight:700;padding:.2rem .55rem;border-radius:100px;background:var(--mint);color:var(--mintD)}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);padding:1.4rem 0;margin:2rem 0 0;overflow:hidden;white-space:nowrap}
+.mq-track{display:inline-flex;gap:3.5rem;animation:mq 26s linear infinite;align-items:center}
+.mq-track span{font-family:'Space Grotesk';font-weight:600;font-size:1.05rem;color:var(--muted);display:inline-flex;align-items:center;gap:3.5rem}
+.mq-track span::after{content:'✦';color:var(--coral)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SECTION */
+section.block{padding:6rem 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:'Space Grotesk';font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);background:var(--lilac);padding:.4rem .9rem;border-radius:100px;margin-bottom:1.1rem}
+.shead{max-width:660px;margin:0 auto 3.5rem;text-align:center}
+.shead.left{text-align:left;margin-left:0}
+.shead h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:1rem}
+.shead p{color:var(--ink2);font-size:1.1rem}
+
+/* GUARANTEE */
+.g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem}
+.gcard{border-radius:var(--r);padding:2.2rem;transition:.4s;border:1px solid transparent}
+.gcard:hover{transform:translateY(-6px)}
+.gcard.c1{background:var(--mint)}.gcard.c1 .gico{background:#fff;color:var(--mintD)}
+.gcard.c2{background:var(--lilac)}.gcard.c2 .gico{background:#fff;color:var(--lilacD)}
+.gcard.c3{background:var(--peach)}.gcard.c3 .gico{background:#fff;color:var(--peachD)}
+.gico{width:54px;height:54px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.4rem;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.gcard h3{font-size:1.3rem;margin-bottom:.7rem}
+.gcard p{font-size:.94rem;color:var(--ink2)}
+
+/* DUAL TRACK */
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:2.5rem;transition:.4s;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.03)}
+.tcard:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.08);border-color:var(--line2)}
+.tbig{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin-bottom:1.5rem}
+.tcard.home .tbig{background:var(--sky)}.tcard.biz .tbig{background:var(--lemon)}
+.tcard h3{font-size:1.6rem;margin-bottom:.8rem}
+.tcard>p{color:var(--ink2);margin-bottom:1.5rem}
+.tlist{list-style:none;margin-bottom:1.75rem}
+.tlist li{display:flex;gap:10px;align-items:flex-start;padding:.4rem 0;font-size:.93rem;color:var(--ink2)}
+.tlist li .c{color:var(--mintD);font-weight:700;flex-shrink:0}
+.tarrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-family:'Space Grotesk';transition:gap .3s}
+.tcard:hover .tarrow{gap:14px}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;counter-reset:s}
+.step{position:relative;padding:2rem 1.5rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);transition:.35s}
+.step:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
+.step::before{counter-increment:s;content:'0' counter(s);font-family:'Space Grotesk';font-size:2.6rem;font-weight:700;color:var(--line2);display:block;margin-bottom:.6rem;line-height:1}
+.step h4{font-size:1.12rem;margin-bottom:.5rem}
+.step p{font-size:.88rem;color:var(--muted)}
+
+/* WHY / FEATURES small */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
+.why{display:flex;gap:14px;align-items:flex-start;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:var(--rs);transition:.3s}
+.why:hover{border-color:var(--line2);transform:translateY(-3px)}
+.why .wi{width:44px;height:44px;border-radius:12px;background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.why b{display:block;font-family:'Space Grotesk';font-size:1.02rem;margin-bottom:.3rem}
+.why p{font-size:.86rem;color:var(--muted)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;text-align:center;background:var(--ink);border-radius:32px;padding:3.5rem 2.5rem;color:#fff}
+.stat .n{font-family:'Space Grotesk';font-size:clamp(2.4rem,5vw,3.4rem);font-weight:700;line-height:1;color:#fff}
+.stat .n em{font-style:normal;color:var(--coral)}
+.stat .l{color:#B5B5C2;font-size:.9rem;margin-top:.6rem}
+
+/* TESTIMONIALS */
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem}
+.testi{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem;transition:.35s}
+.testi:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
+.stars{color:#FFB020;margin-bottom:1rem;letter-spacing:2px}
+.testi q{display:block;font-size:1rem;color:var(--ink2);margin-bottom:1.5rem;line-height:1.7;font-style:normal}
+.tp{display:flex;align-items:center;gap:12px}
+.tav{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-family:'Space Grotesk';font-size:.9rem}
+.tp b{display:block;font-size:.9rem}.tp small{color:var(--muted);font-size:.8rem}
+
+/* SERVICES PAGE */
+.phero{padding:11rem 0 3rem;text-align:center}
+.phero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);margin-bottom:1.2rem}
+.phero p{color:var(--ink2);font-size:1.18rem;max-width:640px;margin:0 auto}
+.svc{background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.5rem;margin-bottom:1.75rem;transition:.35s}
+.svc:hover{box-shadow:0 16px 50px rgba(0,0,0,.06);border-color:var(--line2)}
+.svc-h{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.75rem;flex-wrap:wrap}
+.svc-ico{width:60px;height:60px;border-radius:17px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0}
+.si1{background:var(--lemon)}.si2{background:var(--sky)}.si3{background:var(--lilac)}.si4{background:var(--mint)}
+.svc-h .num{font-family:'Space Grotesk';font-size:.76rem;color:var(--muted);letter-spacing:.1em;font-weight:600}
+.svc-h h2{font-size:1.65rem;margin:.25rem 0}
+.svc-h .tag{color:var(--ink2);font-size:.94rem}
+.svc-intro{color:var(--ink2);font-size:.96rem;margin-bottom:1.5rem;max-width:760px}
+.svc-items{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.sitem{padding:1.25rem 1.4rem;background:var(--paper);border-radius:var(--rs);transition:.3s}
+.sitem:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.sitem b{display:block;font-family:'Space Grotesk';font-size:.98rem;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
+.sitem b .d{width:7px;height:7px;border-radius:50%;background:var(--coral);flex-shrink:0}
+.sitem p{font-size:.86rem;color:var(--muted);line-height:1.55}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start}
+.av{position:sticky;top:7rem}
+.pframe{aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line2);position:relative;background:linear-gradient(160deg,var(--lilac),var(--sky))}
+.pframe img{width:100%;height:100%;object-fit:cover;display:block}
+.pframe .ph-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem}
+.pinit{width:104px;height:104px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.3rem;font-weight:700;font-family:'Space Grotesk';box-shadow:0 10px 30px rgba(79,70,229,.3)}
+.pframe .note{font-size:.78rem;color:var(--ink2);text-align:center;padding:0 2rem}
+.certs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.cert{font-size:.76rem;padding:.4rem .85rem;border-radius:10px;background:#fff;border:1px solid var(--line2);font-weight:500}
+.about-b h2{font-size:2.3rem;margin-bottom:1.5rem}
+.about-b p{color:var(--ink2);margin-bottom:1.25rem}
+.about-b p strong{color:var(--ink)}
+.qblock{border-left:4px solid var(--coral);padding:.5rem 0 .5rem 1.5rem;margin:2rem 0;font-family:'Space Grotesk';font-size:1.2rem;font-weight:500;color:var(--ink)}
+.resume-cta{margin-top:2.5rem;border-radius:26px;padding:2.5rem;background:var(--lemon);position:relative;overflow:hidden}
+.resume-cta h3{font-size:1.35rem;margin-bottom:.75rem}
+.resume-cta p{color:var(--ink2);margin-bottom:1.5rem;font-size:.94rem}
+
+/* FAQ */
+.faqw{max-width:780px;margin:0 auto}
+.faq{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:.9rem;overflow:hidden;transition:.3s}
+.faq:hover{border-color:var(--line2)}
+.faq-q{padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Space Grotesk';font-weight:600;font-size:1.02rem;gap:1rem}
+.faq-q .ic{color:var(--coral);font-size:1.4rem;transition:transform .35s;flex-shrink:0}
+.faq.open .faq-q .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--ink2);font-size:.94rem}
+.faq-a div{padding:0 1.6rem 1.4rem}
+.faq.open .faq-a{max-height:340px}
+
+/* CTA */
+.cta{border-radius:34px;padding:5rem 3rem;text-align:center;background:var(--grad);color:#fff;position:relative;overflow:hidden}
+.cta::after{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,.12);border-radius:50%;top:-100px;right:-60px}
+.cta h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.1rem;color:#fff;position:relative}
+.cta p{font-size:1.15rem;opacity:.9;max-width:560px;margin:0 auto 2.25rem;position:relative}
+.cta .btn-coral{position:relative}
+
+/* CONTACT */
+.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.cinfo h2{font-size:2.2rem;margin-bottom:1.1rem}
+.cinfo>p{color:var(--ink2);margin-bottom:2.25rem}
+.irow{display:flex;align-items:center;gap:14px;margin-bottom:1.4rem}
+.iico{width:48px;height:48px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.irow .l{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.irow .v{font-size:.98rem;font-weight:500}
+.cprom{margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--line)}
+.cprom .p{display:flex;gap:10px;align-items:center;padding:.4rem 0;font-size:.9rem;color:var(--ink2)}
+.cprom .p .c{color:var(--mintD);font-weight:700}
+.fcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.5rem;box-shadow:0 10px 40px rgba(0,0,0,.04)}
+.fg{margin-bottom:1.3rem}
+.fg label{display:block;font-size:.82rem;font-weight:600;color:var(--ink2);margin-bottom:.5rem}
+.fg .req{color:var(--coral)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+input,select,textarea{width:100%;background:var(--paper);border:1.5px solid var(--line2);border-radius:13px;padding:.85rem 1rem;color:var(--ink);font-size:.93rem;font-family:'Inter';transition:.22s;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--indigo);background:#fff;box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+input::placeholder,textarea::placeholder{color:#A8A8B3}
+select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%236B6B78' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+textarea{resize:vertical;min-height:120px}
+.submit-btn{width:100%;background:var(--ink);color:#fff;padding:1.1rem;border-radius:15px;font-weight:600;font-size:1rem;border:none;cursor:pointer;transition:.3s;font-family:'Inter'}
+.submit-btn:hover{background:var(--indigo);transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,70,229,.3)}
+.fsuccess{display:none;text-align:center;padding:3rem 1rem}
+.fsuccess .bc{width:80px;height:80px;border-radius:50%;background:var(--mint);color:var(--mintD);display:flex;align-items:center;justify-content:center;font-size:2.4rem;margin:0 auto 1.5rem}
+.fsuccess h3{font-size:1.6rem;margin-bottom:.75rem}.fsuccess p{color:var(--ink2)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.fbrand .brand{margin-bottom:1rem}
+.fbrand p{color:var(--muted);font-size:.9rem;max-width:300px}
+.fcol h4{font-family:'Space Grotesk';font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:1.1rem}
+.fcol a{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;cursor:pointer;transition:color .2s}
+.fcol a:hover{color:var(--indigo)}
+.fbot{border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.85rem}
+.social{display:flex;gap:.6rem}
+.social a{width:40px;height:40px;border-radius:12px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.3s;font-weight:600}
+.social a:hover{background:var(--ink);color:#fff;transform:translateY(-3px)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+
+/* TIMELINE (resume) */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--line2)}
+.tl-item{position:relative;margin-bottom:1.5rem}
+.tl-dot{position:absolute;left:-2rem;top:1.8rem;width:14px;height:14px;border-radius:50%;background:var(--grad);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--line2);z-index:1}
+.tl-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.75rem 2rem;transition:.35s}
+.tl-card:hover{box-shadow:0 16px 40px rgba(0,0,0,.06);border-color:var(--line2);transform:translateX(4px)}
+.tl-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.tl-top h3{font-size:1.2rem;margin-bottom:.2rem}
+.tl-org{color:var(--violet);font-weight:600;font-family:'Space Grotesk';font-size:.95rem}
+.tl-date{font-size:.8rem;color:var(--muted);font-weight:600;background:var(--paper);padding:.35rem .8rem;border-radius:100px;white-space:nowrap;flex-shrink:0}
+.tl-list{list-style:none}
+.tl-list li{position:relative;padding-left:1.25rem;font-size:.92rem;color:var(--ink2);margin-bottom:.5rem;line-height:1.55}
+.tl-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--coral)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hcard{max-width:460px}
+  .tracks{grid-template-columns:1fr}.about{grid-template-columns:1fr;gap:2.5rem}.av{position:static}
+  .cgrid{grid-template-columns:1fr;gap:2.5rem}.svc-items{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}.container{padding:0 1.25rem}
+  section.block{padding:4rem 0}.svc,.fcard{padding:1.75rem}.cta{padding:3rem 1.5rem}
+  .frow{grid-template-columns:1fr}.stats{padding:2.5rem 1.5rem}.fgrid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}
+}
+</style>
 </head>
 <body>
-  <header>
-    <a href="#home" class="logo"><i class="fas fa-laptop-code"></i> Naresh</a>
-    <div id="menu" class="fas fa-bars"></div>
 
-    <nav class="navbar">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="blobs"><div class="sb sb1"></div><div class="sb sb2"></div><div class="sb sb3"></div></div>
 
-  <section class="home" id="home">
-    <div id="particles-js"></div>
+<div class="wrap">
 
-    <div class="content">
-      <p class="hero-kicker">IT Support and Systems Engineer</p>
-      <h2>Hi, I'm <span>Naresh Adhikari</span></h2>
-      <p class="hero-role-line">I work across <span class="typing-text"></span></p>
-      <p class="hero-summary">
-        Experienced IT professional with more than four years in technical support, end-user computing,
-        Microsoft 365, Azure, networking, Windows environments, and day-to-day IT operations.
-      </p>
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('home')"><div class="blogo">
+      <svg viewBox="0 0 58 58" aria-label="Naresh Adhikari logo"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect x="8" y="12" width="42" height="30" rx="5" fill="url(#lg)"/><rect x="23" y="44" width="12" height="4" rx="2" fill="#7C3AED"/><rect x="18" y="49" width="22" height="3.5" rx="1.75" fill="#7C3AED"/><path d="M21 35 V19 L37 35 V19" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="19" r="2.4" fill="#FF6B4A"/></svg>
+    </div><div>Naresh Adhikari <span class="sub">| IT & Systems</span></div></div>
+    <ul class="nav-links">
+      <li><a onclick="go('home')">Home</a></li>
+      <li><a onclick="go('services')">How We Help</a></li>
+      <li><a onclick="go('about')">About</a></li>
+      <li><a onclick="go('resume')">Resume</a></li>
+      <li><a onclick="go('contact')" class="nav-cta">Request Help →</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mm">
+  <a onclick="go('home');toggleMenu()">Home</a>
+  <a onclick="go('services');toggleMenu()">How We Help</a>
+  <a onclick="go('about');toggleMenu()">About</a>
+  <a onclick="go('resume');toggleMenu()">Resume</a>
+  <a onclick="go('contact');toggleMenu()" class="nav-cta" style="text-align:center;border-radius:14px">Request Help →</a>
+</div>
 
-      <div class="hero-badges">
-        <span>Microsoft 365</span>
-        <span>Azure</span>
-        <span>Active Directory</span>
-        <span>Networking</span>
-        <span>IT Support</span>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn"><span>Contact Me</span><i class="fas fa-paper-plane"></i></a>
-        <a href="./resume.html" class="btn btn-outline"><span>View Resume</span><i class="fas fa-file-alt"></i></a>
-      </div>
-
-      <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/iamnarace" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></li>
-          <li><a class="envelope" aria-label="Email" href="mailto:nareshadhikari06@gmail.com"><i class="fas fa-envelope"></i></a></li>
-        </ul>
+<!-- ===== HOME ===== -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="pill"><span class="dot"></span> Available now · serving Greater Sydney</div>
+          <h1>
+            <span class="ln"><span>Professional IT support</span></span>
+            <span class="ln"><span>&amp; <span class="mark">smart home</span> automation,</span></span>
+            <span class="ln"><span>for Sydney.</span></span>
+          </h1>
+          <p class="lede">Enterprise-grade tech expertise delivered in plain English. No lock-in contracts, completely ad-hoc, and entirely tailored to your budget — for homes and small businesses across Sydney.</p>
+          <div class="hero-btns">
+            <button class="btn btn-dark" onclick="go('contact')">Request Tech Help →</button>
+            <button class="btn btn-out" onclick="go('services')">Explore Our Services</button>
+          </div>
+          <div class="hero-trust">
+            <div class="t"><span class="chk">✓</span> No Fix, No Fee</div>
+            <div class="t"><span class="chk">✓</span> No lock-in contracts</div>
+            <div class="t"><span class="chk">✓</span> Evenings &amp; weekends</div>
+          </div>
+        </div>
+        <div class="hcard">
+          <div class="hcard-top"><div class="hcard-av"><img src="assets/images/naresh-profile.png" alt="Naresh Adhikari" onerror="this.outerHTML='NA'"></div><div><b>Naresh Adhikari</b><small>Systems &amp; Software Engineer</small></div></div>
+          <div class="hrow"><div class="i" style="background:var(--sky)">📶</div><div class="x"><b>Wi-Fi &amp; mesh setup</b><small>0 dead zones · whole home</small></div><span class="s">Done</span></div>
+          <div class="hrow"><div class="i" style="background:var(--lilac)">🔐</div><div class="x"><b>Microsoft 365 + Intune</b><small>12 business devices secured</small></div><span class="s">Live</span></div>
+          <div class="hrow"><div class="i" style="background:var(--peach)">⚡</div><div class="x"><b>SSD speed upgrade</b><small>4× faster boot time</small></div><span class="s">Done</span></div>
+          <div class="hrow"><div class="i" style="background:var(--lemon)">🏠</div><div class="x"><b>Smart home install</b><small>Alexa · cameras · lighting</small></div><span class="s" style="background:var(--lemon);color:var(--lemonD)">Active</span></div>
+        </div>
       </div>
     </div>
-
-    <div class="image">
-      <div class="hero-image-wrap tilt">
-        <img draggable="false" class="hero-image" src="./assets/images/naresh-profile.png" alt="Naresh Adhikari" />
+    <div class="marquee">
+      <div class="mq-track">
+        <span>Microsoft 365<span></span></span><span>Custom PC Builds</span><span>Wi-Fi &amp; NBN</span><span>Smart Home</span><span>Intune MDM</span><span>Virus Removal</span><span>Cloud Backup</span><span>Remote Helpdesk</span>
+        <span>Microsoft 365</span><span>Custom PC Builds</span><span>Wi-Fi &amp; NBN</span><span>Smart Home</span><span>Intune MDM</span><span>Virus Removal</span><span>Cloud Backup</span><span>Remote Helpdesk</span>
       </div>
     </div>
   </section>
 
-  <section class="about section-card" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+  <!-- TRIPLE FREEDOM -->
+  <section class="block">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">◆ Our Triple-Freedom Promise</div>
+        <h2>Three guarantees that remove all your risk</h2>
+        <p>Most IT providers lock you into contracts and charge whether they fix anything or not. We do the opposite.</p>
+      </div>
+      <div class="g-grid">
+        <div class="gcard c1 reveal"><div class="gico">🛡️</div><h3>No Fix, No Fee</h3><p>If we diagnose a software glitch or hardware issue and it proves unfixable, you pay absolutely nothing. Zero risk, zero stress — you only ever pay when there's a genuine result.</p></div>
+        <div class="gcard c2 reveal"><div class="gico">🔓</div><h3>100% Ad-Hoc Support</h3><p>Total budget control. No minimum monthly retainers, no fixed package clutter, and no hidden fees. You only pay for the exact assistance you request, when you request it.</p></div>
+        <div class="gcard c3 reveal"><div class="gico">🕐</div><h3>Service At Your Time</h3><p>Your schedule rules. We coordinate remote or on-site visits around your day — including evening and weekend availability — to completely minimise your household or business downtime.</p></div>
+      </div>
+    </div>
+  </section>
 
-    <div class="row">
-      <div class="image">
-       <img draggable="false" class="tilt" src="./assets/images/aboutme.png" alt="Naresh Adhikari profile" />
+  <!-- DUAL TRACK -->
+  <section class="block">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">◆ Who We Serve</div>
+        <h2>One engineer. Two worlds covered.</h2>
+        <p>Whether it's your family's devices or your growing business, you get the same enterprise discipline at honest, local prices.</p>
+      </div>
+      <div class="tracks">
+        <div class="tcard home reveal" onclick="go('services')">
+          <div class="tbig">🏠</div>
+          <h3>For Your Home &amp; Family</h3>
+          <p>Keeping your household securely connected. From blazing-fast Wi-Fi setups and interactive smart home ecosystems to parental filters and family device cleanups.</p>
+          <ul class="tlist">
+            <li><span class="c">✓</span> Whole-home Wi-Fi &amp; mesh router deployment</li>
+            <li><span class="c">✓</span> Smart home automation — Alexa &amp; Google Home</li>
+            <li><span class="c">✓</span> Network-level parental controls &amp; content filters</li>
+            <li><span class="c">✓</span> Family device cleanups, repairs &amp; setups</li>
+          </ul>
+          <span class="tarrow">View home services →</span>
+        </div>
+        <div class="tcard biz reveal" onclick="go('services')">
+          <div class="tbig">🏢</div>
+          <h3>For Your Small Business</h3>
+          <p>Act as your casual, on-demand remote helpdesk. Managing your Microsoft 365 users, locking down devices with Intune, and deploying automated backups.</p>
+          <ul class="tlist">
+            <li><span class="c">✓</span> Microsoft 365 user &amp; email management</li>
+            <li><span class="c">✓</span> Intune device security &amp; remote wipe</li>
+            <li><span class="c">✓</span> Single Point of Contact (SPOC) helpdesk</li>
+            <li><span class="c">✓</span> Automated cloud backups &amp; monitoring</li>
+          </ul>
+          <span class="tarrow">View business services →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="block">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">◆ How It Works</div>
+        <h2>Getting help is refreshingly simple</h2>
+        <p>No call centres, no ticket queues, no jargon. Just a clear, honest process from first contact to fixed.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><h4>Tell us what's up</h4><p>Send a quick message describing what's broken or what you'd like set up. Takes two minutes.</p></div>
+        <div class="step reveal"><h4>Free assessment</h4><p>We diagnose the root cause and give you an honest, budget-friendly estimate — no obligation.</p></div>
+        <div class="step reveal"><h4>We fix it, your way</h4><p>Remote or on-site, business hours or weekends. You choose the time that minimises your downtime.</p></div>
+        <div class="step reveal"><h4>Only pay for results</h4><p>No Fix, No Fee. No contracts. You pay only for the assistance you actually received.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="block">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">◆ Why Choose Naresh</div>
+        <h2>Enterprise expertise, local-friendly service</h2>
+        <p>You're not hiring a faceless call centre — you're working directly with a qualified systems engineer who genuinely cares about getting it right.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why reveal"><div class="wi">🎓</div><div><b>Qualified engineer</b><p>Bachelor of IT plus CCNA, Azure, Microsoft 365, AWS &amp; ITIL certifications — not just a hobbyist.</p></div></div>
+        <div class="why reveal"><div class="wi">🧩</div><div><b>Root-cause fixes</b><p>I solve the underlying problem, not just the symptom, so issues don't keep coming back.</p></div></div>
+        <div class="why reveal"><div class="wi">💬</div><div><b>Plain English</b><p>No confusing jargon. I explain exactly what's wrong and what I'm doing, in language that makes sense.</p></div></div>
+        <div class="why reveal"><div class="wi">💸</div><div><b>Budget-friendly</b><p>Cheap, ad-hoc, pay-as-you-go rates. No retainers, no surprise invoices, no upselling.</p></div></div>
+        <div class="why reveal"><div class="wi">⚡</div><div><b>Fast response</b><p>Most requests get a personal reply within a few hours, with remote fixes often same-day.</p></div></div>
+        <div class="why reveal"><div class="wi">📍</div><div><b>Truly local</b><p>Based in and serving Greater Sydney, with a focus on Western Sydney and the Parramatta region.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="block">
+    <div class="container">
+      <div class="stats reveal">
+        <div class="stat"><div class="n" data-count="4" data-suffix="+">0</div><div class="l">Years professional IT experience</div></div>
+        <div class="stat"><div class="n">5<em>★</em></div><div class="l">Average client satisfaction</div></div>
+        <div class="stat"><div class="n" data-count="100" data-suffix="%">0</div><div class="l">Ad-hoc · no contracts ever</div></div>
+        <div class="stat"><div class="n">7<em>/7</em></div><div class="l">Days available incl. evenings</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="block">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">◆ Trusted Locally</div>
+        <h2>What Sydney clients say</h2>
+        <p>Real results for real homes and businesses across Greater Sydney.</p>
+      </div>
+      <div class="tg">
+        <div class="testi reveal"><div class="stars">★★★★★</div><q>Naresh sorted our office Microsoft 365 and locked down every laptop with Intune in an afternoon. No contract, no fuss — exactly what a small business needs.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)">SP</div><div><b>Sarah P.</b><small>Small business owner · Parramatta</small></div></div></div>
+        <div class="testi reveal"><div class="stars">★★★★★</div><q>Our Wi-Fi finally reaches every room and the kids' parental controls actually work. He explained everything in plain English. Highly recommend.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#FF6B4A,#7C3AED)">MT</div><div><b>Michael T.</b><small>Family home · Blacktown</small></div></div></div>
+        <div class="testi reveal"><div class="stars">★★★★★</div><q>Built me a custom PC that runs flawlessly and didn't try to upsell parts I didn't need. Genuinely knows the engineering side. Will use again.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#1659B0,#0F7A52)">JL</div><div><b>James L.</b><small>Content creator · Penrith</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="block">
+    <div class="container">
+      <div class="cta reveal">
+        <h2>Ready for a free tech assessment?</h2>
+        <p>No contracts. No obligation. Tell us what's broken or needs setting up — we'll handle the rest on a strict No Fix, No Fee basis.</p>
+        <button class="btn btn-coral" onclick="go('contact')">Get Your Free Estimate →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<div id="page-services" class="page">
+  <div class="phero">
+    <div class="container">
+      <div class="eyebrow" style="margin-bottom:1.1rem">◆ The Complete Service Menu</div>
+      <h1>How <span class="grad-text">we help</span></h1>
+      <p>Enterprise-grade IT support delivered locally. Every service below is ad-hoc, budget-friendly, and backed by the No Fix, No Fee promise.</p>
+    </div>
+  </div>
+  <section class="block" style="padding-top:1.5rem">
+    <div class="container">
+
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si1">💡</div><div><div class="num">SERVICE 01</div><h2>Technology Strategy &amp; Pre-Purchase Advice</h2><div class="tag">Smart planning before you spend a dollar.</div></div></div>
+        <p class="svc-intro">Buying the wrong gear is one of the most expensive mistakes a household or business can make. Before you spend, I give honest, brand-agnostic advice grounded in real systems engineering — so every dollar goes where it counts.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Bespoke pre-purchase advice</b><p>Brand-agnostic component selection for custom gaming rigs, content creator workstations, or budget-friendly business laptop fleets.</p></div>
+          <div class="sitem"><b><span class="d"></span>Tech roadmap audits</b><p>Free initial digital wellness checks to find hardware vulnerabilities, data backup gaps, or network bottlenecks before they cause a crash.</p></div>
+          <div class="sitem"><b><span class="d"></span>Vendor &amp; plan comparisons</b><p>Independent comparisons of NBN plans, routers, NAS devices, cloud storage and business software subscriptions.</p></div>
+          <div class="sitem"><b><span class="d"></span>Future-proofing guidance</b><p>Advice on what to upgrade now, what can wait, and what to retire — so you scale smoothly without overspending.</p></div>
+        </div>
       </div>
 
-      <div class="content">
-        <h3>Practical support with a strong service mindset</h3>
-        <span class="tag">IT Support and Systems Engineer</span>
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si2">🏠</div><div><div class="num">SERVICE 02</div><h2>Home &amp; Family IT Support</h2><div class="tag">Seamless residential tech integration.</div></div></div>
+        <p class="svc-intro">A modern home runs on dozens of connected devices. I make them work together reliably and securely — so your family stays connected, protected and headache-free.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Wi-Fi &amp; NBN optimisation</b><p>Eliminating dead zones, configuring mesh routers, and optimising your bandwidth for fast, stable coverage in every room.</p></div>
+          <div class="sitem"><b><span class="d"></span>Smart home ecosystems</b><p>Flawless automation routines for Amazon Alexa or Google Home, alongside wireless security cameras and smart lighting setups.</p></div>
+          <div class="sitem"><b><span class="d"></span>Internet failover &amp; resilience</b><p>Setting up automatic 4G/5G cellular backup lines so your home office stays online if the NBN drops out.</p></div>
+          <div class="sitem"><b><span class="d"></span>Device &amp; family management</b><p>Configuring family tablets, consoles, printer networks, and custom network-level parental content filters.</p></div>
+        </div>
+      </div>
 
-        <p>
-          I am an IT professional with strong experience in hardware and software support, Microsoft 365,
-          Azure administration, user access management, troubleshooting, and IT service delivery.
-        </p>
-        <p>
-          I enjoy solving technical issues, improving user experience, and supporting smooth day-to-day
-          operations across business systems and end-user environments.
-        </p>
-        <p>
-          I hold a Bachelor of Information Technology and certifications including CCNA, Microsoft Azure
-          Administrator Associate, Microsoft 365 Fundamentals, AWS Cloud Practitioner, and ITIL Foundation.
-        </p>
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si3">🔧</div><div><div class="num">SERVICE 03</div><h2>Computer Repairs &amp; Hardware Engineering</h2><div class="tag">Hardware lifespan extension &amp; custom builds.</div></div></div>
+        <p class="svc-intro">From breathing new life into a sluggish laptop to engineering a high-performance custom rig, I treat every machine with precision and care — extending its life and protecting your data.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Premium custom PC building</b><p>Precision engineering, liquid-cooling integration, and clean cable management for high-performance gaming and creator rigs.</p></div>
+          <div class="sitem"><b><span class="d"></span>Speed upgrades &amp; repairs</b><p>Replacing slow spinning hard drives with ultra-fast modern SSDs and performing physical internal system deep cleans.</p></div>
+          <div class="sitem"><b><span class="d"></span>Virus &amp; malware clean-up</b><p>Complete security purges, ransomware isolation, and setting up bulletproof local or cloud backup systems.</p></div>
+          <div class="sitem"><b><span class="d"></span>Component-level repairs</b><p>Screen replacements, battery swaps, port repairs, and post-drop or post-flood device assessments.</p></div>
+        </div>
+      </div>
 
-        <div class="box-container compact-info">
-          <div class="box">
-            <p><span>Email:</span> nareshadhikari06@gmail.com</p>
-            <p><span>Phone:</span> 0416 218 276</p>
-            <p><span>Location:</span> Sydney, Australia</p>
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si4">☁️</div><div><div class="num">SERVICE 04</div><h2>Small Business Cloud &amp; Remote Helpdesk</h2><div class="tag">Your on-demand virtual IT department.</div></div></div>
+        <p class="svc-intro">Small businesses deserve enterprise-grade IT without the enterprise price tag. I act as your single, dedicated point of contact — securing your devices, managing your cloud, and resolving issues fast.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Single Point of Contact helpdesk</b><p>One dedicated contact for every tech problem — no bouncing between telcos and device manufacturers.</p></div>
+          <div class="sitem"><b><span class="d"></span>Microsoft 365 user management</b><p>Seamless staff onboarding/offboarding, secure business email domain setups, and OneDrive permission auditing.</p></div>
+          <div class="sitem"><b><span class="d"></span>Microsoft Intune &amp; MDM security</b><p>Enforcing remote data wipe policies on corporate laptops or phones if they are lost or stolen.</p></div>
+          <div class="sitem"><b><span class="d"></span>Secure remote troubleshooting</b><p>Immediate incident resolution over the internet using secure remote desktop tools for fast, budget-friendly fixes.</p></div>
+          <div class="sitem"><b><span class="d"></span>Proactive health monitoring</b><p>Lightweight background alerts to monitor drive failures or critical security patches, even after hours.</p></div>
+          <div class="sitem"><b><span class="d"></span>Backup &amp; disaster recovery</b><p>Automated, tested backups so your business data is always recoverable if the worst happens.</p></div>
+        </div>
+      </div>
+
+      <div class="cta reveal" style="margin-top:2rem">
+        <h2>Not sure what you need?</h2>
+        <p>Book a free initial assessment and we'll figure out the smartest, most budget-friendly path together.</p>
+        <button class="btn btn-coral" onclick="go('contact')">Request Free Assessment →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<div id="page-about" class="page">
+  <div class="phero" style="padding-bottom:1rem">
+    <div class="container">
+      <div class="eyebrow" style="margin-bottom:1.1rem">◆ About &amp; Engineering Background</div>
+      <h1>A software engineer <span class="grad-text">in your corner</span></h1>
+    </div>
+  </div>
+  <section class="block" style="padding-top:2rem">
+    <div class="container">
+      <div class="about">
+        <div class="av reveal">
+          <div class="pframe"><img src="assets/images/aboutme.png" alt="Naresh Adhikari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
+          <div class="certs"><span class="cert">CCNA</span><span class="cert">Azure Administrator</span><span class="cert">Microsoft 365 Fundamentals</span><span class="cert">AWS Cloud Practitioner</span><span class="cert">ITIL Foundation</span><span class="cert">B. Information Technology</span></div>
+        </div>
+        <div class="about-b reveal">
+          <h2>More than just tech support</h2>
+          <p>Most local tech support guys only treat the <em>symptoms</em> of a broken device. Because my primary background is in deep systems architecture and software engineering, I analyse the <strong>root cause</strong> of your technical problems.</p>
+          <div class="qblock">"I treat your home and office tech with the same enterprise-grade precision I bring to corporate systems."</div>
+          <p>Whether I am deploying a security rule across your company's Microsoft Intune accounts, configuring an internet failover line, or custom-building a high-performance PC, every job gets that same engineering discipline.</p>
+          <p>I started this local service to give Sydney families and micro-businesses <strong>premium, reliable technical help at cheap, ad-hoc, pay-as-you-go rates</strong>. No lock-ins. No jargon. Just results you can rely on.</p>
+          <p>With more than four years across technical support, end-user computing, Microsoft 365, Azure, networking and day-to-day IT operations, I bring real-world enterprise systems knowledge to every residential and small business job I take on across Greater Sydney.</p>
+
+          <div class="resume-cta">
+            <h3>🎯 Looking for my corporate engineering portfolio?</h3>
+            <p>If you are a corporate recruiter or client looking for my software development project history, enterprise resume, and technical stack details, view my full technical resume portal.</p>
+            <button onclick="go('resume')" class="btn btn-dark">View Professional Engineering Resume →</button>
           </div>
         </div>
       </div>
     </div>
   </section>
+</div>
 
-  <section class="skills section-card" id="skills">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills &amp; <span>Abilities</span></h2>
-    <p class="section-intro">A practical mix of cloud, support, infrastructure, systems administration, and customer-facing IT skills.</p>
+<!-- ===== CONTACT ===== -->
+<div id="page-contact" class="page">
+  <div class="phero" style="padding-bottom:1rem">
     <div class="container">
-      <div class="row" id="skillsContainer"></div>
+      <div class="eyebrow" style="margin-bottom:1.1rem">◆ Request Support</div>
+      <h1>Get a free, <span class="grad-text">budget-friendly estimate</span></h1>
+      <p>No complex contracts. Tell us what's broken or needs setting up, and we'll handle the rest on a strict No Fix, No Fee basis.</p>
     </div>
-  </section>
-
-  <section class="education section-card" id="education">
-    <h2 class="heading"><i class="fas fa-graduation-cap"></i> Education &amp; <span>Certifications</span></h2>
-    <p class="qoute">
-      Continuous learning and hands-on support experience have shaped my professional growth in IT.
-    </p>
-
-    <div class="box-container">
-      <div class="box education-box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/educat/college.jpg" alt="Victoria University" />
+  </div>
+  <section class="block" style="padding-top:2rem">
+    <div class="container">
+      <div class="cgrid">
+        <div class="cinfo reveal">
+          <h2>Let's get you sorted</h2>
+          <p>Reach out and Naresh will personally review your request — usually within a few hours.</p>
+          <div class="irow"><div class="iico">📍</div><div><div class="l">Service Area</div><div class="v">Greater Sydney, NSW</div></div></div>
+          <div class="irow"><div class="iico">📞</div><div><div class="l">Phone</div><div class="v">0416 218 276</div></div></div>
+          <div class="irow"><div class="iico">✉️</div><div><div class="l">Email</div><div class="v">nareshadhikari06@gmail.com</div></div></div>
+          <div class="irow"><div class="iico">🕐</div><div><div class="l">Availability</div><div class="v">7 days · including evenings</div></div></div>
+          <div class="cprom">
+            <div class="p"><span class="c">✓</span> <span><strong>No Fix, No Fee</strong> — zero-risk diagnostics</span></div>
+            <div class="p"><span class="c">✓</span> <span><strong>100% Ad-Hoc</strong> — pay only for what you need</span></div>
+            <div class="p"><span class="c">✓</span> <span><strong>Free initial assessment</strong> — no obligation</span></div>
+          </div>
         </div>
-        <div class="content">
-          <h3>Bachelor of Information Technology</h3>
-          <p>Victoria University | Sydney Campus</p>
-          <h4>2019 - 2022 | Completed</h4>
+        <div class="reveal">
+          <div class="fcard" id="formCard">
+            <div class="fg"><label>Full Name / Business Name <span class="req">*</span></label><input type="text" id="fname" placeholder="e.g. John Smith or Acme Pty Ltd"></div>
+            <div class="fg frow">
+              <div><label>Phone <span class="req">*</span></label><input type="tel" id="fphone" placeholder="04XX XXX XXX"></div>
+              <div><label>Email <span class="req">*</span></label><input type="email" id="femail" placeholder="you@email.com"></div>
+            </div>
+            <div class="fg"><label>Your Sydney Suburb <span class="req">*</span></label><input type="text" id="fsuburb" placeholder="e.g. Parramatta, Penrith, Blacktown"></div>
+            <div class="fg"><label>What track do you need help with? <span class="req">*</span></label>
+              <select id="fcat"><option value="" disabled selected>Select a service type…</option><option>Home Tech Support</option><option>Custom PC &amp; Repairs</option><option>Business Microsoft 365 &amp; Intune</option><option>Tech Strategy &amp; Advice</option></select>
+            </div>
+            <div class="fg"><label>Describe the issue or project <span class="req">*</span></label><textarea id="fdetails" placeholder="Tell us what's broken, what you'd like set up, or what you're trying to achieve…"></textarea></div>
+            <div class="fg"><label>Preferred Service Time <span class="req">*</span></label>
+              <select id="ftime"><option value="" disabled selected>When suits you best?</option><option>Standard Business Hours (Mon–Fri 9–5)</option><option>After-Hours / Evenings</option><option>Weekends</option></select>
+            </div>
+            <button class="submit-btn" onclick="submitForm()">Submit Support Request →</button>
+          </div>
+          <div class="fsuccess" id="formSuccess">
+            <div class="bc">✓</div><h3>Request received!</h3><p>Thanks for reaching out. Naresh will review your request and get back to you shortly — usually within a few hours.</p>
+            <button class="btn btn-out" style="margin-top:1.5rem" onclick="go('home')">← Back to Home</button>
+          </div>
         </div>
       </div>
 
-      <div class="box education-box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/educat/school.jpg" alt="Kingston Institute Australia" />
-        </div>
-        <div class="content">
-          <h3>Advanced Diploma of Information Technology</h3>
-          <p>Kingston Institute Australia</p>
-          <h4>2018 - 2019 | Completed</h4>
-        </div>
+      <div class="shead reveal" style="margin-top:6rem">
+        <div class="eyebrow">◆ FAQ</div>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faqw">
+        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">What does "No Fix, No Fee" actually mean?<span class="ic">+</span></div><div class="faq-a"><div>If I diagnose a software or hardware issue and it turns out to be genuinely unfixable, you pay nothing for the diagnostic work. You only ever pay when there's a real, working result.</div></div></div>
+        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Do I have to sign a contract or monthly plan?<span class="ic">+</span></div><div class="faq-a"><div>Never. Everything is 100% ad-hoc and pay-as-you-go. No retainers, no lock-ins, no minimum spend. You reach out when you need help, and that's it.</div></div></div>
+        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Which areas of Sydney do you cover?<span class="ic">+</span></div><div class="faq-a"><div>Greater Sydney, with a focus on Western Sydney and the Parramatta region. Many issues can also be resolved remotely, wherever you are in Sydney.</div></div></div>
+        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Can you help outside business hours?<span class="ic">+</span></div><div class="faq-a"><div>Yes. I offer evening and weekend availability specifically to minimise downtime for busy households and small businesses.</div></div></div>
+        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Do you work with both homes and businesses?<span class="ic">+</span></div><div class="faq-a"><div>Absolutely. From family Wi-Fi and smart home setups to Microsoft 365 and Intune device management for small teams — the same engineering precision applies either way.</div></div></div>
+        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Can issues be fixed remotely?<span class="ic">+</span></div><div class="faq-a"><div>Many software, Microsoft 365, and configuration issues can be resolved quickly and securely over the internet using remote desktop tools — often same-day and at a lower cost than an on-site visit.</div></div></div>
       </div>
     </div>
-
-    <div class="cert-chip-wrap">
-      <span class="cert-chip">CCNA</span>
-      <span class="cert-chip">Azure Administrator Associate</span>
-      <span class="cert-chip">Microsoft 365 Fundamentals</span>
-      <span class="cert-chip">AWS Cloud Practitioner</span>
-      <span class="cert-chip">ITIL Foundation</span>
-    </div>
   </section>
+</div>
 
-  <section class="experience section-card" id="experience">
-    <h2 class="heading"><i class="fas fa-briefcase"></i> Professional <span>Experience</span></h2>
-    <p class="section-intro">Recent roles across end-user support, desktop engineering, IT operations, and user-facing technical service.</p>
+<!-- ===== RESUME ===== -->
+<div id="page-resume" class="page">
+  <div class="phero" style="padding-bottom:1rem">
+    <div class="container">
+      <div class="eyebrow" style="margin-bottom:1.1rem">◆ Technical Resume Portal</div>
+      <h1>Systems &amp; Software <span class="grad-text">Engineering</span> background</h1>
+      <p>The professional side of Naresh Adhikari — over four years across IT support, end-user computing, Microsoft 365, Azure, networking and day-to-day IT operations.</p>
+      <div class="hero-btns" style="justify-content:center;margin-top:2rem">
+        <a href="assets/resume.pdf" download class="btn btn-dark">Download Full Resume (PDF) →</a>
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-out">View LinkedIn</a>
+      </div>
+    </div>
+  </div>
 
-    <div class="timeline">
-      <div class="container right">
-        <div class="content">
-          <div class="tag"><h2>Carers NSW</h2></div>
-          <div class="desc">
-            <h3>IT Technology and Support Officer</h3>
-            <p>Jul 2023 - Present</p>
-            <ul class="experience-points">
+  <section class="block" style="padding-top:2rem">
+    <div class="container">
+
+      <!-- SUMMARY + CONTACT -->
+      <div class="about" style="margin-bottom:1rem">
+        <div class="av reveal">
+          <div class="pframe"><img src="assets/images/naresh-profile.png" alt="Naresh Adhikari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
+          <div class="certs">
+            <span class="cert">📍 Sydney, Australia</span>
+            <span class="cert">✉️ nareshadhikari06@gmail.com</span>
+            <span class="cert">📞 0416 218 276</span>
+          </div>
+        </div>
+        <div class="about-b reveal">
+          <h2>Practical support with a strong service mindset</h2>
+          <p>I am an IT professional with strong experience in hardware and software support, Microsoft 365, Azure administration, user access management, troubleshooting, and IT service delivery.</p>
+          <p>I enjoy solving technical issues, improving user experience, and supporting smooth day-to-day operations across business systems and end-user environments.</p>
+          <p>I hold a <strong>Bachelor of Information Technology</strong> and certifications including CCNA, Microsoft Azure Administrator Associate, Microsoft 365 Fundamentals, AWS Cloud Practitioner, and ITIL Foundation.</p>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="shead reveal" style="margin-top:5rem">
+        <div class="eyebrow">◆ Skills &amp; Abilities</div>
+        <h2>Core technical skills</h2>
+        <p>A practical mix of cloud, support, infrastructure, systems administration, and customer-facing IT skills.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why reveal"><div class="wi">☁️</div><div><b>Microsoft 365 &amp; Azure</b><p>Tenant administration, user access management, Azure Administrator Associate certified.</p></div></div>
+        <div class="why reveal"><div class="wi">🌐</div><div><b>Networking</b><p>CCNA certified — LAN/WAN, routing, switching, Wi-Fi, VPN connectivity.</p></div></div>
+        <div class="why reveal"><div class="wi">🛡️</div><div><b>Active Directory</b><p>User accounts, permissions, group policy and access management.</p></div></div>
+        <div class="why reveal"><div class="wi">🖥️</div><div><b>End-User Computing</b><p>Windows, macOS, Android &amp; iOS support, deployments and troubleshooting.</p></div></div>
+        <div class="why reveal"><div class="wi">💾</div><div><b>Backup &amp; Recovery</b><p>Azure Backup, Veeam, data protection and disaster recovery setups.</p></div></div>
+        <div class="why reveal"><div class="wi">📋</div><div><b>IT Service Delivery</b><p>ITIL Foundation — ticketing, incident resolution, documentation &amp; SLAs.</p></div></div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="shead reveal" style="margin-top:5rem">
+        <div class="eyebrow">◆ Professional Experience</div>
+        <h2>Where I've worked</h2>
+        <p>Recent roles across end-user support, desktop engineering, IT operations, and user-facing technical service.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top"><div><h3>IT Technology and Support Officer</h3><div class="tl-org">Carers NSW</div></div><span class="tl-date">Jul 2023 – Present</span></div>
+            <ul class="tl-list">
               <li>Administer and maintain networks, systems, end-user devices, and day-to-day business IT services.</li>
               <li>Support backup, security, upgrades, documentation, staff training, and IT asset management activities.</li>
-              <li>Work with stakeholders to resolve technical issues and improve system efficiency across the organisation.</li>
+              <li>Work with colleagues across the organisation to resolve technical issues and improve system efficiency.</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag"><h2>Transport for NSW</h2></div>
-          <div class="desc">
-            <h3>EUC Field Service Engineer</h3>
-            <p>Jan 2023 - Jul 2023</p>
-            <ul class="experience-points">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top"><div><h3>EUC Field Service Engineer</h3><div class="tl-org">Transport for NSW</div></div><span class="tl-date">Jan 2023 – Jul 2023</span></div>
+            <ul class="tl-list">
               <li>Supported end-user computing environments, field devices, deployments, and enterprise troubleshooting.</li>
               <li>Delivered responsive user support in a fast-paced workplace technology environment.</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag"><h2>FUJIFILM Business Innovation Australia</h2></div>
-          <div class="desc">
-            <h3>Onsite Desktop Engineer</h3>
-            <p>Jul 2022 - Jan 2023</p>
-            <ul class="experience-points">
-              <li>Provided support across Windows, Android, iOS, and Mac environments, including remote and onsite issue resolution.</li>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top"><div><h3>Onsite Desktop Engineer</h3><div class="tl-org">FUJIFILM Business Innovation Australia</div></div><span class="tl-date">Jul 2022 – Jan 2023</span></div>
+            <ul class="tl-list">
+              <li>Provided support across Windows, Android, iOS, and Mac environments, including remote and onsite resolution.</li>
               <li>Handled ticketing, software troubleshooting, Active Directory access, Office 365 support, and VPN connectivity.</li>
               <li>Maintained strong client relationships while delivering reliable technical support and documentation.</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag"><h2>ICTBS / The ictX</h2></div>
-          <div class="desc">
-            <h3>IT Support Technician</h3>
-            <p>Jul 2020 - Jul 2022</p>
-            <ul class="experience-points">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top"><div><h3>IT Support Technician</h3><div class="tl-org">ICTBS / The ictX</div></div><span class="tl-date">Jul 2020 – Jul 2022</span></div>
+            <ul class="tl-list">
               <li>Installed and configured hardware, software, printers, scanners, user accounts, and Microsoft 365 services.</li>
               <li>Supported Active Directory, Azure backup, Veeam backup, VPN access, service requests, and user troubleshooting.</li>
               <li>Provided technical support by phone, email, and remote access while maintaining strong customer service.</li>
@@ -217,86 +797,106 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="contact section-card" id="contact">
-    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-    <p class="section-intro">Feel free to reach out for IT support roles, desktop engineering opportunities, or professional networking.</p>
-
-    <div class="container">
-      <div class="content">
-        <div class="image-box">
-          <img draggable="false" src="./assets/images/contact1.png" alt="Contact illustration" />
+      <!-- EDUCATION -->
+      <div class="shead reveal" style="margin-top:5rem">
+        <div class="eyebrow">◆ Education &amp; Certifications</div>
+        <h2>Qualifications</h2>
+        <p>Continuous learning and hands-on experience have shaped my professional growth in IT.</p>
+      </div>
+      <div class="tracks" style="margin-bottom:2rem">
+        <div class="tcard reveal" style="cursor:default">
+          <div class="tbig" style="background:var(--sky)">🎓</div>
+          <h3 style="font-size:1.3rem">Bachelor of Information Technology</h3>
+          <p style="margin-bottom:.5rem">Victoria University · Sydney Campus</p>
+          <span class="cert">2019 – 2022 · Completed</span>
         </div>
-
-        <form id="contact-form">
-          <div class="form-group">
-            <div class="field">
-              <input type="text" name="name" placeholder="Name" required />
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="field">
-              <input type="email" name="email" placeholder="Email" required />
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="field">
-              <input type="text" name="phone" placeholder="Phone" />
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="message">
-              <textarea placeholder="Message" name="message" required></textarea>
-              <i class="fas fa-comment-dots"></i>
-            </div>
-          </div>
-
-          <div class="button-area">
-            <button type="submit">Send Message <i class="fa fa-paper-plane"></i></button>
-          </div>
-        </form>
+        <div class="tcard reveal" style="cursor:default">
+          <div class="tbig" style="background:var(--lemon)">📜</div>
+          <h3 style="font-size:1.3rem">Advanced Diploma of Information Technology</h3>
+          <p style="margin-bottom:.5rem">Kingston Institute Australia</p>
+          <span class="cert">2018 – 2019 · Completed</span>
+        </div>
       </div>
+      <div class="certs" style="justify-content:center;gap:.75rem;margin-top:1.5rem">
+        <span class="cert">CCNA</span>
+        <span class="cert">Azure Administrator Associate</span>
+        <span class="cert">Microsoft 365 Fundamentals</span>
+        <span class="cert">AWS Cloud Practitioner</span>
+        <span class="cert">ITIL Foundation</span>
+      </div>
+
+      <div class="cta reveal" style="margin-top:5rem">
+        <h2>Hiring or collaborating?</h2>
+        <p>I'm open to IT support roles, desktop engineering opportunities, and professional networking. Let's connect.</p>
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-coral">Connect on LinkedIn →</a>
+      </div>
+
     </div>
   </section>
+</div>
 
-  <section class="footer">
-    <div class="box-container">
-      <div class="box">
-        <h3>Naresh's Portfolio</h3>
-        <p>
-          Thank you for visiting my portfolio. Feel free to connect with me through LinkedIn,
-          GitHub, or email.
-        </p>
+<footer>
+  <div class="container">
+    <div class="fgrid">
+      <div class="fbrand">
+        <div class="brand"><div class="blogo">
+          <svg viewBox="0 0 58 58" aria-label="Naresh Adhikari logo"><rect x="8" y="12" width="42" height="30" rx="5" fill="url(#lg)"/><rect x="23" y="44" width="12" height="4" rx="2" fill="#7C3AED"/><rect x="18" y="49" width="22" height="3.5" rx="1.75" fill="#7C3AED"/><path d="M21 35 V19 L37 35 V19" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="19" r="2.4" fill="#FF6B4A"/></svg>
+        </div><div>Naresh Adhikari <span class="sub">| IT & Systems</span></div></div>
+        <p>Proudly providing cheap, reliable ad-hoc IT support and device setups across Greater Sydney.</p>
       </div>
-
-      <div class="box">
-        <h3>Quick Links</h3>
-        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-        <a href="#contact"><i class="fas fa-chevron-circle-right"></i> contact</a>
-      </div>
-
-      <div class="box">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-phone"></i> +61 0416 218 276</p>
-        <p><i class="fas fa-envelope"></i> nareshadhikari06@gmail.com</p>
-        <p><i class="fas fa-map-marked-alt"></i> Sydney, Australia</p>
+      <div class="fcol"><h4>Navigate</h4><a onclick="go('home')">Home</a><a onclick="go('services')">How We Help</a><a onclick="go('about')">About & Resume</a><a onclick="go('contact')">Request Help</a></div>
+      <div class="fcol"><h4>Services</h4><a onclick="go('services')">Home & Family IT</a><a onclick="go('services')">Business Cloud</a><a onclick="go('services')">PC Repairs & Builds</a><a onclick="go('services')">Tech Strategy</a></div>
+      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener">LinkedIn Profile</a><a onclick="go('resume')">Technical Resume Portal</a><a href="mailto:nareshadhikari06@gmail.com">Email Naresh</a><a href="tel:0416218276">0416 218 276</a></div>
+    </div>
+    <div class="fbot">
+      <div>© 2026 Naresh Adhikari. All Rights Reserved.</div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/iamnarace" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+        <a href="mailto:nareshadhikari06@gmail.com" aria-label="Email">@</a>
       </div>
     </div>
+  </div>
+</footer>
 
-    <h1 class="credit">Designed and maintained by Naresh Adhikari</h1>
-  </section>
+</div>
 
-  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(initReveal,80);
+}
+function toggleMenu(){const m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex'}
+function toggleFaq(el){el.parentElement.classList.toggle('open')}
+function submitForm(){
+  const ids=['fname','fphone','femail','fsuburb','fcat','fdetails','ftime'];
+  for(const id of ids){if(!document.getElementById(id).value.trim()){alert('Please fill in all required fields before submitting.');return}}
+  document.getElementById('formCard').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>30)});
+let revObs;
+function initReveal(){
+  if(revObs)revObs.disconnect();
+  revObs=new IntersectionObserver(en=>{en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');revObs.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.page.active .reveal').forEach(el=>revObs.observe(el));
+}
+function animateCounters(){
+  document.querySelectorAll('.n[data-count]').forEach(el=>{
+    if(el.dataset.done)return;
+    const r=el.getBoundingClientRect();
+    if(r.top<window.innerHeight&&r.bottom>0){
+      el.dataset.done='1';
+      const t=+el.dataset.count,suf=el.dataset.suffix||'';let c=0;const st=t/40;
+      const tk=()=>{c+=st;if(c<t){el.textContent=Math.round(c)+suf;requestAnimationFrame(tk)}else{el.textContent=t+suf}};tk();
+    }
+  });
+}
+window.addEventListener('scroll',animateCounters);
+initReveal();setTimeout(animateCounters,400);
+</script>
 </body>
 </html>
