@@ -235,6 +235,11 @@ section.block{padding:6rem 0;position:relative}
 .pframe .note{font-size:.78rem;color:var(--ink2);text-align:center;padding:0 2rem}
 .certs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
 .cert{font-size:.76rem;padding:.4rem .85rem;border-radius:10px;background:#fff;border:1px solid var(--line2);font-weight:500}
+.cert-flow{overflow:hidden;margin-top:1.5rem;padding:.25rem 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.cert-track{display:flex;width:max-content;gap:.75rem;animation:certslide 32s linear infinite}
+.cert-track:hover{animation-play-state:paused}
+.cert-track .cert{flex:0 0 auto}
+@keyframes certslide{to{transform:translateX(-50%)}}
 .about-b h2{font-size:2.3rem;margin-bottom:1.5rem}
 .about-b p{color:var(--ink2);margin-bottom:1.25rem}
 .about-b p strong{color:var(--ink)}
@@ -293,9 +298,12 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
 .fbrand .brand{margin-bottom:1rem}
 .fbrand p{color:var(--muted);font-size:.9rem;max-width:300px}
-.fcol h4{font-family:'Space Grotesk';font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:1.1rem}
-.fcol a{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;cursor:pointer;transition:color .2s}
+.fcol h4{font-family:'Space Grotesk';font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:1.1rem}
+.fcol a,.fcol>span{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;transition:color .2s}
+.fcol a{cursor:pointer}
 .fcol a:hover{color:var(--indigo)}
+.fcol a.ficon-link{display:flex;align-items:center;gap:.5rem}
+.li-mini{width:20px;height:20px;border-radius:5px;background:#0A66C2;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;font-family:Arial,sans-serif;line-height:1;flex-shrink:0}
 .fbot{border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.85rem}
 .social{display:flex;gap:.6rem}
 .social a{width:40px;height:40px;border-radius:12px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.3s;font-weight:600}
@@ -348,7 +356,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
       <li><a onclick="go('services')">How We Help</a></li>
       <li><a onclick="go('about')">About</a></li>
       <li><a onclick="go('resume')">Resume</a></li>
-      <li><a onclick="go('contact')" class="nav-cta">Request Help →</a></li>
+      <li><a onclick="go('contact')" class="nav-cta">Contact Us →</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -358,7 +366,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <a onclick="go('services');toggleMenu()">How We Help</a>
   <a onclick="go('about');toggleMenu()">About</a>
   <a onclick="go('resume');toggleMenu()">Resume</a>
-  <a onclick="go('contact');toggleMenu()" class="nav-cta" style="text-align:center;border-radius:14px">Request Help →</a>
+  <a onclick="go('contact');toggleMenu()" class="nav-cta" style="text-align:center;border-radius:14px">Contact Us →</a>
 </div>
 
 <!-- ===== HOME ===== -->
@@ -650,7 +658,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           <h2>Let's get you sorted</h2>
           <p>Reach out and Naresh will personally review your request — usually within a few hours.</p>
           <div class="irow"><div class="iico">📍</div><div><div class="l">Service Area</div><div class="v">Greater Sydney, NSW</div></div></div>
-          <div class="irow"><div class="iico">📞</div><div><div class="l">Phone</div><div class="v">0416 218 276</div></div></div>
+          <div class="irow"><div class="iico">📞</div><div><div class="l">Phone</div><div class="v">0416 XXX XXX</div></div></div>
           <div class="irow"><div class="iico">✉️</div><div><div class="l">Email</div><div class="v">nareshadhikari06@gmail.com</div></div></div>
           <div class="irow"><div class="iico">🕐</div><div><div class="l">Availability</div><div class="v">7 days · including evenings</div></div></div>
           <div class="cprom">
@@ -660,22 +668,25 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           </div>
         </div>
         <div class="reveal">
-          <div class="fcard" id="formCard">
-            <div class="fg"><label>Full Name / Business Name <span class="req">*</span></label><input type="text" id="fname" placeholder="e.g. John Smith or Acme Pty Ltd"></div>
+          <form class="fcard" id="formCard" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitForm(event)">
+            <input type="hidden" name="access_key" value="da46b9b3-0660-46e5-9b03-88b520f70124">
+            <input type="hidden" name="subject" value="New support request from nareshadhikari.com.au">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="fg"><label>Full Name / Business Name <span class="req">*</span></label><input type="text" id="fname" name="name" placeholder="e.g. John Smith or Acme Pty Ltd" required></div>
             <div class="fg frow">
-              <div><label>Phone <span class="req">*</span></label><input type="tel" id="fphone" placeholder="04XX XXX XXX"></div>
-              <div><label>Email <span class="req">*</span></label><input type="email" id="femail" placeholder="you@email.com"></div>
+              <div><label>Phone <span class="req">*</span></label><input type="tel" id="fphone" name="phone" placeholder="04XX XXX XXX" required></div>
+              <div><label>Email <span class="req">*</span></label><input type="email" id="femail" name="email" placeholder="you@email.com" required></div>
             </div>
-            <div class="fg"><label>Your Sydney Suburb <span class="req">*</span></label><input type="text" id="fsuburb" placeholder="e.g. Parramatta, Penrith, Blacktown"></div>
+            <div class="fg"><label>Your Sydney Suburb <span class="req">*</span></label><input type="text" id="fsuburb" name="suburb" placeholder="e.g. Parramatta, Penrith, Blacktown" required></div>
             <div class="fg"><label>What track do you need help with? <span class="req">*</span></label>
-              <select id="fcat"><option value="" disabled selected>Select a service type…</option><option>Home Tech Support</option><option>Custom PC &amp; Repairs</option><option>Business Microsoft 365 &amp; Intune</option><option>Tech Strategy &amp; Advice</option></select>
+              <select id="fcat" name="service_type" required><option value="" disabled selected>Select a service type…</option><option>Home Tech Support</option><option>Custom PC &amp; Repairs</option><option>Business Microsoft 365 &amp; Intune</option><option>Tech Strategy &amp; Advice</option></select>
             </div>
-            <div class="fg"><label>Describe the issue or project <span class="req">*</span></label><textarea id="fdetails" placeholder="Tell us what's broken, what you'd like set up, or what you're trying to achieve…"></textarea></div>
+            <div class="fg"><label>Describe the issue or project <span class="req">*</span></label><textarea id="fdetails" name="message" placeholder="Tell us what's broken, what you'd like set up, or what you're trying to achieve…" required></textarea></div>
             <div class="fg"><label>Preferred Service Time <span class="req">*</span></label>
-              <select id="ftime"><option value="" disabled selected>When suits you best?</option><option>Standard Business Hours (Mon–Fri 9–5)</option><option>After-Hours / Evenings</option><option>Weekends</option></select>
+              <select id="ftime" name="preferred_time" required><option value="" disabled selected>When suits you best?</option><option>Standard Business Hours (Mon–Fri 9–5)</option><option>After-Hours / Evenings</option><option>Weekends</option></select>
             </div>
-            <button class="submit-btn" onclick="submitForm()">Submit Support Request →</button>
-          </div>
+            <button class="submit-btn" type="submit">Submit Support Request →</button>
+          </form>
           <div class="fsuccess" id="formSuccess">
             <div class="bc">✓</div><h3>Request received!</h3><p>Thanks for reaching out. Naresh will review your request and get back to you shortly — usually within a few hours.</p>
             <button class="btn btn-out" style="margin-top:1.5rem" onclick="go('home')">← Back to Home</button>
@@ -707,8 +718,8 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
       <h1>Systems &amp; Software <span class="grad-text">Engineering</span> background</h1>
       <p>The professional side of Naresh Adhikari — over four years across IT support, end-user computing, Microsoft 365, Azure, networking and day-to-day IT operations.</p>
       <div class="hero-btns" style="justify-content:center;margin-top:2rem">
-        <a href="assets/resume.pdf" download class="btn btn-dark">Download Full Resume (PDF) →</a>
-        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-out">View LinkedIn</a>
+        <button onclick="go('contact')" class="btn btn-dark">Contact Us →</button>
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-out"><span class="li-mini" aria-hidden="true">in</span>View LinkedIn</a>
       </div>
     </div>
   </div>
@@ -723,7 +734,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           <div class="certs">
             <span class="cert">📍 Sydney, Australia</span>
             <span class="cert">✉️ nareshadhikari06@gmail.com</span>
-            <span class="cert">📞 0416 218 276</span>
+            <span class="cert">📞 0416 XXX XXX</span>
           </div>
         </div>
         <div class="about-b reveal">
@@ -821,12 +832,29 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           <span class="cert">2018 – 2019 · Completed</span>
         </div>
       </div>
-      <div class="certs" style="justify-content:center;gap:.75rem;margin-top:1.5rem">
-        <span class="cert">CCNA</span>
-        <span class="cert">Azure Administrator Associate</span>
-        <span class="cert">Microsoft 365 Fundamentals</span>
-        <span class="cert">AWS Cloud Practitioner</span>
-        <span class="cert">ITIL Foundation</span>
+      <div class="cert-flow" aria-label="Certifications">
+        <div class="cert-track">
+          <span class="cert">ISC2 CC (Certified in Cybersecurity)</span>
+          <span class="cert">AWS Cloud Practitioner</span>
+          <span class="cert">ITIL Foundation</span>
+          <span class="cert">CCNA 200-301</span>
+          <span class="cert">Azure Administrator Associate</span>
+          <span class="cert">Microsoft 365</span>
+          <span class="cert">Introduction to Cybersecurity</span>
+          <span class="cert">Network Defense Essentials (NDE)</span>
+          <span class="cert">Cloud Computing Security</span>
+          <span class="cert">Microsoft Dynamics 365 Basics</span>
+          <span class="cert" aria-hidden="true">ISC2 CC (Certified in Cybersecurity)</span>
+          <span class="cert" aria-hidden="true">AWS Cloud Practitioner</span>
+          <span class="cert" aria-hidden="true">ITIL Foundation</span>
+          <span class="cert" aria-hidden="true">CCNA 200-301</span>
+          <span class="cert" aria-hidden="true">Azure Administrator Associate</span>
+          <span class="cert" aria-hidden="true">Microsoft 365</span>
+          <span class="cert" aria-hidden="true">Introduction to Cybersecurity</span>
+          <span class="cert" aria-hidden="true">Network Defense Essentials (NDE)</span>
+          <span class="cert" aria-hidden="true">Cloud Computing Security</span>
+          <span class="cert" aria-hidden="true">Microsoft Dynamics 365 Basics</span>
+        </div>
       </div>
 
       <div class="cta reveal" style="margin-top:5rem">
@@ -848,9 +876,9 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div><div>Naresh Adhikari <span class="sub">| IT & Systems</span></div></div>
         <p>Proudly providing cheap, reliable ad-hoc IT support and device setups across Greater Sydney.</p>
       </div>
-      <div class="fcol"><h4>Navigate</h4><a onclick="go('home')">Home</a><a onclick="go('services')">How We Help</a><a onclick="go('about')">About & Resume</a><a onclick="go('contact')">Request Help</a></div>
+      <div class="fcol"><h4>Navigate</h4><a onclick="go('home')">Home</a><a onclick="go('services')">How We Help</a><a onclick="go('about')">About & Resume</a><a onclick="go('contact')">Contact Us</a></div>
       <div class="fcol"><h4>Services</h4><a onclick="go('services')">Home & Family IT</a><a onclick="go('services')">Business Cloud</a><a onclick="go('services')">PC Repairs & Builds</a><a onclick="go('services')">Tech Strategy</a></div>
-      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener">LinkedIn Profile</a><a onclick="go('resume')">Technical Resume Portal</a><a href="mailto:nareshadhikari06@gmail.com">Email Naresh</a><a href="tel:0416218276">0416 218 276</a></div>
+      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="ficon-link"><span class="li-mini" aria-hidden="true">in</span>LinkedIn Profile</a><a onclick="go('resume')">Technical Resume Portal</a><a href="mailto:nareshadhikari06@gmail.com">Email Naresh</a><span>ABN 28 579 398 740</span></div>
     </div>
     <div class="fbot">
       <div>© 2026 Naresh Adhikari. All Rights Reserved.</div>
@@ -874,9 +902,29 @@ function go(id){
 }
 function toggleMenu(){const m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex'}
 function toggleFaq(el){el.parentElement.classList.toggle('open')}
-function submitForm(){
+async function submitForm(event){
+  event.preventDefault();
   const ids=['fname','fphone','femail','fsuburb','fcat','fdetails','ftime'];
   for(const id of ids){if(!document.getElementById(id).value.trim()){alert('Please fill in all required fields before submitting.');return}}
+  const form=document.getElementById('formCard');
+  const btn=form.querySelector('.submit-btn');
+  const originalText=btn.textContent;
+  if(form.elements.access_key.value==='YOUR_WEB3FORMS_ACCESS_KEY'){
+    alert('This contact form needs a Web3Forms access key before it can send email.');
+    return;
+  }
+  btn.disabled=true;
+  btn.textContent='Sending...';
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    const data=await res.json();
+    if(!res.ok||!data.success)throw new Error(data.message||'Form submission failed');
+  }catch(err){
+    alert('Sorry, the request could not be sent. Please email nareshadhikari06@gmail.com.');
+    btn.disabled=false;
+    btn.textContent=originalText;
+    return;
+  }
   document.getElementById('formCard').style.display='none';
   document.getElementById('formSuccess').style.display='block';
 }
