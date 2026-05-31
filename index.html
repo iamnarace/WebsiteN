@@ -171,6 +171,8 @@ section.block{padding:6rem 0;position:relative}
 .tlist li{display:flex;gap:10px;align-items:flex-start;padding:.4rem 0;font-size:.93rem;color:var(--ink2)}
 .tlist li .c{color:var(--mintD);font-weight:700;flex-shrink:0}
 .tarrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-family:'Space Grotesk';transition:gap .3s}
+.track-cta{margin-top:.2rem;padding:.7rem 1rem;border-radius:12px;background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.tcard.biz .track-cta{background:var(--indigo)}
 .tcard:hover .tarrow{gap:14px}
 
 /* PROCESS */
@@ -224,6 +226,12 @@ section.block{padding:6rem 0;position:relative}
 .sitem b{display:block;font-family:'Space Grotesk';font-size:.98rem;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
 .sitem b .d{width:7px;height:7px;border-radius:50%;background:var(--coral);flex-shrink:0}
 .sitem p{font-size:.86rem;color:var(--muted);line-height:1.55}
+.service-tabs{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin:0 auto 2.5rem}
+.service-tab{border:1px solid var(--line2);background:#fff;border-radius:14px;padding:.85rem 1.2rem;font-weight:700;font-family:'Space Grotesk';cursor:pointer;transition:.25s;box-shadow:0 4px 18px rgba(0,0,0,.03)}
+.service-tab:hover{border-color:var(--indigo);color:var(--indigo);transform:translateY(-2px)}
+.service-band{margin:3rem 0 1.5rem;padding:1.6rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-band h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:.5rem}
+.service-band p{color:var(--ink2);max-width:720px}
 
 /* ABOUT */
 .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start}
@@ -437,7 +445,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <p>Whether it's your family's devices or your growing business, you get the same enterprise discipline at honest, local prices.</p>
       </div>
       <div class="tracks">
-        <div class="tcard home reveal" onclick="go('services')">
+        <div class="tcard home reveal" onclick="go('services','home-services')">
           <div class="tbig">🏠</div>
           <h3>For Your Home &amp; Family</h3>
           <p>Keeping your household securely connected. From blazing-fast Wi-Fi setups and interactive smart home ecosystems to parental filters and family device cleanups.</p>
@@ -447,9 +455,9 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
             <li><span class="c">✓</span> Network-level parental controls &amp; content filters</li>
             <li><span class="c">✓</span> Family device cleanups, repairs &amp; setups</li>
           </ul>
-          <span class="tarrow">View home services →</span>
+          <span class="tarrow track-cta">View home services →</span>
         </div>
-        <div class="tcard biz reveal" onclick="go('services')">
+        <div class="tcard biz reveal" onclick="go('services','business-services')">
           <div class="tbig">🏢</div>
           <h3>For Your Small Business</h3>
           <p>Act as your casual, on-demand remote helpdesk. Managing your Microsoft 365 users, locking down devices with Intune, and deploying automated backups.</p>
@@ -459,7 +467,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
             <li><span class="c">✓</span> Single Point of Contact (SPOC) helpdesk</li>
             <li><span class="c">✓</span> Automated cloud backups &amp; monitoring</li>
           </ul>
-          <span class="tarrow">View business services →</span>
+          <span class="tarrow track-cta">View business services →</span>
         </div>
       </div>
     </div>
@@ -552,6 +560,10 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </div>
   <section class="block" style="padding-top:1.5rem">
     <div class="container">
+      <div class="service-tabs reveal">
+        <button class="service-tab" onclick="document.getElementById('home-services').scrollIntoView({behavior:'smooth',block:'start'})">Home services</button>
+        <button class="service-tab" onclick="document.getElementById('business-services').scrollIntoView({behavior:'smooth',block:'start'})">Business services</button>
+      </div>
 
       <div class="svc reveal">
         <div class="svc-h"><div class="svc-ico si1">💡</div><div><div class="num">SERVICE 01</div><h2>Technology Strategy &amp; Pre-Purchase Advice</h2><div class="tag">Smart planning before you spend a dollar.</div></div></div>
@@ -562,6 +574,12 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           <div class="sitem"><b><span class="d"></span>Vendor &amp; plan comparisons</b><p>Independent comparisons of NBN plans, routers, NAS devices, cloud storage and business software subscriptions.</p></div>
           <div class="sitem"><b><span class="d"></span>Future-proofing guidance</b><p>Advice on what to upgrade now, what can wait, and what to retire — so you scale smoothly without overspending.</p></div>
         </div>
+      </div>
+
+      <div class="service-band reveal" id="home-services">
+        <div class="eyebrow">◆ Home Services</div>
+        <h2>Home &amp; family technology support</h2>
+        <p>Clear, practical help for Wi-Fi, devices, repairs, smart home setups, family safety, and everyday tech headaches.</p>
       </div>
 
       <div class="svc reveal">
@@ -586,6 +604,12 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
+      <div class="service-band reveal" id="business-services">
+        <div class="eyebrow">◆ Business Services</div>
+        <h2>Small business IT, cloud, security &amp; automation</h2>
+        <p>Business-focused support for Microsoft 365, secure devices, cloud operations, networking, backup, cybersecurity basics, and practical automation. No recruitment or custom software development services.</p>
+      </div>
+
       <div class="svc reveal">
         <div class="svc-h"><div class="svc-ico si4">☁️</div><div><div class="num">SERVICE 04</div><h2>Small Business Cloud &amp; Remote Helpdesk</h2><div class="tag">Your on-demand virtual IT department.</div></div></div>
         <p class="svc-intro">Small businesses deserve enterprise-grade IT without the enterprise price tag. I act as your single, dedicated point of contact — securing your devices, managing your cloud, and resolving issues fast.</p>
@@ -596,6 +620,19 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           <div class="sitem"><b><span class="d"></span>Secure remote troubleshooting</b><p>Immediate incident resolution over the internet using secure remote desktop tools for fast, budget-friendly fixes.</p></div>
           <div class="sitem"><b><span class="d"></span>Proactive health monitoring</b><p>Lightweight background alerts to monitor drive failures or critical security patches, even after hours.</p></div>
           <div class="sitem"><b><span class="d"></span>Backup &amp; disaster recovery</b><p>Automated, tested backups so your business data is always recoverable if the worst happens.</p></div>
+        </div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si3">🛡️</div><div><div class="num">SERVICE 05</div><h2>Business Systems, Security &amp; Automation</h2><div class="tag">Practical improvements for growing teams.</div></div></div>
+        <p class="svc-intro">When your business needs more than break-fix support, I can help clean up your systems, improve security, simplify workflows and make your cloud tools work together properly — without pushing you into a big managed-services contract.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Modern workplace setup</b><p>Microsoft 365, Teams, SharePoint, OneDrive and email configuration so staff can collaborate securely from anywhere.</p></div>
+          <div class="sitem"><b><span class="d"></span>Cloud transformation &amp; optimisation</b><p>Practical Azure, AWS and SaaS guidance for migrations, storage, accounts, backups and cost-conscious cloud usage.</p></div>
+          <div class="sitem"><b><span class="d"></span>Infrastructure &amp; network services</b><p>Business Wi-Fi, routers, switches, VPN access, internet failover, printer networks and tidy office network design.</p></div>
+          <div class="sitem"><b><span class="d"></span>Cybersecurity &amp; compliance basics</b><p>MFA, password hygiene, device hardening, backup checks, access reviews and practical cyber awareness for small teams.</p></div>
+          <div class="sitem"><b><span class="d"></span>Digital transformation consulting</b><p>Reviewing manual processes, software subscriptions and technology gaps so you can modernise in sensible stages.</p></div>
+          <div class="sitem"><b><span class="d"></span>AI-assisted automation</b><p>Combining AI tools and workflow automation to reduce repetitive admin, improve triage, organise information and save time.</p></div>
         </div>
       </div>
 
@@ -894,11 +931,15 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 </div>
 
 <script>
-function go(id){
+function go(id,target){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-  setTimeout(initReveal,80);
+  if(target){
+    setTimeout(()=>document.getElementById(target)?.scrollIntoView({behavior:'smooth',block:'start'}),80);
+  }else{
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  setTimeout(initReveal,120);
 }
 function toggleMenu(){const m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex'}
 function toggleFaq(el){el.parentElement.classList.toggle('open')}
