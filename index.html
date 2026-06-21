@@ -125,7 +125,7 @@ nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px r
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .hcard-top{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
 .hcard-av{width:46px;height:46px;border-radius:13px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk';overflow:hidden;flex-shrink:0}
-.hcard-av img{width:100%;height:100%;object-fit:cover}
+.hcard-av picture,.hcard-av img{width:100%;height:100%;display:block}.hcard-av img{object-fit:cover}
 .hcard-top b{display:block;font-size:.92rem}.hcard-top small{color:var(--muted);font-size:.78rem}
 .hrow{display:flex;align-items:center;gap:11px;padding:.7rem;border-radius:14px;background:var(--paper);margin-bottom:.5rem;transition:.3s}
 .hrow:hover{transform:translateX(4px)}
@@ -237,7 +237,7 @@ section.block{padding:6rem 0;position:relative}
 .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start}
 .av{position:sticky;top:7rem}
 .pframe{aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line2);position:relative;background:linear-gradient(160deg,var(--lilac),var(--sky))}
-.pframe img{width:100%;height:100%;object-fit:cover;display:block}
+.pframe picture,.pframe img{width:100%;height:100%;display:block}.pframe img{object-fit:cover}
 .pframe .ph-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem}
 .pinit{width:104px;height:104px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.3rem;font-weight:700;font-family:'Space Grotesk';box-shadow:0 10px 30px rgba(79,70,229,.3)}
 .pframe .note{font-size:.78rem;color:var(--ink2);text-align:center;padding:0 2rem}
@@ -404,7 +404,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           </div>
         </div>
         <div class="hcard">
-          <div class="hcard-top"><div class="hcard-av"><img src="assets/images/naresh-profile.png" alt="Naresh Adhikari" onerror="this.outerHTML='NA'"></div><div><b>Naresh Adhikari</b><small>Systems &amp; Software Engineer</small></div></div>
+          <div class="hcard-top"><div class="hcard-av"><picture class="hcard-picture"><source type="image/avif" srcset="assets/images/optimized/naresh-profile-320.avif 320w, assets/images/optimized/naresh-profile-640.avif 640w" sizes="46px"><source type="image/webp" srcset="assets/images/optimized/naresh-profile-320.webp 320w, assets/images/optimized/naresh-profile-640.webp 640w" sizes="46px"><img src="assets/images/naresh-profile.png" width="1673" height="2048" alt="Naresh Adhikari" decoding="async" fetchpriority="high"></picture></div><div><b>Naresh Adhikari</b><small>Systems &amp; Software Engineer</small></div></div>
           <div class="hrow"><div class="i" style="background:var(--sky)">📶</div><div class="x"><b>Wi-Fi &amp; mesh setup</b><small>0 dead zones · whole home</small></div><span class="s">Done</span></div>
           <div class="hrow"><div class="i" style="background:var(--lilac)">🔐</div><div class="x"><b>Microsoft 365 + Intune</b><small>12 business devices secured</small></div><span class="s">Live</span></div>
           <div class="hrow"><div class="i" style="background:var(--peach)">⚡</div><div class="x"><b>SSD speed upgrade</b><small>4× faster boot time</small></div><span class="s">Done</span></div>
@@ -657,7 +657,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     <div class="container">
       <div class="about">
         <div class="av reveal">
-          <div class="pframe"><img src="assets/images/aboutme.png" alt="Naresh Adhikari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
+          <div class="pframe"><picture class="portrait-picture"><source type="image/avif" srcset="assets/images/optimized/aboutme-320.avif 320w, assets/images/optimized/aboutme-640.avif 640w, assets/images/optimized/aboutme-960.avif 960w" sizes="(max-width:900px) 100vw, 40vw"><source type="image/webp" srcset="assets/images/optimized/aboutme-320.webp 320w, assets/images/optimized/aboutme-640.webp 640w, assets/images/optimized/aboutme-960.webp 960w" sizes="(max-width:900px) 100vw, 40vw"><img src="assets/images/aboutme.png" width="1536" height="1024" alt="Naresh Adhikari" loading="lazy" decoding="async"></picture><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
           <div class="certs"><span class="cert">CCNA</span><span class="cert">Azure Administrator</span><span class="cert">Microsoft 365 Fundamentals</span><span class="cert">AWS Cloud Practitioner</span><span class="cert">ITIL Foundation</span><span class="cert">B. Information Technology</span></div>
         </div>
         <div class="about-b reveal">
@@ -767,7 +767,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
       <!-- SUMMARY + CONTACT -->
       <div class="about" style="margin-bottom:1rem">
         <div class="av reveal">
-          <div class="pframe"><img src="assets/images/naresh-profile.png" alt="Naresh Adhikari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
+          <div class="pframe"><picture class="portrait-picture"><source type="image/avif" srcset="assets/images/optimized/naresh-profile-320.avif 320w, assets/images/optimized/naresh-profile-640.avif 640w, assets/images/optimized/naresh-profile-960.avif 960w" sizes="(max-width:900px) 100vw, 40vw"><source type="image/webp" srcset="assets/images/optimized/naresh-profile-320.webp 320w, assets/images/optimized/naresh-profile-640.webp 640w, assets/images/optimized/naresh-profile-960.webp 960w" sizes="(max-width:900px) 100vw, 40vw"><img src="assets/images/naresh-profile.png" width="1673" height="2048" alt="Naresh Adhikari" loading="lazy" decoding="async"></picture><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
           <div class="certs">
             <span class="cert">📍 Sydney, Australia</span>
             <span class="cert">✉️ nareshadhikari06@gmail.com</span>

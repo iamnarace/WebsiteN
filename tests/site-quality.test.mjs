@@ -19,3 +19,22 @@ test('public metadata assets and crawl files exist', () => {
   assert.match(readText('robots.txt'), /Sitemap: https:\/\/nareshadhikari\.com\.au\/sitemap\.xml/);
   assert.match(readText('sitemap.xml'), /<loc>https:\/\/nareshadhikari\.com\.au\/<\/loc>/);
 });
+
+test('large portraits use responsive AVIF and WebP sources', () => {
+  const html = readText('index.html');
+  for (const name of ['naresh-profile', 'aboutme']) {
+    for (const width of [320, 640, 960]) {
+      for (const format of ['avif', 'webp']) {
+        const path = `assets/images/optimized/${name}-${width}.${format}`;
+        assert.ok(exists(path), `${path} missing`);
+        assert.ok(statSync(join(root, path)).size < 450_000, `${path} too large`);
+      }
+    }
+    assert.match(html, new RegExp(`optimized/${name}-320\\.avif`));
+    assert.match(html, new RegExp(`optimized/${name}-640\\.webp`));
+  }
+  assert.match(html, /<picture class="hcard-picture">/);
+  assert.match(html, /<picture class="portrait-picture">/);
+  assert.match(html, /width="1673" height="2048"/);
+  assert.match(html, /width="1536" height="1024"/);
+});
