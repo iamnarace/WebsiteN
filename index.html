@@ -272,6 +272,14 @@ section.block{padding:6rem 0;position:relative}
 .faq-a div{padding:0 1.6rem 1.4rem}
 .faq.open .faq-a{max-height:340px}
 
+/* HELPFUL GUIDES */
+.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.guide-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform var(--motion-base) var(--ease-gentle),box-shadow var(--motion-base) ease}
+.guide-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
+.guide-toggle{width:100%;padding:2rem;border:0;background:none;color:inherit;text-align:left;cursor:pointer;font:inherit}
+.guide-toggle h3{font-size:1.35rem;margin:.8rem 0}.guide-toggle p,.guide-panel{color:var(--ink2)}
+.guide-panel{padding:0 2rem 2rem}.guide-panel h4{margin:1.2rem 0 .5rem}.guide-panel ul{padding-left:1.2rem}
+
 /* CTA */
 .cta{border-radius:34px;padding:5rem 3rem;text-align:center;background:var(--grad);color:#fff;position:relative;overflow:hidden}
 .cta::after{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,.12);border-radius:50%;top:-100px;right:-60px}
@@ -358,7 +366,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 @media(max-width:768px){
   .nav-links{display:none}.hamburger{display:flex}.container{padding:0 1.25rem}
   section.block{padding:4rem 0}.svc,.fcard{padding:1.75rem}.cta{padding:3rem 1.5rem}
-  .frow{grid-template-columns:1fr}.stats{padding:2.5rem 1.5rem}.fgrid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}
+  .frow{grid-template-columns:1fr}.stats{padding:2.5rem 1.5rem}.fgrid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.guide-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -547,6 +555,49 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <div class="testi reveal"><div class="stars">★★★★★</div><q>Naresh sorted our office Microsoft 365 and locked down every laptop with Intune in an afternoon. No contract, no fuss — exactly what a small business needs.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)">SP</div><div><b>Sarah P.</b><small>Small business owner · Parramatta</small></div></div></div>
         <div class="testi reveal"><div class="stars">★★★★★</div><q>Our Wi-Fi finally reaches every room and the kids' parental controls actually work. He explained everything in plain English. Highly recommend.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#FF6B4A,#7C3AED)">MT</div><div><b>Michael T.</b><small>Family home · Blacktown</small></div></div></div>
         <div class="testi reveal"><div class="stars">★★★★★</div><q>Built me a custom PC that runs flawlessly and didn't try to upsell parts I didn't need. Genuinely knows the engineering side. Will use again.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#1659B0,#0F7A52)">JL</div><div><b>James L.</b><small>Content creator · Penrith</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELPFUL LOCAL GUIDES -->
+  <section class="block" id="helpful-guides">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">◆ Helpful Local Guides</div>
+        <h2>Practical advice before you book support</h2>
+        <p>Clear steps for common Sydney home and small-business technology problems.</p>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card reveal">
+          <button type="button" class="guide-toggle" id="guide-button-wifi" aria-expanded="false" aria-controls="guide-panel-wifi" onclick="toggleDisclosure(this)">
+            <span class="eyebrow">Home Wi-Fi</span>
+            <h3>How to troubleshoot slow or unreliable Wi-Fi at home</h3>
+            <p>Seven practical checks before replacing your router or calling your provider.</p>
+          </button>
+          <div class="guide-panel" id="guide-panel-wifi" role="region" aria-labelledby="guide-button-wifi" hidden>
+            <h4>Start with the connection</h4>
+            <p>Test beside the router, compare Wi-Fi with a wired connection if possible, then restart the NBN box and router once.</p>
+            <h4>Check placement and interference</h4>
+            <ul><li>Use an open, central, elevated position.</li><li>Avoid metal cabinets, microwaves, thick masonry, and crowded power boards.</li><li>Use 5 GHz nearby and 2.4 GHz farther away.</li></ul>
+            <h4>Know when mesh helps</h4>
+            <p>Mesh can help larger or multi-storey homes, but cannot repair weak NBN service. If wired speed is healthy but rooms have dead zones, a measured Wi-Fi survey is the useful next step.</p>
+          </div>
+        </article>
+        <article class="guide-card reveal">
+          <button type="button" class="guide-toggle" id="guide-button-m365" aria-expanded="false" aria-controls="guide-panel-m365" onclick="toggleDisclosure(this)">
+            <span class="eyebrow">Small Business Security</span>
+            <h3>Microsoft 365 security essentials for small businesses</h3>
+            <p>A practical baseline that reduces account takeover, phishing, and avoidable data loss.</p>
+          </button>
+          <div class="guide-panel" id="guide-panel-m365" role="region" aria-labelledby="guide-button-m365" hidden>
+            <h4>Protect identities first</h4>
+            <ul><li>Require multifactor authentication for every user.</li><li>Use separate everyday and administrator accounts.</li><li>Review sign-ins, forwarding rules, and inactive accounts.</li></ul>
+            <h4>Protect devices and information</h4>
+            <ul><li>Keep Windows, browsers, Office, and security tools updated.</li><li>Use encryption, screen locks, and managed endpoint protection.</li><li>Maintain an independent backup for critical cloud data.</li></ul>
+            <h4>Make phishing reportable</h4>
+            <p>Give staff a simple way to report suspicious messages. Review users, devices, sharing links, mailbox rules, and recovery details quarterly.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>

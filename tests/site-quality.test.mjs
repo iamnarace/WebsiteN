@@ -64,3 +64,13 @@ test('Gentle Flow and reduced-motion paths are present', () => {
   ];
   patterns.forEach((pattern) => assert.match(html, pattern));
 });
+
+test('home contains two useful local guides', () => {
+  const html = readText('index.html');
+  assert.match(html, /id="helpful-guides"/);
+  assert.match(html, /How to troubleshoot slow or unreliable Wi-Fi at home/);
+  assert.match(html, /Microsoft 365 security essentials for small businesses/);
+  assert.equal((html.match(/class="guide-card reveal"/g) || []).length, 2);
+  assert.match(html, /id="guide-panel-wifi"/);
+  assert.match(html, /id="guide-panel-m365"/);
+});
