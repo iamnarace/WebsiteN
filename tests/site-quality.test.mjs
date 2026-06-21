@@ -38,3 +38,14 @@ test('large portraits use responsive AVIF and WebP sources', () => {
   assert.match(html, /width="1673" height="2048"/);
   assert.match(html, /width="1536" height="1024"/);
 });
+
+test('interactive elements expose semantic controls and state', () => {
+  const html = readText('index.html');
+  assert.doesNotMatch(html, /<a(?![^>]*href=)[^>]*onclick=/);
+  assert.match(html, /class="hamburger"[^>]*aria-expanded="false"[^>]*aria-controls="mm"/);
+  assert.match(html, /<button[^>]*class="tcard home/);
+  assert.match(html, /class="faq-q"[^>]*aria-expanded="false"[^>]*aria-controls="faq-panel-1"/);
+  for (const id of ['fname', 'fphone', 'femail', 'fsuburb', 'fcat', 'fdetails', 'ftime']) {
+    assert.match(html, new RegExp(`<label for="${id}"`));
+  }
+});

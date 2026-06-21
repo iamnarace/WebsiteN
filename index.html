@@ -82,15 +82,16 @@ nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px r
 .blogo svg{width:38px;height:38px;display:block;filter:drop-shadow(0 4px 10px rgba(79,70,229,.3))}
 .brand .sub{color:var(--muted);font-weight:400;font-size:.82rem}
 .nav-links{display:flex;gap:.3rem;list-style:none;align-items:center}
-.nav-links a{padding:.55rem 1rem;border-radius:100px;font-size:.9rem;color:var(--ink2);font-weight:500;cursor:pointer;transition:all .2s}
-.nav-links a:hover{background:var(--paper);color:var(--ink)}
+.nav-action,.footer-action{border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.nav-links .nav-action{padding:.55rem 1rem;border-radius:100px;font-size:.9rem;color:var(--ink2);font-weight:500;transition:all .2s}
+.nav-links .nav-action:hover,.nav-links .nav-action[aria-current="page"]{background:var(--paper);color:var(--ink)}
 .nav-cta{background:var(--ink)!important;color:#fff!important;font-weight:600!important;transition:all .3s!important}
 .nav-cta:hover{background:var(--indigo)!important;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .hamburger span{width:24px;height:2.5px;background:var(--ink);border-radius:3px;transition:.3s}
-.mobile-menu{position:fixed;top:78px;left:1rem;right:1rem;z-index:999;background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.25rem;flex-direction:column;gap:.4rem;display:none;box-shadow:0 20px 50px rgba(0,0,0,.12)}
-.mobile-menu a{padding:.85rem 1rem;border-radius:14px;color:var(--ink2);font-weight:500;cursor:pointer}
-.mobile-menu a:hover{background:var(--paper)}
+.mobile-menu{position:fixed;top:78px;left:1rem;right:1rem;z-index:999;background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.25rem;flex-direction:column;gap:.4rem;display:flex;box-shadow:0 20px 50px rgba(0,0,0,.12)}.mobile-menu[hidden]{display:none}
+.mobile-menu .nav-action{padding:.85rem 1rem;border-radius:14px;color:var(--ink2);font-weight:500;width:100%}
+.mobile-menu .nav-action:hover{background:var(--paper)}
 
 .page{display:none;animation:pi .5s ease}.page.active{display:block}
 @keyframes pi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -161,7 +162,7 @@ section.block{padding:6rem 0;position:relative}
 
 /* DUAL TRACK */
 .tracks{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
-.tcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:2.5rem;transition:.4s;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.03)}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:2.5rem;transition:.4s;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.03);width:100%;text-align:left;color:inherit;font:inherit}
 .tcard:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.08);border-color:var(--line2)}
 .tbig{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin-bottom:1.5rem}
 .tcard.home .tbig{background:var(--sky)}.tcard.biz .tbig{background:var(--lemon)}
@@ -260,7 +261,7 @@ section.block{padding:6rem 0;position:relative}
 .faqw{max-width:780px;margin:0 auto}
 .faq{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:.9rem;overflow:hidden;transition:.3s}
 .faq:hover{border-color:var(--line2)}
-.faq-q{padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Space Grotesk';font-weight:600;font-size:1.02rem;gap:1rem}
+.faq-q{padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Space Grotesk';font-weight:600;font-size:1.02rem;gap:1rem;width:100%;text-align:left;color:inherit;border:0;background:none}
 .faq-q .ic{color:var(--coral);font-size:1.4rem;transition:transform .35s;flex-shrink:0}
 .faq.open .faq-q .ic{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--ink2);font-size:.94rem}
@@ -307,9 +308,9 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 .fbrand .brand{margin-bottom:1rem}
 .fbrand p{color:var(--muted);font-size:.9rem;max-width:300px}
 .fcol h4{font-family:'Space Grotesk';font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:1.1rem}
-.fcol a,.fcol>span{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;transition:color .2s}
-.fcol a{cursor:pointer}
-.fcol a:hover{color:var(--indigo)}
+.fcol a,.fcol .footer-action,.fcol>span{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;transition:color .2s}
+.fcol a,.fcol .footer-action{cursor:pointer}
+.fcol a:hover,.fcol .footer-action:hover{color:var(--indigo)}
 .fcol a.ficon-link{display:flex;align-items:center;gap:.5rem}
 .li-mini{width:20px;height:20px;border-radius:5px;background:#0A66C2;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;font-family:Arial,sans-serif;line-height:1;flex-shrink:0}
 .fbot{border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.85rem}
@@ -356,25 +357,25 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 
 <nav id="nav">
   <div class="nav-inner">
-    <div class="brand" onclick="go('home')"><div class="blogo">
+    <button type="button" class="brand nav-action" data-view="home" onclick="go('home')"><div class="blogo">
       <svg viewBox="0 0 58 58" aria-label="Naresh Adhikari logo"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect x="8" y="12" width="42" height="30" rx="5" fill="url(#lg)"/><rect x="23" y="44" width="12" height="4" rx="2" fill="#7C3AED"/><rect x="18" y="49" width="22" height="3.5" rx="1.75" fill="#7C3AED"/><path d="M21 35 V19 L37 35 V19" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="19" r="2.4" fill="#FF6B4A"/></svg>
-    </div><div>Naresh Adhikari <span class="sub">| IT & Systems</span></div></div>
+    </div><span>Naresh Adhikari <span class="sub">| IT & Systems</span></span></button>
     <ul class="nav-links">
-      <li><a onclick="go('home')">Home</a></li>
-      <li><a onclick="go('services')">How We Help</a></li>
-      <li><a onclick="go('about')">About</a></li>
-      <li><a onclick="go('resume')">Resume</a></li>
-      <li><a onclick="go('contact')" class="nav-cta">Contact Us →</a></li>
+      <li><button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button></li>
+      <li><button type="button" class="nav-action" data-view="services" onclick="go('services')">How We Help</button></li>
+      <li><button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button></li>
+      <li><button type="button" class="nav-action" data-view="resume" onclick="go('resume')">Resume</button></li>
+      <li><button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')">Contact Us →</button></li>
     </ul>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<div class="mobile-menu" id="mm">
-  <a onclick="go('home');toggleMenu()">Home</a>
-  <a onclick="go('services');toggleMenu()">How We Help</a>
-  <a onclick="go('about');toggleMenu()">About</a>
-  <a onclick="go('resume');toggleMenu()">Resume</a>
-  <a onclick="go('contact');toggleMenu()" class="nav-cta" style="text-align:center;border-radius:14px">Contact Us →</a>
+<div class="mobile-menu" id="mm" hidden>
+  <button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button>
+  <button type="button" class="nav-action" data-view="services" onclick="go('services')">How We Help</button>
+  <button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button>
+  <button type="button" class="nav-action" data-view="resume" onclick="go('resume')">Resume</button>
+  <button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')" style="text-align:center;border-radius:14px">Contact Us →</button>
 </div>
 
 <!-- ===== HOME ===== -->
@@ -445,7 +446,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <p>Whether it's your family's devices or your growing business, you get the same enterprise discipline at honest, local prices.</p>
       </div>
       <div class="tracks">
-        <div class="tcard home reveal" onclick="go('services','home-services')">
+        <button type="button" class="tcard home reveal" onclick="go('services','home-services')">
           <div class="tbig">🏠</div>
           <h3>For Your Home &amp; Family</h3>
           <p>Keeping your household securely connected. From blazing-fast Wi-Fi setups and interactive smart home ecosystems to parental filters and family device cleanups.</p>
@@ -456,8 +457,8 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
             <li><span class="c">✓</span> Family device cleanups, repairs &amp; setups</li>
           </ul>
           <span class="tarrow track-cta">View home services →</span>
-        </div>
-        <div class="tcard biz reveal" onclick="go('services','business-services')">
+        </button>
+        <button type="button" class="tcard biz reveal" onclick="go('services','business-services')">
           <div class="tbig">🏢</div>
           <h3>For Your Small Business</h3>
           <p>Act as your casual, on-demand remote helpdesk. Managing your Microsoft 365 users, locking down devices with Intune, and deploying automated backups.</p>
@@ -468,7 +469,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
             <li><span class="c">✓</span> Automated cloud backups &amp; monitoring</li>
           </ul>
           <span class="tarrow track-cta">View business services →</span>
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -709,17 +710,17 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
             <input type="hidden" name="access_key" value="da46b9b3-0660-46e5-9b03-88b520f70124">
             <input type="hidden" name="subject" value="New support request from nareshadhikari.com.au">
             <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-            <div class="fg"><label>Full Name / Business Name <span class="req">*</span></label><input type="text" id="fname" name="name" placeholder="e.g. John Smith or Acme Pty Ltd" required></div>
+            <div class="fg"><label for="fname">Full Name / Business Name <span class="req">*</span></label><input type="text" id="fname" name="name" placeholder="e.g. John Smith or Acme Pty Ltd" required></div>
             <div class="fg frow">
-              <div><label>Phone <span class="req">*</span></label><input type="tel" id="fphone" name="phone" placeholder="04XX XXX XXX" required></div>
-              <div><label>Email <span class="req">*</span></label><input type="email" id="femail" name="email" placeholder="you@email.com" required></div>
+              <div><label for="fphone">Phone <span class="req">*</span></label><input type="tel" id="fphone" name="phone" placeholder="04XX XXX XXX" required></div>
+              <div><label for="femail">Email <span class="req">*</span></label><input type="email" id="femail" name="email" placeholder="you@email.com" required></div>
             </div>
-            <div class="fg"><label>Your Sydney Suburb <span class="req">*</span></label><input type="text" id="fsuburb" name="suburb" placeholder="e.g. Parramatta, Penrith, Blacktown" required></div>
-            <div class="fg"><label>What track do you need help with? <span class="req">*</span></label>
+            <div class="fg"><label for="fsuburb">Your Sydney Suburb <span class="req">*</span></label><input type="text" id="fsuburb" name="suburb" placeholder="e.g. Parramatta, Penrith, Blacktown" required></div>
+            <div class="fg"><label for="fcat">What track do you need help with? <span class="req">*</span></label>
               <select id="fcat" name="service_type" required><option value="" disabled selected>Select a service type…</option><option>Home Tech Support</option><option>Custom PC &amp; Repairs</option><option>Business Microsoft 365 &amp; Intune</option><option>Tech Strategy &amp; Advice</option></select>
             </div>
-            <div class="fg"><label>Describe the issue or project <span class="req">*</span></label><textarea id="fdetails" name="message" placeholder="Tell us what's broken, what you'd like set up, or what you're trying to achieve…" required></textarea></div>
-            <div class="fg"><label>Preferred Service Time <span class="req">*</span></label>
+            <div class="fg"><label for="fdetails">Describe the issue or project <span class="req">*</span></label><textarea id="fdetails" name="message" placeholder="Tell us what's broken, what you'd like set up, or what you're trying to achieve…" required></textarea></div>
+            <div class="fg"><label for="ftime">Preferred Service Time <span class="req">*</span></label>
               <select id="ftime" name="preferred_time" required><option value="" disabled selected>When suits you best?</option><option>Standard Business Hours (Mon–Fri 9–5)</option><option>After-Hours / Evenings</option><option>Weekends</option></select>
             </div>
             <button class="submit-btn" type="submit">Submit Support Request →</button>
@@ -736,12 +737,12 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <h2>Common questions</h2>
       </div>
       <div class="faqw">
-        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">What does "No Fix, No Fee" actually mean?<span class="ic">+</span></div><div class="faq-a"><div>If I diagnose a software or hardware issue and it turns out to be genuinely unfixable, you pay nothing for the diagnostic work. You only ever pay when there's a real, working result.</div></div></div>
-        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Do I have to sign a contract or monthly plan?<span class="ic">+</span></div><div class="faq-a"><div>Never. Everything is 100% ad-hoc and pay-as-you-go. No retainers, no lock-ins, no minimum spend. You reach out when you need help, and that's it.</div></div></div>
-        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Which areas of Sydney do you cover?<span class="ic">+</span></div><div class="faq-a"><div>Greater Sydney, with a focus on Western Sydney and the Parramatta region. Many issues can also be resolved remotely, wherever you are in Sydney.</div></div></div>
-        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Can you help outside business hours?<span class="ic">+</span></div><div class="faq-a"><div>Yes. I offer evening and weekend availability specifically to minimise downtime for busy households and small businesses.</div></div></div>
-        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Do you work with both homes and businesses?<span class="ic">+</span></div><div class="faq-a"><div>Absolutely. From family Wi-Fi and smart home setups to Microsoft 365 and Intune device management for small teams — the same engineering precision applies either way.</div></div></div>
-        <div class="faq reveal"><div class="faq-q" onclick="toggleFaq(this)">Can issues be fixed remotely?<span class="ic">+</span></div><div class="faq-a"><div>Many software, Microsoft 365, and configuration issues can be resolved quickly and securely over the internet using remote desktop tools — often same-day and at a lower cost than an on-site visit.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-1" aria-expanded="false" aria-controls="faq-panel-1" onclick="toggleDisclosure(this)">What does "No Fix, No Fee" actually mean?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-1" role="region" aria-labelledby="faq-button-1" hidden><div>If I diagnose a software or hardware issue and it turns out to be genuinely unfixable, you pay nothing for the diagnostic work. You only ever pay when there's a real, working result.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-2" aria-expanded="false" aria-controls="faq-panel-2" onclick="toggleDisclosure(this)">Do I have to sign a contract or monthly plan?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-2" role="region" aria-labelledby="faq-button-2" hidden><div>Never. Everything is 100% ad-hoc and pay-as-you-go. No retainers, no lock-ins, no minimum spend. You reach out when you need help, and that's it.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-3" aria-expanded="false" aria-controls="faq-panel-3" onclick="toggleDisclosure(this)">Which areas of Sydney do you cover?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-3" role="region" aria-labelledby="faq-button-3" hidden><div>Greater Sydney, with a focus on Western Sydney and the Parramatta region. Many issues can also be resolved remotely, wherever you are in Sydney.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-4" aria-expanded="false" aria-controls="faq-panel-4" onclick="toggleDisclosure(this)">Can you help outside business hours?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-4" role="region" aria-labelledby="faq-button-4" hidden><div>Yes. I offer evening and weekend availability specifically to minimise downtime for busy households and small businesses.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-5" aria-expanded="false" aria-controls="faq-panel-5" onclick="toggleDisclosure(this)">Do you work with both homes and businesses?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-5" role="region" aria-labelledby="faq-button-5" hidden><div>Absolutely. From family Wi-Fi and smart home setups to Microsoft 365 and Intune device management for small teams — the same engineering precision applies either way.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-6" aria-expanded="false" aria-controls="faq-panel-6" onclick="toggleDisclosure(this)">Can issues be fixed remotely?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-6" role="region" aria-labelledby="faq-button-6" hidden><div>Many software, Microsoft 365, and configuration issues can be resolved quickly and securely over the internet using remote desktop tools — often same-day and at a lower cost than an on-site visit.</div></div></div>
       </div>
     </div>
   </section>
@@ -913,9 +914,9 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div><div>Naresh Adhikari <span class="sub">| IT & Systems</span></div></div>
         <p>Proudly providing cheap, reliable ad-hoc IT support and device setups across Greater Sydney.</p>
       </div>
-      <div class="fcol"><h4>Navigate</h4><a onclick="go('home')">Home</a><a onclick="go('services')">How We Help</a><a onclick="go('about')">About & Resume</a><a onclick="go('contact')">Contact Us</a></div>
-      <div class="fcol"><h4>Services</h4><a onclick="go('services')">Home & Family IT</a><a onclick="go('services')">Business Cloud</a><a onclick="go('services')">PC Repairs & Builds</a><a onclick="go('services')">Tech Strategy</a></div>
-      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="ficon-link"><span class="li-mini" aria-hidden="true">in</span>LinkedIn Profile</a><a onclick="go('resume')">Technical Resume Portal</a><a href="mailto:nareshadhikari06@gmail.com">Email Naresh</a><span>ABN 28 579 398 740</span></div>
+      <div class="fcol"><h4>Navigate</h4><button type="button" class="footer-action" data-view="home" onclick="go('home')">Home</button><button type="button" class="footer-action" data-view="services" onclick="go('services')">How We Help</button><button type="button" class="footer-action" data-view="about" onclick="go('about')">About & Resume</button><button type="button" class="footer-action" data-view="contact" onclick="go('contact')">Contact Us</button></div>
+      <div class="fcol"><h4>Services</h4><button type="button" class="footer-action" onclick="go('services','home-services')">Home & Family IT</button><button type="button" class="footer-action" onclick="go('services','business-services')">Business Cloud</button><button type="button" class="footer-action" onclick="go('services','home-services')">PC Repairs & Builds</button><button type="button" class="footer-action" onclick="go('services')">Tech Strategy</button></div>
+      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="ficon-link"><span class="li-mini" aria-hidden="true">in</span>LinkedIn Profile</a><button type="button" class="footer-action" data-view="resume" onclick="go('resume')">Technical Resume Portal</button><a href="mailto:nareshadhikari06@gmail.com">Email Naresh</a><span>ABN 28 579 398 740</span></div>
     </div>
     <div class="fbot">
       <div>© 2026 Naresh Adhikari. All Rights Reserved.</div>
@@ -941,8 +942,20 @@ function go(id,target){
   }
   setTimeout(initReveal,120);
 }
-function toggleMenu(){const m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex'}
-function toggleFaq(el){el.parentElement.classList.toggle('open')}
+function toggleMenu(force){
+  const menu=document.getElementById('mm'),trigger=document.querySelector('.hamburger');
+  const open=typeof force==='boolean'?force:trigger.getAttribute('aria-expanded')!=='true';
+  trigger.setAttribute('aria-expanded',String(open));
+  trigger.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+  menu.hidden=!open;
+}
+function toggleDisclosure(button){
+  const panel=document.getElementById(button.getAttribute('aria-controls'));
+  const open=button.getAttribute('aria-expanded')==='true';
+  button.setAttribute('aria-expanded',String(!open));
+  panel.hidden=open;
+  button.closest('.faq,.guide-card')?.classList.toggle('open',!open);
+}
 async function submitForm(event){
   event.preventDefault();
   const ids=['fname','fphone','femail','fsuburb','fcat','fdetails','ftime'];
