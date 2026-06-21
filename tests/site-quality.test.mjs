@@ -49,3 +49,18 @@ test('interactive elements expose semantic controls and state', () => {
     assert.match(html, new RegExp(`<label for="${id}"`));
   }
 });
+
+test('Gentle Flow and reduced-motion paths are present', () => {
+  const html = readText('index.html');
+  const patterns = [
+    /--motion-fast:\s*160ms/,
+    /--motion-page:\s*360ms/,
+    /classList\.add\('is-leaving'\)/,
+    /aria-current/,
+    /:focus-visible/,
+    /@media\s*\(prefers-reduced-motion:\s*reduce\)/,
+    /scroll-behavior:\s*auto/,
+    /animation-duration:\s*\.01ms/,
+  ];
+  patterns.forEach((pattern) => assert.match(html, pattern));
+});
