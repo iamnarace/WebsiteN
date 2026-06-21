@@ -74,3 +74,11 @@ test('home contains two useful local guides', () => {
   assert.match(html, /id="guide-panel-wifi"/);
   assert.match(html, /id="guide-panel-m365"/);
 });
+
+test('confirmed artifacts are removed and audit exists', () => {
+  for (const path of ['favicon.svg.txt', 'social-share.svg.txt', 'README.md.txt', 'README-UPDATE.txt']) {
+    assert.equal(exists(path), false, `${path} should be removed`);
+  }
+  assert.ok(exists('docs/asset-audit.md'));
+  assert.match(readText('docs/asset-audit.md'), /Unreferenced candidates/);
+});
