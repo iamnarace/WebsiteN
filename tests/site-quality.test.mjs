@@ -10,9 +10,10 @@ const exists = (path) => existsSync(join(root, path));
 
 test('public metadata assets and crawl files exist', () => {
   const html = readText('index.html');
-  assert.match(html, /href="favicon\.svg"/);
+  assert.match(html, /href="assets\/images\/1touch-it-logo-icon\.png"/);
+  assert.match(html, /assets\/images\/top-band-logo\.png/);
   assert.match(html, /assets\/images\/social-share\.png/);
-  for (const path of ['favicon.svg', 'assets/images/social-share.png', 'robots.txt', 'sitemap.xml']) {
+  for (const path of ['assets/images/1touch-it-logo-icon.png', 'assets/images/top-band-logo.png', 'assets/images/social-share.png', 'robots.txt', 'sitemap.xml']) {
     assert.ok(exists(path), `${path} missing`);
   }
   assert.ok(statSync(join(root, 'assets/images/social-share.png')).size > 10_000);
@@ -20,7 +21,7 @@ test('public metadata assets and crawl files exist', () => {
   assert.match(readText('sitemap.xml'), /<loc>https:\/\/nareshadhikari\.com\.au\/<\/loc>/);
 });
 
-test('large portraits use responsive AVIF and WebP sources', () => {
+test('founder imagery remains optional while responsive image assets stay available', () => {
   const html = readText('index.html');
   for (const name of ['naresh-profile', 'aboutme']) {
     for (const width of [320, 640, 960]) {
@@ -30,13 +31,11 @@ test('large portraits use responsive AVIF and WebP sources', () => {
         assert.ok(statSync(join(root, path)).size < 450_000, `${path} too large`);
       }
     }
-    assert.match(html, new RegExp(`optimized/${name}-320\\.avif`));
-    assert.match(html, new RegExp(`optimized/${name}-640\\.webp`));
   }
-  assert.match(html, /<picture class="hcard-picture">/);
-  assert.match(html, /<picture class="portrait-picture">/);
-  assert.match(html, /width="1673" height="2048"/);
-  assert.match(html, /width="1536" height="1024"/);
+  assert.match(html, /Direct, personal support/);
+  assert.match(html, /With an experienced IT professional/);
+  assert.match(html, /assets\/images\/top-band-logo\.png/);
+  assert.doesNotMatch(html, /hcard-picture/);
 });
 
 test('interactive elements expose semantic controls and state', () => {
@@ -45,7 +44,7 @@ test('interactive elements expose semantic controls and state', () => {
   assert.match(html, /class="hamburger"[^>]*aria-expanded="false"[^>]*aria-controls="mm"/);
   assert.match(html, /<button[^>]*class="tcard home/);
   assert.match(html, /class="faq-q"[^>]*aria-expanded="false"[^>]*aria-controls="faq-panel-1"/);
-  for (const id of ['fname', 'fphone', 'femail', 'fsuburb', 'fcat', 'fdetails', 'ftime']) {
+  for (const id of ['fname', 'fphone', 'femail', 'fsuburb', 'fcat', 'fdetails', 'fcontactmethod', 'ftime']) {
     assert.match(html, new RegExp(`<label for="${id}"`));
   }
 });
@@ -73,6 +72,27 @@ test('home contains two useful local guides', () => {
   assert.equal((html.match(/class="guide-card reveal"/g) || []).length, 2);
   assert.match(html, /id="guide-panel-wifi"/);
   assert.match(html, /id="guide-panel-m365"/);
+});
+
+test('homepage merges preferred local sections in the requested order', () => {
+  const html = readText('index.html');
+  const order = [
+    'Our Triple-Freedom Promise',
+    'Practical technology support for real life and business',
+    'Getting help is refreshingly simple',
+    'Why 1Touch IT',
+    'Everything at home, in one place',
+    'Helpful Local Guides',
+    'Trusted Locally',
+    'Need practical help with your technology?',
+  ];
+  let lastIndex = -1;
+  for (const marker of order) {
+    const currentIndex = html.indexOf(marker);
+    assert.notEqual(currentIndex, -1, `${marker} missing`);
+    assert.ok(currentIndex > lastIndex, `${marker} out of order`);
+    lastIndex = currentIndex;
+  }
 });
 
 test('confirmed artifacts are removed and audit exists', () => {
