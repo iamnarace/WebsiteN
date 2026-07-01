@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/home.js": {
+      "includeFiles": "index.html"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/home"
+    }
+  ]
+}
