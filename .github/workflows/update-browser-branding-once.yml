@@ -1,0 +1,64 @@
+name: Update browser branding once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/update-browser-branding-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-browser-branding:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Update title and favicon reference
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("index.html")
+          text = path.read_bytes().decode("utf-8-sig")
+
+          old_title = "<title>1Touch IT | Professional IT Support in Sydney</title>"
+          new_title = "<title>1Touch IT</title>"
+          if old_title in text:
+              text = text.replace(old_title, new_title, 1)
+          elif new_title not in text:
+              raise SystemExit("Expected browser title was not found in index.html")
+
+          old_icon = '<link rel="icon" type="image/png" href="assets/images/1touch-it-logo-icon.png">'
+          new_icon = '<link rel="icon" type="image/x-icon" href="/favicon.ico">'
+          if old_icon in text:
+              text = text.replace(old_icon, new_icon, 1)
+          elif new_icon not in text:
+              raise SystemExit("Expected favicon link was not found in index.html")
+
+          path.write_bytes(text.encode("utf-8"))
+          PY
+
+          cat > /tmp/favicon.b64 <<'B64'
+          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
+          B64
+          sed -i 's/^[[:space:]]*//' /tmp/favicon.b64
+          base64 -d /tmp/favicon.b64 > favicon.ico
+
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html favicon.ico
+          if git diff --cached --quiet; then
+            echo "No browser-branding changes were required."
+            exit 0
+          fi
+          git commit -m "chore: update browser title and favicon"
+          git push origin HEAD:main
