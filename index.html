@@ -1,27 +1,54 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional IT support, computer repairs & smart home automation for Sydney homes and small businesses. Enterprise-grade expertise in plain English. 100% ad-hoc, No Fix No Fee. By systems engineer Naresh Adhikari.">
+<meta name="description" content="Professional IT support for homes and small businesses across Greater Sydney, including Microsoft 365, Wi-Fi, computer repairs, websites, smart-home support and digital solutions.">
 <meta name="keywords" content="IT support Sydney, computer repairs Sydney, smart home automation, Microsoft 365 support Sydney, Intune device management, custom PC builds, Western Sydney IT support, Parramatta IT support, NBN Wi-Fi setup">
-<meta name="author" content="Naresh Adhikari">
-<meta property="og:title" content="Naresh Adhikari | IT & Systems Support — Sydney">
-<meta property="og:description" content="Enterprise-grade IT support for Sydney homes & businesses. 100% ad-hoc, No Fix No Fee, evenings & weekends.">
+<meta name="author" content="1Touch IT">
+<meta property="og:title" content="1Touch IT | Professional IT Support in Sydney">
+<meta property="og:description" content="Professional IT support for homes and small businesses across Greater Sydney, including Microsoft 365, Wi-Fi, computer repairs, websites, smart-home support and digital solutions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nareshadhikari.com.au/">
 <meta property="og:image" content="https://nareshadhikari.com.au/assets/images/social-share.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Naresh Adhikari | IT & Systems Support">
+<meta property="og:site_name" content="1Touch IT">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Naresh Adhikari | IT & Systems Support — Sydney">
-<meta name="twitter:description" content="Enterprise-grade IT support for Sydney homes & businesses. 100% ad-hoc, No Fix No Fee.">
+<meta name="twitter:title" content="1Touch IT | Professional IT Support in Sydney">
+<meta name="twitter:description" content="Professional IT support for homes and small businesses across Greater Sydney, including Microsoft 365, Wi-Fi, computer repairs, websites, smart-home support and digital solutions.">
 <meta name="twitter:image" content="https://nareshadhikari.com.au/assets/images/social-share.png">
 <meta name="theme-color" content="#4F46E5">
-<title>Naresh Adhikari | Professional IT & Systems Support — Sydney</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>1Touch IT | Professional IT Support in Sydney</title>
+<link rel="icon" type="image/png" href="assets/images/1touch-it-logo-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "1Touch IT",
+  "url": "https://nareshadhikari.com.au/",
+  "image": "https://nareshadhikari.com.au/assets/images/social-share.png",
+  "description": "Professional IT support for homes and small businesses across Greater Sydney, including Microsoft 365, Wi-Fi, computer repairs, websites, smart-home support and digital solutions.",
+  "areaServed": [
+    "Greater Sydney",
+    "Western Sydney",
+    "Parramatta"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Naresh Adhikari"
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "1Touch IT"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/iamnarace/",
+    "https://homelifehub.com.au"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -117,10 +144,17 @@ nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px r
 .btn{padding:.95rem 1.85rem;border-radius:14px;font-weight:600;font-size:.98rem;cursor:pointer;transition:all .28s;border:none;font-family:'Inter';display:inline-flex;align-items:center;gap:8px}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-dark:hover{background:var(--indigo);transform:translateY(-2px);box-shadow:0 12px 28px rgba(79,70,229,.3)}
+.btn-light{background:#fff;color:var(--ink);border:1.5px solid rgba(79,70,229,.1);box-shadow:0 14px 32px rgba(11,11,15,.08)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(79,70,229,.14);border-color:rgba(79,70,229,.2)}
 .btn-coral{background:var(--coral);color:#20100C}
 .btn-coral:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,107,74,.35)}
 .btn-out{background:#fff;color:var(--ink);border:1.5px solid var(--line2)}
 .btn-out:hover{border-color:var(--ink);transform:translateY(-2px)}
+.icon{width:1.1em;height:1.1em;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.icon-sm{width:18px;height:18px}
+.icon-md{width:20px;height:20px}
+.icon-lg{width:24px;height:24px}
+.icon-xl{width:28px;height:28px}
 .hero-trust{display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;animation:fi 1s .8s both}
 .hero-trust .t{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--ink2);font-weight:500}
 .chk{width:20px;height:20px;border-radius:50%;background:var(--mint);color:var(--mintD);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}
@@ -128,10 +162,10 @@ nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px r
 /* hero card */
 .hcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:1.6rem;box-shadow:0 30px 70px rgba(0,0,0,.08);animation:fi 1.1s .55s both,fl 6s ease-in-out infinite}
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hcard-top{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
-.hcard-av{width:46px;height:46px;border-radius:13px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk';overflow:hidden;flex-shrink:0}
-.hcard-av picture,.hcard-av img{width:100%;height:100%;display:block}.hcard-av img{object-fit:cover}
-.hcard-top b{display:block;font-size:.92rem}.hcard-top small{color:var(--muted);font-size:.78rem}
+.hcard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.25rem}
+.hcard-top b{display:block;font-size:.98rem}.hcard-top small{color:var(--muted);font-size:.8rem}
+.hcard-kicker{display:inline-flex;align-items:center;gap:.45rem;margin-bottom:.35rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.hcard-note{font-size:.72rem;color:var(--muted);margin-top:.2rem}
 .hrow{display:flex;align-items:center;gap:11px;padding:.7rem;border-radius:14px;background:var(--paper);margin-bottom:.5rem;transition:.3s}
 .hrow:hover{transform:translateX(4px)}
 .hrow .i{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
@@ -142,7 +176,7 @@ nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px r
 .marquee{border-block:1px solid var(--line);padding:1.4rem 0;margin:2rem 0 0;overflow:hidden;white-space:nowrap}
 .mq-track{display:inline-flex;gap:3.5rem;animation:mq 26s linear infinite;align-items:center}
 .mq-track span{font-family:'Space Grotesk';font-weight:600;font-size:1.05rem;color:var(--muted);display:inline-flex;align-items:center;gap:3.5rem}
-.mq-track span::after{content:'✦';color:var(--coral)}
+.mq-track span::after{content:'+';color:var(--coral)}
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* SECTION */
@@ -165,7 +199,7 @@ section.block{padding:6rem 0;position:relative}
 .gcard p{font-size:.94rem;color:var(--ink2)}
 
 /* DUAL TRACK */
-.tracks{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
+.tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.75rem}
 .tcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:2.5rem;transition:.4s;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.03);width:100%;text-align:left;color:inherit;font:inherit}
 .tcard:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.08);border-color:var(--line2)}
 .tbig{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin-bottom:1.5rem}
@@ -178,29 +212,47 @@ section.block{padding:6rem 0;position:relative}
 .tarrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-family:'Space Grotesk';transition:gap .3s}
 .track-cta{margin-top:.2rem;padding:.7rem 1rem;border-radius:12px;background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.08)}
 .tcard.biz .track-cta{background:var(--indigo)}
+.tcard.digital .tbig{background:var(--lilac)}
+.tcard.digital .track-cta{background:var(--coral);color:#20100C}
 .tcard:hover .tarrow{gap:14px}
 
 /* PROCESS */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;counter-reset:s}
-.step{position:relative;padding:2rem 1.5rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);transition:.35s}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem;counter-reset:s}
+.step{position:relative;padding:2rem 1.5rem;background:linear-gradient(180deg,#FFFFFF,#FCFBF8);border:1px solid #E8E4DB;border-radius:var(--r);transition:.35s;box-shadow:0 12px 28px rgba(15,25,45,.05)}
 .step:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
 .step::before{counter-increment:s;content:'0' counter(s);font-family:'Space Grotesk';font-size:2.6rem;font-weight:700;color:var(--line2);display:block;margin-bottom:.6rem;line-height:1}
 .step h4{font-size:1.12rem;margin-bottom:.5rem}
 .step p{font-size:.88rem;color:var(--muted)}
+.step:nth-child(1){background:linear-gradient(180deg,#FFFFFF,#F7FBFF)}
+.step:nth-child(2){background:linear-gradient(180deg,#FFFFFF,#FCFBFF)}
+.step:nth-child(3){background:linear-gradient(180deg,#FFFFFF,#FFF9F5)}
+.step:nth-child(4){background:linear-gradient(180deg,#FFFFFF,#F7FCF8)}
 
 /* WHY / FEATURES small */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
-.why{display:flex;gap:14px;align-items:flex-start;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:var(--rs);transition:.3s}
-.why:hover{border-color:var(--line2);transform:translateY(-3px)}
-.why .wi{width:44px;height:44px;border-radius:12px;background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.why{display:flex;gap:14px;align-items:flex-start;padding:1.5rem;background:linear-gradient(180deg,#FFFFFF,#FCFBF8);border:1px solid #E8E4DB;border-radius:var(--rs);transition:.3s;box-shadow:0 12px 28px rgba(15,25,45,.05)}
+.why:hover{border-color:var(--line2);transform:translateY(-3px);box-shadow:0 18px 36px rgba(15,25,45,.08)}
+.why .wi{width:50px;height:50px;border-radius:14px;background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.65)}
 .why b{display:block;font-family:'Space Grotesk';font-size:1.02rem;margin-bottom:.3rem}
 .why p{font-size:.86rem;color:var(--muted)}
+.why:nth-child(1) .wi{background:#EAF3FF;color:var(--skyD)}
+.why:nth-child(2) .wi{background:#F2EEFF;color:var(--lilacD)}
+.why:nth-child(3) .wi{background:#FFF0EA;color:var(--peachD)}
+.why:nth-child(4) .wi{background:#EEF8F4;color:var(--mintD)}
+.why:nth-child(5) .wi{background:#FFF7DA;color:var(--lemonD)}
+.why:nth-child(6) .wi{background:#EAF7F9;color:#0F7A8B}
 
 /* STATS */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;text-align:center;background:var(--ink);border-radius:32px;padding:3.5rem 2.5rem;color:#fff}
+.stats.stats-light{background:linear-gradient(135deg,#F8FBFF,#EEF4FF 58%,#F6FCFA);border:1px solid var(--line);box-shadow:0 16px 44px rgba(15,25,45,.06);color:var(--ink)}
+.stat{display:grid;justify-items:center;gap:.7rem}
 .stat .n{font-family:'Space Grotesk';font-size:clamp(2.4rem,5vw,3.4rem);font-weight:700;line-height:1;color:#fff}
+.stats.stats-light .stat .n{color:var(--ink)}
 .stat .n em{font-style:normal;color:var(--coral)}
-.stat .l{color:#B5B5C2;font-size:.9rem;margin-top:.6rem}
+.stat .l{color:#B5B5C2;font-size:.9rem;margin-top:.1rem}
+.stats.stats-light .stat .l{color:var(--ink2)}
+.stat-icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--indigo);box-shadow:0 12px 24px rgba(79,70,229,.08)}
+.stats.stats-light .stat-icon{background:rgba(255,255,255,.9);border:1px solid rgba(79,70,229,.08)}
 
 /* TESTIMONIALS */
 .tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem}
@@ -216,12 +268,15 @@ section.block{padding:6rem 0;position:relative}
 .phero{padding:11rem 0 3rem;text-align:center}
 .phero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);margin-bottom:1.2rem}
 .phero p{color:var(--ink2);font-size:1.18rem;max-width:640px;margin:0 auto}
+.service-hero .eyebrow{background:var(--sky);color:var(--skyD)}
+.service-hero h1{font-size:clamp(3rem,6vw,5rem);max-width:1040px;margin:0 auto 1.5rem}
+.service-hero p{max-width:780px;font-size:1.18rem}
 .svc{background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.5rem;margin-bottom:1.75rem;transition:.35s}
 .svc:hover{box-shadow:0 16px 50px rgba(0,0,0,.06);border-color:var(--line2)}
 .svc-h{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.75rem;flex-wrap:wrap}
 .svc-ico{width:60px;height:60px;border-radius:17px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0}
 .si1{background:var(--lemon)}.si2{background:var(--sky)}.si3{background:var(--lilac)}.si4{background:var(--mint)}
-.svc-h .num{font-family:'Space Grotesk';font-size:.76rem;color:var(--muted);letter-spacing:.1em;font-weight:600}
+.svc-h .num{font-family:'Space Grotesk';font-size:.76rem;color:var(--muted);letter-spacing:.1em;font-weight:700;text-transform:uppercase}
 .svc-h h2{font-size:1.65rem;margin:.25rem 0}
 .svc-h .tag{color:var(--ink2);font-size:.94rem}
 .svc-intro{color:var(--ink2);font-size:.96rem;margin-bottom:1.5rem;max-width:760px}
@@ -232,7 +287,7 @@ section.block{padding:6rem 0;position:relative}
 .sitem b .d{width:7px;height:7px;border-radius:50%;background:var(--coral);flex-shrink:0}
 .sitem p{font-size:.86rem;color:var(--muted);line-height:1.55}
 .service-tabs{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin:0 auto 2.5rem}
-.service-tab{border:1px solid var(--line2);background:#fff;border-radius:14px;padding:.85rem 1.2rem;font-weight:700;font-family:'Space Grotesk';cursor:pointer;transition:.25s;box-shadow:0 4px 18px rgba(0,0,0,.03)}
+.service-tab{border:1px solid var(--line2);background:#fff;border-radius:18px;padding:1rem 1.5rem;font-weight:700;font-family:'Space Grotesk';cursor:pointer;transition:.25s;box-shadow:0 8px 22px rgba(15,25,45,.05)}
 .service-tab:hover{border-color:var(--indigo);color:var(--indigo);transform:translateY(-2px)}
 .service-band{margin:3rem 0 1.5rem;padding:1.6rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .service-band h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:.5rem}
@@ -260,6 +315,15 @@ section.block{padding:6rem 0;position:relative}
 .resume-cta{margin-top:2.5rem;border-radius:26px;padding:2.5rem;background:var(--lemon);position:relative;overflow:hidden}
 .resume-cta h3{font-size:1.35rem;margin-bottom:.75rem}
 .resume-cta p{color:var(--ink2);margin-bottom:1.5rem;font-size:.94rem}
+.about-company{max-width:920px;margin:0 auto}
+.about-company .qblock{max-width:720px}
+.founder-summary{display:grid;grid-template-columns:.78fr 1.22fr;gap:3rem;align-items:start;margin-bottom:1rem}
+.founder-profile-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:1.75rem;box-shadow:0 14px 34px rgba(15,25,45,.05)}
+.founder-profile-card .pframe{aspect-ratio:4/4.65}
+.founder-profile-card .certs{justify-content:flex-start}
+.founder-intro h2{font-size:2.2rem;margin-bottom:1.25rem}
+.founder-intro p{color:var(--ink2);margin-bottom:1.2rem}
+.founder-mini-note{display:inline-flex;padding:.5rem .9rem;border-radius:999px;background:var(--sky);color:var(--skyD);font-weight:700;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
 
 /* FAQ */
 .faqw{max-width:780px;margin:0 auto}
@@ -279,6 +343,9 @@ section.block{padding:6rem 0;position:relative}
 .guide-toggle{width:100%;padding:2rem;border:0;background:none;color:inherit;text-align:left;cursor:pointer;font:inherit}
 .guide-toggle h3{font-size:1.35rem;margin:.8rem 0}.guide-toggle p,.guide-panel{color:var(--ink2)}
 .guide-panel{padding:0 2rem 2rem}.guide-panel h4{margin:1.2rem 0 .5rem}.guide-panel ul{padding-left:1.2rem}
+.section-panel{background:#fff;border:1px solid var(--line);border-radius:34px;padding:clamp(2rem,4vw,3rem);box-shadow:0 18px 52px rgba(10,16,31,.05)}
+.section-panel h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:1rem}
+.section-panel p{color:var(--ink2);font-size:1.05rem;max-width:640px;margin:0 auto 2rem}
 
 /* CTA */
 .cta{border-radius:34px;padding:5rem 3rem;text-align:center;background:var(--grad);color:#fff;position:relative;overflow:hidden}
@@ -286,6 +353,10 @@ section.block{padding:6rem 0;position:relative}
 .cta h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.1rem;color:#fff;position:relative}
 .cta p{font-size:1.15rem;opacity:.9;max-width:560px;margin:0 auto 2.25rem;position:relative}
 .cta .btn-coral{position:relative}
+.cta.cta-light{background:linear-gradient(135deg,#F8FBFF,#F3F7FC 58%,#FFFFFF);color:var(--ink);border:1px solid var(--line);box-shadow:0 24px 54px rgba(15,25,45,.06)}
+.cta.cta-light::after{background:rgba(79,70,229,.08)}
+.cta.cta-light h2{color:var(--ink)}
+.cta.cta-light p{color:var(--ink2);opacity:1}
 
 /* CONTACT */
 .cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
@@ -296,7 +367,7 @@ section.block{padding:6rem 0;position:relative}
 .irow .l{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 .irow .v{font-size:.98rem;font-weight:500}
 .cprom{margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--line)}
-.cprom .p{display:flex;gap:10px;align-items:center;padding:.4rem 0;font-size:.9rem;color:var(--ink2)}
+.cprom .p{display:flex;gap:10px;align-items:flex-start;padding:.4rem 0;font-size:.9rem;color:var(--ink2)}
 .cprom .p .c{color:var(--mintD);font-weight:700}
 .fcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.5rem;box-shadow:0 10px 40px rgba(0,0,0,.04)}
 .fg{margin-bottom:1.3rem}
@@ -317,14 +388,16 @@ textarea{resize:vertical;min-height:120px}
 /* FOOTER */
 footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.fbrand{display:flex;flex-direction:column;justify-content:flex-start}
 .fbrand .brand{margin-bottom:1rem}
-.fbrand p{color:var(--muted);font-size:.9rem;max-width:300px}
+.fbrand p{color:var(--muted);font-size:.9rem;max-width:320px;line-height:1.75}
 .fcol h4{font-family:'Space Grotesk';font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:1.1rem}
 .fcol a,.fcol .footer-action,.fcol>span{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;transition:color .2s}
 .fcol a,.fcol .footer-action{cursor:pointer}
 .fcol a:hover,.fcol .footer-action:hover{color:var(--indigo)}
 .fcol a.ficon-link{display:flex;align-items:center;gap:.5rem}
-.li-mini{width:20px;height:20px;border-radius:5px;background:#0A66C2;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;font-family:Arial,sans-serif;line-height:1;flex-shrink:0}
+.footer-mark{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;color:#0A66C2}
+.fcol{display:flex;flex-direction:column;align-items:flex-start}
 .fbot{border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.85rem}
 .social{display:flex;gap:.6rem}
 .social a{width:40px;height:40px;border-radius:12px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.3s;font-weight:600}
@@ -368,6 +441,188 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   section.block{padding:4rem 0}.svc,.fcard{padding:1.75rem}.cta{padding:3rem 1.5rem}
   .frow{grid-template-columns:1fr}.stats{padding:2.5rem 1.5rem}.fgrid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.guide-grid{grid-template-columns:1fr}
 }
+
+/* 1TOUCH BRAND PATCH */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  min-width: 185px;
+  padding: .25rem .55rem !important;
+  border-radius: 999px;
+}
+
+.brand-logo-full {
+  width: clamp(190px, 22vw, 290px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}
+
+.footer-logo-shell {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0 .75rem 0;
+}
+
+.product-preview {
+  background: linear-gradient(
+    135deg,
+    #F7F9FC 0%,
+    #EEF4FF 50%,
+    #F4FBFA 100%
+  );
+  border-block: 1px solid var(--line);
+}
+
+.product-preview-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.product-preview-grid h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin: .6rem 0;
+}
+
+.product-preview-grid h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.product-preview-grid p {
+  color: var(--ink2);
+  font-size: 1.08rem;
+  max-width: 580px;
+  margin-bottom: 1.75rem;
+}
+
+.product-mini-card {
+  background: #111E3D;
+  color: white;
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 28px 70px rgba(17, 30, 61, .18);
+}
+
+.product-mini-card h3 {
+  color: white;
+  font-size: 1.7rem;
+  margin: .9rem 0 1.3rem;
+}
+
+.product-chip {
+  display: inline-flex;
+  padding: .4rem .75rem;
+  border-radius: 999px;
+  background: rgba(25, 169, 181, .16);
+  color: #7BE0E5;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.product-feature-list {
+  list-style: none;
+  display: grid;
+  gap: .8rem;
+}
+
+.product-feature-list li {
+  padding: .85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .05);
+}
+
+.product-page-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-page-intro h1,
+.product-page-intro h2{
+  font-size:clamp(2.8rem,5.2vw,4.9rem);
+  line-height:1.04;
+  letter-spacing:-.03em;
+  margin:.35rem 0 1rem;
+}
+
+.product-page-intro .lede{
+  font-size:1.14rem;
+  color:var(--ink2);
+  max-width:760px;
+  margin:0 auto;
+}
+
+.product-feature-grid {
+  display:none;
+}
+.product-showcase-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.2rem;align-items:center}
+.product-copy-stack h2{font-size:clamp(2.2rem,4vw,3.8rem);margin-bottom:1rem}
+.product-copy-stack>p{font-size:1.08rem;color:var(--ink2);max-width:540px;margin-bottom:1.7rem}
+.product-feature-stack{display:grid;gap:.8rem}
+.product-feature-item{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:1rem 1rem 1rem .9rem;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 24px rgba(15,25,45,.04)}
+.product-feature-icon{width:36px;height:36px;border-radius:12px;background:#EAF3FF;color:var(--skyD);display:flex;align-items:center;justify-content:center;font-weight:700}
+.product-feature-item h3{font-size:1.02rem;margin-bottom:.2rem}
+.product-feature-item p{font-size:.88rem;color:var(--muted)}
+.product-screen-frame{background:linear-gradient(135deg,#132544,#17365D 55%,#1CA7BA);border-radius:28px;padding:1.2rem;box-shadow:0 24px 60px rgba(15,25,45,.16)}
+.product-screen-frame img{display:block;width:100%;height:auto;border-radius:22px}
+.product-screen-frame.tight{padding:0}
+.product-screen-frame.tight img{border-radius:24px}
+.product-story-grid{display:grid;gap:2rem}
+.product-story{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:center}
+.product-story.reverse .product-story-copy{order:2}
+.product-story.reverse .product-story-media{order:1}
+.product-story-copy h3{font-size:clamp(1.8rem,3vw,2.7rem);margin-bottom:.85rem}
+.product-story-copy p{color:var(--ink2);font-size:1.03rem;margin-bottom:.75rem}
+.product-story-copy ul{padding-left:1.2rem;color:var(--ink2)}
+.product-story-copy li{margin:.4rem 0}
+.product-stage-note{display:inline-flex;margin-top:1.25rem;padding:1rem 1.2rem;border-radius:18px;background:#D7F1EC;color:#235C54;font-size:.95rem}
+.product-cta-panel{max-width:840px;margin:0 auto}
+
+@media (max-width: 1120px) {
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .founder-summary{grid-template-columns:1fr;gap:2rem}
+}
+
+@media (max-width: 920px) {
+  .product-preview-grid,
+  .product-showcase-grid,
+  .product-story {
+    grid-template-columns: 1fr;
+  }
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .product-story.reverse .product-story-copy,
+  .product-story.reverse .product-story-media{order:initial}
+}
+
+@media (max-width: 768px) {
+  .steps,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-logo-full {
+    width: 176px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-logo-full {
+    width: 160px;
+  }
+}
 </style>
 </head>
 <body>
@@ -375,27 +630,57 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 <div class="blobs"><div class="sb sb1"></div><div class="sb sb2"></div><div class="sb sb3"></div></div>
 
 <div class="wrap">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.86a10 10 0 0 1 14 0"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M4 7h16a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18"/><path d="M12 3a15 15 0 0 0 0 18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/><path d="m9.5 12.5 1.8 1.8 3.7-4"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5.5A2.5 2.5 0 0 1 3 16.5z"/><path d="M16 12h5"/><circle cx="16" cy="12" r=".5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7"/><path d="M5 10v10h14V10"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M7 10h10"/><path d="M7 14h6"/><path d="M4 5h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1A1.7 1.7 0 0 0 10 3.1V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5h.1a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.4 2.7a2 2 0 0 1-.6 1.8l-1.3 1.3a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.8-.6l2.7.4A2 2 0 0 1 22 16.9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="m12 2 2.3 3.4 4-.2-.9 3.9 3 2.6-3 2.6.9 3.9-4-.2L12 22l-2.3-3.4-4 .2.9-3.9-3-2.6 3-2.6-.9-3.9 4 .2z"/><path d="m9.5 12.5 1.8 1.8 3.7-4"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 4.5-9 4.5L3 7.5z"/><path d="m3 12.5 9 4.5 9-4.5"/><path d="m3 17.5 9 4.5 9-4.5"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M12 9v3"/><path d="M6 15v-3h12v3"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="3.5"/><path d="M10.5 13.5 21 3"/><path d="M18 6h3v3"/><path d="M15 9h3v3"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="10" rx="2"/><rect x="18" y="8" width="4" height="8" rx="1"/><path d="M8 20h2"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.4-6-3"/><path d="M15 22v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.9A5.4 5.4 0 0 0 19 4.8 5 5 0 0 0 18.9 1S17.7.7 15 2.5a13.3 13.3 0 0 0-6 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.3 3.8c0 5.4 3.2 6.6 6.2 6.9a3.4 3.4 0 0 0-.9 2.6V22"/></symbol>
+  <symbol id="i-graduation" viewBox="0 0 24 24"><path d="m3 9 9-4 9 4-9 4z"/><path d="M7 11v4c0 1.7 2.2 3 5 3s5-1.3 5-3v-4"/><path d="M21 10v6"/></symbol>
+</svg>
 
 <nav id="nav">
   <div class="nav-inner">
-    <button type="button" class="brand nav-action" data-view="home" onclick="go('home')"><div class="blogo">
-      <svg viewBox="0 0 58 58" aria-label="Naresh Adhikari logo"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect x="8" y="12" width="42" height="30" rx="5" fill="url(#lg)"/><rect x="23" y="44" width="12" height="4" rx="2" fill="#7C3AED"/><rect x="18" y="49" width="22" height="3.5" rx="1.75" fill="#7C3AED"/><path d="M21 35 V19 L37 35 V19" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="19" r="2.4" fill="#FF6B4A"/></svg>
-    </div><span>Naresh Adhikari <span class="sub">| IT & Systems</span></span></button>
+    <button type="button" class="brand nav-action" data-view="home" onclick="go('home')" aria-label="1Touch IT home">
+      <img
+        src="assets/images/top-band-logo.png"
+        alt="1Touch IT"
+        class="brand-logo-full"
+      >
+    </button>
     <ul class="nav-links">
-      <li><button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button></li>
-      <li><button type="button" class="nav-action" data-view="services" onclick="go('services')">How We Help</button></li>
-      <li><button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button></li>
-      <li><button type="button" class="nav-action" data-view="resume" onclick="go('resume')">Resume</button></li>
-      <li><button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')">Contact Us →</button></li>
-    </ul>
+  <li><button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button></li>
+  <li><button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button></li>
+  <li><button type="button" class="nav-action" data-view="services" onclick="go('services')">Services</button></li>
+  <li><button type="button" class="nav-action" data-view="product" onclick="go('product')">Product</button></li>
+  <li><button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')">Contact Us →</button></li>
+</ul>
     <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mm" hidden>
   <button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button>
-  <button type="button" class="nav-action" data-view="services" onclick="go('services')">How We Help</button>
   <button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button>
-  <button type="button" class="nav-action" data-view="resume" onclick="go('resume')">Resume</button>
+  <button type="button" class="nav-action" data-view="services" onclick="go('services')">Services</button>
+  <button type="button" class="nav-action" data-view="product" onclick="go('product')">Product</button>
   <button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')" style="text-align:center;border-radius:14px">Contact Us →</button>
 </div>
 
@@ -405,7 +690,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     <div class="container">
       <div class="hero-grid">
         <div>
-          <div class="pill"><span class="dot"></span> Available now · serving Greater Sydney</div>
+          <div class="pill"><span class="dot"></span> Available now &middot; serving Greater Sydney</div>
 <h1>
   <span class="ln"><span>Professional IT support</span></span>
   <span class="ln"><span>&amp;</span></span>
@@ -416,21 +701,27 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   From Microsoft 365 and business IT to Wi-Fi, computer repairs, and home technology, get reliable expert support without lock-in contracts or monthly retainers. With transparent pricing, a No Fix, No Fee guarantee, and 100% ad-hoc service, you only pay for the help you need, when you need it.
 </p>
           <div class="hero-btns">
-            <button class="btn btn-dark" onclick="go('contact')">Request Tech Help →</button>
+            <button class="btn btn-light" onclick="go('contact')">Request Tech Help &rarr;</button>
             <button class="btn btn-out" onclick="go('services')">Explore Our Services</button>
           </div>
           <div class="hero-trust">
-            <div class="t"><span class="chk">✓</span> No Fix, No Fee</div>
-            <div class="t"><span class="chk">✓</span> No lock-in contracts</div>
-            <div class="t"><span class="chk">✓</span> Evenings &amp; weekends</div>
+            <div class="t"><span class="chk">&#10003;</span> No Fix, No Fee</div>
+            <div class="t"><span class="chk">&#10003;</span> No lock-in contracts</div>
+            <div class="t"><span class="chk">&#10003;</span> Evenings &amp; weekends</div>
           </div>
         </div>
         <div class="hcard">
-          <div class="hcard-top"><div class="hcard-av"><picture class="hcard-picture"><source type="image/avif" srcset="assets/images/optimized/naresh-profile-320.avif 320w, assets/images/optimized/naresh-profile-640.avif 640w" sizes="46px"><source type="image/webp" srcset="assets/images/optimized/naresh-profile-320.webp 320w, assets/images/optimized/naresh-profile-640.webp 640w" sizes="46px"><img src="assets/images/naresh-profile.png" width="1673" height="2048" alt="Naresh Adhikari" decoding="async" fetchpriority="high"></picture></div><div><b>Naresh Adhikari</b><small>Systems &amp; Software Engineer</small></div></div>
-          <div class="hrow"><div class="i" style="background:var(--sky)">📶</div><div class="x"><b>Wi-Fi &amp; mesh setup</b><small>0 dead zones · whole home</small></div><span class="s">Done</span></div>
-          <div class="hrow"><div class="i" style="background:var(--lilac)">🔐</div><div class="x"><b>Microsoft 365 + Intune</b><small>12 business devices secured</small></div><span class="s">Live</span></div>
-          <div class="hrow"><div class="i" style="background:var(--peach)">⚡</div><div class="x"><b>SSD speed upgrade</b><small>4× faster boot time</small></div><span class="s">Done</span></div>
-          <div class="hrow"><div class="i" style="background:var(--lemon)">🏠</div><div class="x"><b>Smart home install</b><small>Alexa · cameras · lighting</small></div><span class="s" style="background:var(--lemon);color:var(--lemonD)">Active</span></div>
+          <div class="hcard-top">
+            <div>
+              <span class="hcard-kicker">Direct, personal support</span>
+              <b>With an experienced IT professional</b>
+              <small>One reliable contact for practical help at home or in business.</small>
+            </div>
+          </div>
+          <div class="hrow"><div class="i" style="background:var(--sky)"><svg class="icon icon-md" aria-hidden="true"><use href="#i-wifi"></use></svg></div><div class="x"><b>Wi-Fi &amp; mesh setup</b><small>Stable whole-home coverage</small></div><span class="s">Ready</span></div>
+          <div class="hrow"><div class="i" style="background:var(--lilac)"><svg class="icon icon-md" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div class="x"><b>Microsoft 365 + Intune</b><small>Secure business devices</small></div><span class="s">Ready</span></div>
+          <div class="hrow"><div class="i" style="background:var(--peach)"><svg class="icon icon-md" aria-hidden="true"><use href="#i-laptop"></use></svg></div><div class="x"><b>Computer repairs &amp; upgrades</b><small>Practical performance improvements</small></div><span class="s">Ready</span></div>
+          <div class="hrow"><div class="i" style="background:var(--lemon)"><svg class="icon icon-md" aria-hidden="true"><use href="#i-globe"></use></svg></div><div class="x"><b>Websites &amp; digital solutions</b><small>Modern, useful business technology</small></div><span class="s" style="background:var(--lemon);color:var(--lemonD)">Ready</span></div>
         </div>
       </div>
     </div>
@@ -446,50 +737,62 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <section class="block">
     <div class="container">
       <div class="shead reveal">
-        <div class="eyebrow">◆ Our Triple-Freedom Promise</div>
-        <h2>Three guarantees that remove all your risk</h2>
-        <p>Most IT providers lock you into contracts and charge whether they fix anything or not. We do the opposite.</p>
+        <div class="eyebrow">&#9670; Our Triple-Freedom Promise</div>
+        <h2>Technology support without the usual pressure</h2>
+        <p>Clear help, flexible service and no unnecessary monthly commitment.</p>
       </div>
       <div class="g-grid">
-        <div class="gcard c1 reveal"><div class="gico">🛡️</div><h3>No Fix, No Fee</h3><p>If we diagnose a software glitch or hardware issue and it proves unfixable, you pay absolutely nothing. Zero risk, zero stress — you only ever pay when there's a genuine result.</p></div>
-        <div class="gcard c2 reveal"><div class="gico">🔓</div><h3>100% Ad-Hoc Support</h3><p>Total budget control. No minimum monthly retainers, no fixed package clutter, and no hidden fees. You only pay for the exact assistance you request, when you request it.</p></div>
-        <div class="gcard c3 reveal"><div class="gico">🕐</div><h3>Service At Your Time</h3><p>Your schedule rules. We coordinate remote or on-site visits around your day — including evening and weekend availability — to completely minimise your household or business downtime.</p></div>
+        <div class="gcard c1 reveal"><div class="gico"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-shield"></use></svg></div><h3>No Fix, No Fee</h3><p>If we diagnose a software glitch or hardware issue and it proves unfixable, you pay absolutely nothing. Zero risk, zero stress &mdash; you only ever pay when there&apos;s a genuine result.</p></div>
+        <div class="gcard c2 reveal"><div class="gico"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-wallet"></use></svg></div><h3>100% Ad-Hoc Support</h3><p>Total budget control. No minimum monthly retainers, no fixed package clutter, and no hidden fees. You only pay for the exact assistance you request, when you request it.</p></div>
+        <div class="gcard c3 reveal"><div class="gico"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-clock"></use></svg></div><h3>Service At Your Time</h3><p>Your schedule rules. We coordinate remote or on-site visits around your day &mdash; including evening and weekend availability &mdash; to minimise household or business downtime.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- DUAL TRACK -->
+  <!-- WHO WE HELP -->
   <section class="block">
     <div class="container">
       <div class="shead reveal">
-        <div class="eyebrow">◆ Who We Serve</div>
-        <h2>One engineer. Two worlds covered.</h2>
-        <p>Whether it's your family's devices or your growing business, you get the same enterprise discipline at honest, local prices.</p>
+        <div class="eyebrow">&#9670; Who We Help</div>
+        <h2>Practical technology support for real life and business</h2>
+        <p>One reliable contact for home technology, small-business systems and digital projects.</p>
       </div>
       <div class="tracks">
         <button type="button" class="tcard home reveal" onclick="go('services','home-services')">
-          <div class="tbig">🏠</div>
-          <h3>For Your Home &amp; Family</h3>
-          <p>Keeping your household securely connected. From blazing-fast Wi-Fi setups and interactive smart home ecosystems to parental filters and family device cleanups.</p>
+          <div class="tbig"><svg class="icon icon-xl" aria-hidden="true"><use href="#i-home"></use></svg></div>
+          <h3>Home and Family</h3>
+          <p>Reliable help for the devices, Wi-Fi, repairs and home technology that keep daily life running smoothly.</p>
           <ul class="tlist">
-            <li><span class="c">✓</span> Whole-home Wi-Fi &amp; mesh router deployment</li>
-            <li><span class="c">✓</span> Smart home automation — Alexa &amp; Google Home</li>
-            <li><span class="c">✓</span> Network-level parental controls &amp; content filters</li>
-            <li><span class="c">✓</span> Family device cleanups, repairs &amp; setups</li>
+            <li><span class="c">&#10003;</span> Whole-home Wi-Fi &amp; mesh router deployment</li>
+            <li><span class="c">&#10003;</span> Computer repairs, tune-ups and practical upgrades</li>
+            <li><span class="c">&#10003;</span> Smart-home support, device setup and safer family tech</li>
+            <li><span class="c">&#10003;</span> Clear advice before spending on new technology</li>
           </ul>
-          <span class="tarrow track-cta">View home services →</span>
+          <span class="tarrow track-cta">View home services &rarr;</span>
         </button>
         <button type="button" class="tcard biz reveal" onclick="go('services','business-services')">
-          <div class="tbig">🏢</div>
-          <h3>For Your Small Business</h3>
-          <p>Act as your casual, on-demand remote helpdesk. Managing your Microsoft 365 users, locking down devices with Intune, and deploying automated backups.</p>
+          <div class="tbig"><svg class="icon icon-xl" aria-hidden="true"><use href="#i-briefcase"></use></svg></div>
+          <h3>Small Business</h3>
+          <p>On-demand business IT that keeps your users, devices, email, networking and security moving without lock-in overhead.</p>
           <ul class="tlist">
-            <li><span class="c">✓</span> Microsoft 365 user &amp; email management</li>
-            <li><span class="c">✓</span> Intune device security &amp; remote wipe</li>
-            <li><span class="c">✓</span> Single Point of Contact (SPOC) helpdesk</li>
-            <li><span class="c">✓</span> Automated cloud backups &amp; monitoring</li>
+            <li><span class="c">&#10003;</span> Microsoft 365, email and user management</li>
+            <li><span class="c">&#10003;</span> Intune, device security and remote support</li>
+            <li><span class="c">&#10003;</span> Backup, networking and practical cyber guidance</li>
+            <li><span class="c">&#10003;</span> One direct point of contact for everyday IT issues</li>
           </ul>
-          <span class="tarrow track-cta">View business services →</span>
+          <span class="tarrow track-cta">View business services &rarr;</span>
+        </button>
+        <button type="button" class="tcard digital reveal" onclick="go('services','digital-services')">
+          <div class="tbig"><svg class="icon icon-xl" aria-hidden="true"><use href="#i-globe"></use></svg></div>
+          <h3>Websites and Digital Solutions</h3>
+          <p>Clean websites and practical digital improvements that make it easier for customers to find you and contact you.</p>
+          <ul class="tlist">
+            <li><span class="c">&#10003;</span> Website refreshes, service pages and copy improvements</li>
+            <li><span class="c">&#10003;</span> Forms, analytics and search-friendly structure</li>
+            <li><span class="c">&#10003;</span> Domain, hosting and business email setup</li>
+            <li><span class="c">&#10003;</span> Lightweight automation and workflow improvements</li>
+          </ul>
+          <span class="tarrow track-cta">View digital services &rarr;</span>
         </button>
       </div>
     </div>
@@ -499,13 +802,13 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <section class="block">
     <div class="container">
       <div class="shead reveal">
-        <div class="eyebrow">◆ How It Works</div>
+        <div class="eyebrow">&#9670; How It Works</div>
         <h2>Getting help is refreshingly simple</h2>
         <p>No call centres, no ticket queues, no jargon. Just a clear, honest process from first contact to fixed.</p>
       </div>
       <div class="steps">
-        <div class="step reveal"><h4>Tell us what's up</h4><p>Send a quick message describing what's broken or what you'd like set up. Takes two minutes.</p></div>
-        <div class="step reveal"><h4>Free assessment</h4><p>We diagnose the root cause and give you an honest, budget-friendly estimate — no obligation.</p></div>
+        <div class="step reveal"><h4>Tell us what you need</h4><p>Send a short description of the issue, setup or improvement you have in mind.</p></div>
+        <div class="step reveal"><h4>Receive an assessment</h4><p>We review the situation and explain the practical options before work begins.</p></div>
         <div class="step reveal"><h4>We fix it, your way</h4><p>Remote or on-site, business hours or weekends. You choose the time that minimises your downtime.</p></div>
         <div class="step reveal"><h4>Only pay for results</h4><p>No Fix, No Fee. No contracts. You pay only for the assistance you actually received.</p></div>
       </div>
@@ -516,17 +819,17 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <section class="block">
     <div class="container">
       <div class="shead reveal">
-        <div class="eyebrow">◆ Why Choose Naresh</div>
-        <h2>Enterprise expertise, local-friendly service</h2>
-        <p>You're not hiring a faceless call centre — you're working directly with a qualified systems engineer who genuinely cares about getting it right.</p>
+        <div class="eyebrow">&#9670; Why 1Touch IT</div>
+        <h2>Enterprise experience with direct, local service</h2>
+        <p>Work with one experienced IT professional who explains the problem clearly and stays focused on the result.</p>
       </div>
       <div class="why-grid">
-        <div class="why reveal"><div class="wi">🎓</div><div><b>Qualified engineer</b><p>Bachelor of IT plus CCNA, Azure, Microsoft 365, AWS &amp; ITIL certifications — not just a hobbyist.</p></div></div>
-        <div class="why reveal"><div class="wi">🧩</div><div><b>Root-cause fixes</b><p>I solve the underlying problem, not just the symptom, so issues don't keep coming back.</p></div></div>
-        <div class="why reveal"><div class="wi">💬</div><div><b>Plain English</b><p>No confusing jargon. I explain exactly what's wrong and what I'm doing, in language that makes sense.</p></div></div>
-        <div class="why reveal"><div class="wi">💸</div><div><b>Budget-friendly</b><p>Cheap, ad-hoc, pay-as-you-go rates. No retainers, no surprise invoices, no upselling.</p></div></div>
-        <div class="why reveal"><div class="wi">⚡</div><div><b>Fast response</b><p>Most requests get a personal reply within a few hours, with remote fixes often same-day.</p></div></div>
-        <div class="why reveal"><div class="wi">📍</div><div><b>Truly local</b><p>Based in and serving Greater Sydney, with a focus on Western Sydney and the Parramatta region.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-badge"></use></svg></div><div><b>Qualified support</b><p>Founder-led support backed by a Bachelor of IT plus CCNA, Azure, Microsoft 365, AWS and ITIL certifications.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-search"></use></svg></div><div><b>Root-cause thinking</b><p>Focus on the underlying cause rather than applying a quick temporary patch.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-message"></use></svg></div><div><b>Clear communication</b><p>Clear explanations and honest recommendations without confusing technical language.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-settings"></use></svg></div><div><b>Flexible service</b><p>Ad-hoc support and transparent approval before work, without unnecessary retainers.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-zap"></use></svg></div><div><b>Responsive support</b><p>Personal review of requests, with remote resolution available for many common issues.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-map-pin"></use></svg></div><div><b>Greater Sydney coverage</b><p>Local service with a focus on Western Sydney and the Parramatta region.</p></div></div>
       </div>
     </div>
   </section>
@@ -534,36 +837,63 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <!-- STATS -->
   <section class="block">
     <div class="container">
-      <div class="stats reveal">
-        <div class="stat"><div class="n" data-count="4" data-suffix="+">0</div><div class="l">Years professional IT experience</div></div>
-        <div class="stat"><div class="n">5<em>★</em></div><div class="l">Average client satisfaction</div></div>
-        <div class="stat"><div class="n" data-count="100" data-suffix="%">0</div><div class="l">Ad-hoc · no contracts ever</div></div>
-        <div class="stat"><div class="n">7<em>/7</em></div><div class="l">Days available incl. evenings</div></div>
+      <div class="stats stats-light reveal">
+        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div class="n" data-count="4" data-suffix="+">0</div><div class="l">Years of professional IT experience</div></div>
+        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-wallet"></use></svg></div><div class="n" data-count="100" data-suffix="%">0</div><div class="l">Ad-hoc support available</div></div>
+        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-clock"></use></svg></div><div class="n">7<em>/7</em></div><div class="l">Evening and weekend options</div></div>
+        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-message"></use></svg></div><div class="n">1</div><div class="l">Direct point of contact from first enquiry to resolution</div></div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="block">
+  <section class="block" id="homelife-preview">
     <div class="container">
-      <div class="shead reveal">
-        <div class="eyebrow">◆ Trusted Locally</div>
-        <h2>What Sydney clients say</h2>
-        <p>Real results for real homes and businesses across Greater Sydney.</p>
+      <div class="product-page-intro reveal" style="margin-bottom:3.2rem">
+        <div class="eyebrow">Product by 1Touch IT</div>
+        <h2>Meet <span class="grad-text">HomeLife Hub</span></h2>
+        <p class="lede" style="max-width:720px;margin:0 auto">A private household dashboard for tasks, routines, groceries, reminders, property information and everyday home management.</p>
       </div>
-      <div class="tg">
-        <div class="testi reveal"><div class="stars">★★★★★</div><q>Naresh sorted our office Microsoft 365 and locked down every laptop with Intune in an afternoon. No contract, no fuss — exactly what a small business needs.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)">SP</div><div><b>Sarah P.</b><small>Small business owner · Parramatta</small></div></div></div>
-        <div class="testi reveal"><div class="stars">★★★★★</div><q>Our Wi-Fi finally reaches every room and the kids' parental controls actually work. He explained everything in plain English. Highly recommend.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#FF6B4A,#7C3AED)">MT</div><div><b>Michael T.</b><small>Family home · Blacktown</small></div></div></div>
-        <div class="testi reveal"><div class="stars">★★★★★</div><q>Built me a custom PC that runs flawlessly and didn't try to upsell parts I didn't need. Genuinely knows the engineering side. Will use again.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#1659B0,#0F7A52)">JL</div><div><b>James L.</b><small>Content creator · Penrith</small></div></div></div>
+      <div class="product-showcase-grid reveal">
+        <div class="product-copy-stack">
+          <div class="eyebrow">Product Preview</div>
+          <h2>Everything at home, in one place</h2>
+          <p>HomeLife Hub is designed for the everyday information and routines that are often spread across notes, calendars, messages and different applications.</p>
+          <div class="product-feature-stack">
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-badge"></use></svg></div>
+              <div><h3>Tasks and reminders</h3><p>Keep household responsibilities and recurring jobs visible.</p></div>
+            </article>
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-wallet"></use></svg></div>
+              <div><h3>Groceries and planning</h3><p>Maintain practical lists for everyday household needs.</p></div>
+            </article>
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-home"></use></svg></div>
+              <div><h3>Property and household records</h3><p>Organise useful information about assets, warranties and maintenance.</p></div>
+            </article>
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-clock"></use></svg></div>
+              <div><h3>Habits and routines</h3><p>Track household and personal routines from one dashboard.</p></div>
+            </article>
+          </div>
+          <div class="hero-btns" style="margin-top:1.7rem">
+            <button class="btn btn-light" onclick="go('product')">Discover HomeLife Hub</button>
+            <a class="btn btn-out" href="https://homelifehub.com.au" target="_blank" rel="noopener">Visit product website</a>
+          </div>
+          <div class="product-stage-note"><strong>Current stage:</strong>&nbsp;HomeLife Hub is preparing for private testing. The dedicated product website will be expanded separately.</div>
+        </div>
+        <div class="product-screen-frame">
+          <img src="assets/homelife/showcase/dashboard-browser.png" alt="HomeLife Hub browser dashboard preview">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HELPFUL LOCAL GUIDES -->
+  <!-- HELPFUL GUIDES -->
   <section class="block" id="helpful-guides">
     <div class="container">
       <div class="shead reveal">
-        <div class="eyebrow">◆ Helpful Local Guides</div>
+        <div class="eyebrow">&#9670; Helpful Local Guides</div>
         <h2>Practical advice before you book support</h2>
         <p>Clear steps for common Sydney home and small-business technology problems.</p>
       </div>
@@ -602,109 +932,272 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="block">
+    <div class="container">
+      <div class="shead reveal">
+        <div class="eyebrow">&#9670; Trusted Locally</div>
+        <h2>What Sydney clients say</h2>
+        <p>Real results for real homes and businesses across Greater Sydney.</p>
+      </div>
+      <div class="tg">
+        <div class="testi reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>Naresh sorted our office Microsoft 365 and locked down every laptop with Intune in an afternoon. No contract, no fuss &mdash; exactly what a small business needs.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)">SP</div><div><b>Sarah P.</b><small>Small business owner &middot; Parramatta</small></div></div></div>
+        <div class="testi reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>Our Wi-Fi finally reaches every room and the kids' parental controls actually work. He explained everything in plain English. Highly recommend.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#FF6B4A,#7C3AED)">MT</div><div><b>Michael T.</b><small>Family home &middot; Blacktown</small></div></div></div>
+        <div class="testi reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>Built me a custom PC that runs flawlessly and did not try to upsell parts I did not need. Genuinely knows the engineering side. Will use again.</q><div class="tp"><div class="tav" style="background:linear-gradient(135deg,#1659B0,#0F7A52)">JL</div><div><b>James L.</b><small>Content creator &middot; Penrith</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="block">
     <div class="container">
-      <div class="cta reveal">
-        <h2>Ready for a free tech assessment?</h2>
-        <p>No contracts. No obligation. Tell us what's broken or needs setting up — we'll handle the rest on a strict No Fix, No Fee basis.</p>
-        <button class="btn btn-coral" onclick="go('contact')">Get Your Free Estimate →</button>
+      <div class="cta cta-light reveal">
+        <h2>Need practical help with your technology?</h2>
+        <p>Tell us what is not working, what you want to improve or what you are planning to set up.</p>
+        <button class="btn btn-light" onclick="go('contact')">Request Tech Help &rarr;</button>
       </div>
     </div>
   </section>
 </div>
 
+
+<!-- ===== PRODUCT ===== -->
+<div id="page-product" class="page">
+  <section class="hero">
+    <div class="container">
+      <div class="product-page-intro">
+        <div class="pill">
+          <span class="dot"></span>
+          Product by 1Touch IT
+        </div>
+
+        <h1>Meet <span class="grad-text">HomeLife Hub</span></h1>
+
+        <p class="lede">
+          A private household dashboard for tasks, routines, groceries,
+          reminders, property information and everyday home management.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="product-features">
+    <div class="container">
+      <div class="product-showcase-grid reveal">
+        <div class="product-copy-stack">
+          <div class="eyebrow">Product Preview</div>
+          <h2>Everything at home, in one place</h2>
+          <p>HomeLife Hub is designed for the everyday information and routines that are often spread across notes, calendars, messages and different applications.</p>
+          <div class="product-feature-stack">
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-badge"></use></svg></div>
+              <div><h3>Tasks and reminders</h3><p>Keep household responsibilities and recurring jobs visible.</p></div>
+            </article>
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-wallet"></use></svg></div>
+              <div><h3>Groceries and planning</h3><p>Maintain practical lists for everyday household needs.</p></div>
+            </article>
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-home"></use></svg></div>
+              <div><h3>Property and household records</h3><p>Organise useful information about assets, warranties and maintenance.</p></div>
+            </article>
+            <article class="product-feature-item">
+              <div class="product-feature-icon"><svg class="icon icon-md" aria-hidden="true"><use href="#i-clock"></use></svg></div>
+              <div><h3>Habits and routines</h3><p>Track household and personal routines from one dashboard.</p></div>
+            </article>
+          </div>
+          <div class="hero-btns" style="margin-top:1.7rem">
+            <a class="btn btn-dark" href="https://homelifehub.com.au" target="_blank" rel="noopener">Visit homelifehub.com.au &rarr;</a>
+            <button class="btn btn-out" onclick="go('contact')">Product Enquiry</button>
+          </div>
+          <div class="product-stage-note"><strong>Current stage:</strong>&nbsp;HomeLife Hub is preparing for private testing. The dedicated product website will be expanded separately.</div>
+        </div>
+        <div class="product-screen-frame">
+          <img src="assets/homelife/showcase/dashboard-browser.png" alt="HomeLife Hub browser dashboard preview">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="product-story-grid">
+        <article class="product-story reveal">
+          <div class="product-story-copy">
+            <div class="eyebrow">Dashboard Experience</div>
+            <h3>See your home at a glance</h3>
+            <p>A clear dashboard can bring tasks, weather, security status, reminders and shared household planning into one practical daily view.</p>
+            <ul>
+              <li>Quick daily overview for home routines and tasks</li>
+              <li>Designed for busy households that want one visible source of truth</li>
+              <li>Tablet-friendly presentation for shared spaces</li>
+            </ul>
+          </div>
+          <div class="product-story-media">
+            <div class="product-screen-frame tight">
+              <img src="assets/homelife/showcase/dashboard-tablet.png" alt="HomeLife Hub tablet dashboard on a table">
+            </div>
+          </div>
+        </article>
+
+        <article class="product-story reverse reveal">
+          <div class="product-story-copy">
+            <div class="eyebrow">Real Household Use</div>
+            <h3>Tasks, groceries and routines that feel real</h3>
+            <p>Instead of a generic productivity layout, HomeLife Hub can reflect actual household use cases like shared groceries, pending tasks, community updates and home records.</p>
+            <ul>
+              <li>Pending tasks with shared accountability</li>
+              <li>Grocery list coordination without multiple apps</li>
+              <li>Household updates and key day-to-day information in one place</li>
+            </ul>
+          </div>
+          <div class="product-story-media">
+            <div class="product-screen-frame tight">
+              <img src="assets/homelife/showcase/tasks-calendar-groceries.png" alt="HomeLife Hub tasks, calendar and groceries view across devices">
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="cta reveal product-cta-panel">
+        <h2>HomeLife Hub has its own home</h2>
+        <p>Visit the dedicated domain for product updates as the public website is prepared.</p>
+        <a class="btn btn-light" href="https://homelifehub.com.au" target="_blank" rel="noopener">Open HomeLife Hub &rarr;</a>
+      </div>
+    </div>
+  </section>
+</div>
 <!-- ===== SERVICES ===== -->
 <div id="page-services" class="page">
-  <div class="phero">
+  <div class="phero service-hero">
     <div class="container">
-      <div class="eyebrow" style="margin-bottom:1.1rem">◆ The Complete Service Menu</div>
-      <h1>How <span class="grad-text">we help</span></h1>
-      <p>Enterprise-grade IT support delivered locally. Every service below is ad-hoc, budget-friendly, and backed by the No Fix, No Fee promise.</p>
+      <div class="eyebrow" style="margin-bottom:1.1rem">Services</div>
+      <h1>Flexible IT support for <span class="grad-text">home, business and digital work</span></h1>
+      <p>Choose the support area that best matches what you need. Every project begins with a clear assessment and approval before work starts.</p>
     </div>
   </div>
   <section class="block" style="padding-top:1.5rem">
     <div class="container">
       <div class="service-tabs reveal">
-        <button class="service-tab" onclick="document.getElementById('home-services').scrollIntoView({behavior:'smooth',block:'start'})">Home services</button>
-        <button class="service-tab" onclick="document.getElementById('business-services').scrollIntoView({behavior:'smooth',block:'start'})">Business services</button>
-      </div>
-
-      <div class="svc reveal">
-        <div class="svc-h"><div class="svc-ico si1">💡</div><div><div class="num">SERVICE 01</div><h2>Technology Strategy &amp; Pre-Purchase Advice</h2><div class="tag">Smart planning before you spend a dollar.</div></div></div>
-        <p class="svc-intro">Buying the wrong gear is one of the most expensive mistakes a household or business can make. Before you spend, I give honest, brand-agnostic advice grounded in real systems engineering — so every dollar goes where it counts.</p>
-        <div class="svc-items">
-          <div class="sitem"><b><span class="d"></span>Bespoke pre-purchase advice</b><p>Brand-agnostic component selection for custom gaming rigs, content creator workstations, or budget-friendly business laptop fleets.</p></div>
-          <div class="sitem"><b><span class="d"></span>Tech roadmap audits</b><p>Free initial digital wellness checks to find hardware vulnerabilities, data backup gaps, or network bottlenecks before they cause a crash.</p></div>
-          <div class="sitem"><b><span class="d"></span>Vendor &amp; plan comparisons</b><p>Independent comparisons of NBN plans, routers, NAS devices, cloud storage and business software subscriptions.</p></div>
-          <div class="sitem"><b><span class="d"></span>Future-proofing guidance</b><p>Advice on what to upgrade now, what can wait, and what to retire — so you scale smoothly without overspending.</p></div>
-        </div>
+        <button class="service-tab" onclick="document.getElementById('home-services').scrollIntoView({behavior:'smooth',block:'start'})">Home &amp; Family</button>
+        <button class="service-tab" onclick="document.getElementById('business-services').scrollIntoView({behavior:'smooth',block:'start'})">Small Business</button>
+        <button class="service-tab" onclick="document.getElementById('digital-services').scrollIntoView({behavior:'smooth',block:'start'})">Websites &amp; Digital</button>
       </div>
 
       <div class="service-band reveal" id="home-services">
-        <div class="eyebrow">◆ Home Services</div>
-        <h2>Home &amp; family technology support</h2>
-        <p>Clear, practical help for Wi-Fi, devices, repairs, smart home setups, family safety, and everyday tech headaches.</p>
+        <div class="eyebrow">HOME SERVICES</div>
+        <h2>Everyday technology that works properly</h2>
+        <p>Practical support for connectivity, devices, repairs, security, smart-home setups and family technology.</p>
       </div>
 
       <div class="svc reveal">
-        <div class="svc-h"><div class="svc-ico si2">🏠</div><div><div class="num">SERVICE 02</div><h2>Home &amp; Family IT Support</h2><div class="tag">Seamless residential tech integration.</div></div></div>
-        <p class="svc-intro">A modern home runs on dozens of connected devices. I make them work together reliably and securely — so your family stays connected, protected and headache-free.</p>
+        <div class="svc-h"><div class="svc-ico si2"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-wifi"></use></svg></div><div><div class="num">HOME SERVICE 01</div><h2>Wi-Fi, NBN &amp; Home Networks</h2><div class="tag">Stable connections and better whole-home coverage.</div></div></div>
+        <p class="svc-intro">Diagnose unreliable connections, improve router placement and configure the right network for your home.</p>
         <div class="svc-items">
-          <div class="sitem"><b><span class="d"></span>Wi-Fi &amp; NBN optimisation</b><p>Eliminating dead zones, configuring mesh routers, and optimising your bandwidth for fast, stable coverage in every room.</p></div>
-          <div class="sitem"><b><span class="d"></span>Smart home ecosystems</b><p>Flawless automation routines for Amazon Alexa or Google Home, alongside wireless security cameras and smart lighting setups.</p></div>
-          <div class="sitem"><b><span class="d"></span>Internet failover &amp; resilience</b><p>Setting up automatic 4G/5G cellular backup lines so your home office stays online if the NBN drops out.</p></div>
-          <div class="sitem"><b><span class="d"></span>Device &amp; family management</b><p>Configuring family tablets, consoles, printer networks, and custom network-level parental content filters.</p></div>
+          <div class="sitem"><b><span class="d"></span>Wi-Fi and mesh optimisation</b><p>Improve coverage, reduce dead zones and configure devices correctly.</p></div>
+          <div class="sitem"><b><span class="d"></span>NBN and router troubleshooting</b><p>Separate connection problems from Wi-Fi problems and identify the practical next step.</p></div>
+          <div class="sitem"><b><span class="d"></span>Home-office connectivity</b><p>Reliable video calls, printers, VPN access and work-from-home equipment.</p></div>
+          <div class="sitem"><b><span class="d"></span>Network security</b><p>Safer passwords, guest networks, firmware checks and sensible device separation.</p></div>
         </div>
       </div>
 
       <div class="svc reveal">
-        <div class="svc-h"><div class="svc-ico si3">🔧</div><div><div class="num">SERVICE 03</div><h2>Computer Repairs &amp; Hardware Engineering</h2><div class="tag">Hardware lifespan extension &amp; custom builds.</div></div></div>
-        <p class="svc-intro">From breathing new life into a sluggish laptop to engineering a high-performance custom rig, I treat every machine with precision and care — extending its life and protecting your data.</p>
+        <div class="svc-h"><div class="svc-ico si3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-laptop"></use></svg></div><div><div class="num">HOME SERVICE 02</div><h2>Computer Repairs, Upgrades &amp; Setup</h2><div class="tag">Keep useful devices running well for longer.</div></div></div>
+        <p class="svc-intro">Troubleshooting and practical improvement for Windows computers, laptops, peripherals and common software issues.</p>
         <div class="svc-items">
-          <div class="sitem"><b><span class="d"></span>Premium custom PC building</b><p>Precision engineering, liquid-cooling integration, and clean cable management for high-performance gaming and creator rigs.</p></div>
-          <div class="sitem"><b><span class="d"></span>Speed upgrades &amp; repairs</b><p>Replacing slow spinning hard drives with ultra-fast modern SSDs and performing physical internal system deep cleans.</p></div>
-          <div class="sitem"><b><span class="d"></span>Virus &amp; malware clean-up</b><p>Complete security purges, ransomware isolation, and setting up bulletproof local or cloud backup systems.</p></div>
-          <div class="sitem"><b><span class="d"></span>Component-level repairs</b><p>Screen replacements, battery swaps, port repairs, and post-drop or post-flood device assessments.</p></div>
+          <div class="sitem"><b><span class="d"></span>Performance upgrades</b><p>SSD, memory and setup improvements where the upgrade makes financial sense.</p></div>
+          <div class="sitem"><b><span class="d"></span>Malware and software cleanup</b><p>Remove unwanted software, improve security and restore normal performance.</p></div>
+          <div class="sitem"><b><span class="d"></span>New-device setup</b><p>Accounts, updates, applications, backups, email and secure transfer of information.</p></div>
+          <div class="sitem"><b><span class="d"></span>Custom computer advice</b><p>Independent component selection and custom PC planning based on real needs.</p></div>
+        </div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si1"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-home"></use></svg></div><div><div class="num">HOME SERVICE 03</div><h2>Smart Home &amp; Family Technology</h2><div class="tag">Connected devices that are useful, secure and manageable.</div></div></div>
+        <p class="svc-intro">Setup and troubleshooting for smart-home devices, cameras, lighting, voice assistants and family controls.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Smart-home setup</b><p>Connect compatible lighting, cameras, plugs and voice assistants.</p></div>
+          <div class="sitem"><b><span class="d"></span>Parental controls</b><p>Age-appropriate device settings, family accounts and network-level controls.</p></div>
+          <div class="sitem"><b><span class="d"></span>Backup and photo protection</b><p>Simple backup plans for family documents, photos and important device data.</p></div>
+          <div class="sitem"><b><span class="d"></span>Technology purchasing advice</b><p>Choose compatible products before spending money on the wrong equipment.</p></div>
         </div>
       </div>
 
       <div class="service-band reveal" id="business-services">
-        <div class="eyebrow">◆ Business Services</div>
-        <h2>Small business IT, cloud, security &amp; automation</h2>
-        <p>Business-focused support for Microsoft 365, secure devices, cloud operations, networking, backup, cybersecurity basics, and practical automation. No recruitment or custom software development services.</p>
+        <div class="eyebrow">BUSINESS SERVICES</div>
+        <h2>Business systems, support, cloud and security</h2>
+        <p>Flexible help for small teams that need professional IT support without a large managed-services contract.</p>
       </div>
 
       <div class="svc reveal">
-        <div class="svc-h"><div class="svc-ico si4">☁️</div><div><div class="num">SERVICE 04</div><h2>Small Business Cloud &amp; Remote Helpdesk</h2><div class="tag">Your on-demand virtual IT department.</div></div></div>
-        <p class="svc-intro">Small businesses deserve enterprise-grade IT without the enterprise price tag. I act as your single, dedicated point of contact — securing your devices, managing your cloud, and resolving issues fast.</p>
+        <div class="svc-h"><div class="svc-ico si4"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div><div class="num">BUSINESS SERVICE 01</div><h2>Microsoft 365, Cloud &amp; User Support</h2><div class="tag">A practical on-demand IT contact for your business.</div></div></div>
+        <p class="svc-intro">Support for business email, accounts, Microsoft 365 applications, SharePoint, OneDrive and user access.</p>
         <div class="svc-items">
-          <div class="sitem"><b><span class="d"></span>Single Point of Contact helpdesk</b><p>One dedicated contact for every tech problem — no bouncing between telcos and device manufacturers.</p></div>
-          <div class="sitem"><b><span class="d"></span>Microsoft 365 user management</b><p>Seamless staff onboarding/offboarding, secure business email domain setups, and OneDrive permission auditing.</p></div>
-          <div class="sitem"><b><span class="d"></span>Microsoft Intune &amp; MDM security</b><p>Enforcing remote data wipe policies on corporate laptops or phones if they are lost or stolen.</p></div>
-          <div class="sitem"><b><span class="d"></span>Secure remote troubleshooting</b><p>Immediate incident resolution over the internet using secure remote desktop tools for fast, budget-friendly fixes.</p></div>
-          <div class="sitem"><b><span class="d"></span>Proactive health monitoring</b><p>Lightweight background alerts to monitor drive failures or critical security patches, even after hours.</p></div>
-          <div class="sitem"><b><span class="d"></span>Backup &amp; disaster recovery</b><p>Automated, tested backups so your business data is always recoverable if the worst happens.</p></div>
+          <div class="sitem"><b><span class="d"></span>Microsoft 365 administration</b><p>User setup, email, licences, groups, permissions and day-to-day configuration.</p></div>
+          <div class="sitem"><b><span class="d"></span>Staff onboarding and offboarding</b><p>Create secure access for new starters and remove access properly when people leave.</p></div>
+          <div class="sitem"><b><span class="d"></span>SharePoint and OneDrive</b><p>Improve storage, sharing, permissions and everyday collaboration.</p></div>
+          <div class="sitem"><b><span class="d"></span>Remote troubleshooting</b><p>Resolve common software and configuration problems quickly and securely.</p></div>
         </div>
       </div>
 
       <div class="svc reveal">
-        <div class="svc-h"><div class="svc-ico si3">🛡️</div><div><div class="num">SERVICE 05</div><h2>Business Systems, Security &amp; Automation</h2><div class="tag">Practical improvements for growing teams.</div></div></div>
-        <p class="svc-intro">When your business needs more than break-fix support, I can help clean up your systems, improve security, simplify workflows and make your cloud tools work together properly — without pushing you into a big managed-services contract.</p>
+        <div class="svc-h"><div class="svc-ico si2"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-shield"></use></svg></div><div><div class="num">BUSINESS SERVICE 02</div><h2>Devices, Networks, Backup &amp; Cybersecurity</h2><div class="tag">Practical protection for users, devices and business information.</div></div></div>
+        <p class="svc-intro">Improve core security, business connectivity and recoverability without unnecessary complexity.</p>
         <div class="svc-items">
-          <div class="sitem"><b><span class="d"></span>Modern workplace setup</b><p>Microsoft 365, Teams, SharePoint, OneDrive and email configuration so staff can collaborate securely from anywhere.</p></div>
-          <div class="sitem"><b><span class="d"></span>Cloud transformation &amp; optimisation</b><p>Practical Azure, AWS and SaaS guidance for migrations, storage, accounts, backups and cost-conscious cloud usage.</p></div>
-          <div class="sitem"><b><span class="d"></span>Infrastructure &amp; network services</b><p>Business Wi-Fi, routers, switches, VPN access, internet failover, printer networks and tidy office network design.</p></div>
-          <div class="sitem"><b><span class="d"></span>Cybersecurity &amp; compliance basics</b><p>MFA, password hygiene, device hardening, backup checks, access reviews and practical cyber awareness for small teams.</p></div>
-          <div class="sitem"><b><span class="d"></span>Digital transformation consulting</b><p>Reviewing manual processes, software subscriptions and technology gaps so you can modernise in sensible stages.</p></div>
-          <div class="sitem"><b><span class="d"></span>AI-assisted automation</b><p>Combining AI tools and workflow automation to reduce repetitive admin, improve triage, organise information and save time.</p></div>
+          <div class="sitem"><b><span class="d"></span>Intune and device management</b><p>Device policies, security baselines and remote protection for compatible business devices.</p></div>
+          <div class="sitem"><b><span class="d"></span>Business Wi-Fi and networking</b><p>Routers, switches, VPN access, printers and tidy small-office network design.</p></div>
+          <div class="sitem"><b><span class="d"></span>Backup and recovery</b><p>Review, configure and test backups for critical business information.</p></div>
+          <div class="sitem"><b><span class="d"></span>Cybersecurity basics</b><p>MFA, access reviews, account hygiene, patching and practical staff awareness.</p></div>
+        </div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-search"></use></svg></div><div><div class="num">BUSINESS SERVICE 03</div><h2>Technology Review &amp; Improvement Planning</h2><div class="tag">Make sensible improvements in the right order.</div></div></div>
+        <p class="svc-intro">Review recurring issues, software subscriptions, risks and manual processes to create a realistic improvement plan.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Technology health review</b><p>Identify support risks, security gaps, ageing devices and avoidable cost.</p></div>
+          <div class="sitem"><b><span class="d"></span>Vendor and product comparison</b><p>Independent guidance on software, hardware, internet and cloud options.</p></div>
+          <div class="sitem"><b><span class="d"></span>Documentation</b><p>Practical records for systems, devices, subscriptions and important support details.</p></div>
+          <div class="sitem"><b><span class="d"></span>Staged improvement roadmap</b><p>Prioritise the changes that matter now and defer what can safely wait.</p></div>
+        </div>
+      </div>
+
+      <div class="service-band reveal" id="digital-services">
+        <div class="eyebrow">WEBSITES &amp; DIGITAL</div>
+        <h2>Useful digital tools for small organisations</h2>
+        <p>Build or improve the customer-facing and internal tools that support your business.</p>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-globe"></use></svg></div><div><div class="num">DIGITAL SERVICE 01</div><h2>Websites, Domains &amp; Business Email</h2><div class="tag">A modern online presence that is clear and maintainable.</div></div></div>
+        <p class="svc-intro">Website design and refreshes for small businesses, including practical setup of domains, contact forms and email.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Business website design</b><p>Responsive websites focused on clarity, trust and useful customer actions.</p></div>
+          <div class="sitem"><b><span class="d"></span>Website refreshes</b><p>Improve outdated design, mobile behaviour, accessibility and content structure.</p></div>
+          <div class="sitem"><b><span class="d"></span>Domain and email setup</b><p>Connect domains, DNS, professional email and essential security records.</p></div>
+          <div class="sitem"><b><span class="d"></span>Forms and analytics</b><p>Working enquiry forms, basic analytics and practical conversion tracking.</p></div>
+        </div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-h"><div class="svc-ico si4"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-settings"></use></svg></div><div><div class="num">DIGITAL SERVICE 02</div><h2>Workflow, Integration &amp; AI-Assisted Automation</h2><div class="tag">Reduce repetitive administration with sensible automation.</div></div></div>
+        <p class="svc-intro">Connect common tools and simplify small, repetitive processes without building an unnecessarily complex system.</p>
+        <div class="svc-items">
+          <div class="sitem"><b><span class="d"></span>Form and notification workflows</b><p>Route enquiries, requests and reminders to the right people and systems.</p></div>
+          <div class="sitem"><b><span class="d"></span>Microsoft Power Platform</b><p>Practical Power Automate and Power Apps solutions for suitable small workflows.</p></div>
+          <div class="sitem"><b><span class="d"></span>AI-assisted administration</b><p>Use approved AI tools for drafting, triage, knowledge organisation and repetitive tasks.</p></div>
+          <div class="sitem"><b><span class="d"></span>Integration review</b><p>Identify where existing tools can share information and reduce duplicate entry.</p></div>
         </div>
       </div>
 
       <div class="cta reveal" style="margin-top:2rem">
         <h2>Not sure what you need?</h2>
-        <p>Book a free initial assessment and we'll figure out the smartest, most budget-friendly path together.</p>
-        <button class="btn btn-coral" onclick="go('contact')">Request Free Assessment →</button>
+        <p>Book a free initial assessment and we&apos;ll figure out the smartest, most budget-friendly path together.</p>
+        <button class="btn btn-coral" onclick="go('contact')">Request Free Assessment &rarr;</button>
       </div>
     </div>
   </section>
@@ -714,29 +1207,23 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 <div id="page-about" class="page">
   <div class="phero" style="padding-bottom:1rem">
     <div class="container">
-      <div class="eyebrow" style="margin-bottom:1.1rem">◆ About &amp; Engineering Background</div>
-      <h1>A software engineer <span class="grad-text">in your corner</span></h1>
+      <div class="eyebrow" style="margin-bottom:1.1rem">&#9670; About 1Touch IT</div>
+      <h1>Business-first support with a <span class="grad-text">founder-led approach</span></h1>
     </div>
   </div>
   <section class="block" style="padding-top:2rem">
     <div class="container">
-      <div class="about">
-        <div class="av reveal">
-          <div class="pframe"><picture class="portrait-picture"><source type="image/avif" srcset="assets/images/optimized/aboutme-320.avif 320w, assets/images/optimized/aboutme-640.avif 640w, assets/images/optimized/aboutme-960.avif 960w" sizes="(max-width:900px) 100vw, 40vw"><source type="image/webp" srcset="assets/images/optimized/aboutme-320.webp 320w, assets/images/optimized/aboutme-640.webp 640w, assets/images/optimized/aboutme-960.webp 960w" sizes="(max-width:900px) 100vw, 40vw"><img src="assets/images/aboutme.png" width="1536" height="1024" alt="Naresh Adhikari" loading="lazy" decoding="async"></picture><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
-          <div class="certs"><span class="cert">CCNA</span><span class="cert">Azure Administrator</span><span class="cert">Microsoft 365 Fundamentals</span><span class="cert">AWS Cloud Practitioner</span><span class="cert">ITIL Foundation</span><span class="cert">B. Information Technology</span></div>
-        </div>
-        <div class="about-b reveal">
-          <h2>More than just tech support</h2>
-          <p>Most local tech support guys only treat the <em>symptoms</em> of a broken device. Because my primary background is in deep systems architecture and software engineering, I analyse the <strong>root cause</strong> of your technical problems.</p>
-          <div class="qblock">"I treat your home and office tech with the same enterprise-grade precision I bring to corporate systems."</div>
-          <p>Whether I am deploying a security rule across your company's Microsoft Intune accounts, configuring an internet failover line, or custom-building a high-performance PC, every job gets that same engineering discipline.</p>
-          <p>I started this local service to give Sydney families and micro-businesses <strong>premium, reliable technical help at cheap, ad-hoc, pay-as-you-go rates</strong>. No lock-ins. No jargon. Just results you can rely on.</p>
-          <p>With more than four years across technical support, end-user computing, Microsoft 365, Azure, networking and day-to-day IT operations, I bring real-world enterprise systems knowledge to every residential and small business job I take on across Greater Sydney.</p>
-
+      <div class="about-company reveal section-panel">
+        <div class="about-b">
+          <h2>Built for homes and small businesses that want clear, reliable help</h2>
+          <p>1Touch IT exists to deliver practical support without lock-in contracts, confusing jargon or faceless call-centre handoffs. The business is built around a simple idea: technology help should be clear, honest, useful and easy to access when people actually need it.</p>
+          <p>Across home technology, small-business systems and digital projects, the focus stays on practical outcomes: improve reliability, reduce frustration, protect what matters and recommend only what is genuinely useful.</p>
+          <div class="qblock">"Clear communication. Honest recommendations. Reliable solutions. Personal service."</div>
+          <p>1Touch IT supports homes and small businesses across Greater Sydney, including Western Sydney and Parramatta, with remote support available where appropriate. Founder experience remains part of the story, but the website is designed to lead with what the company does and how it helps.</p>
           <div class="resume-cta">
-            <h3>🎯 Looking for my corporate engineering portfolio?</h3>
-            <p>If you are a corporate recruiter or client looking for my software development project history, enterprise resume, and technical stack details, view my full technical resume portal.</p>
-            <button onclick="go('resume')" class="btn btn-dark">View Professional Engineering Resume →</button>
+            <h3>Founder and technical background</h3>
+            <p>Read the founder background as a secondary reference while the main website stays focused on the business, the services and HomeLife Hub.</p>
+            <button onclick="go('resume')" class="btn btn-dark">View Founder Background &rarr;</button>
           </div>
         </div>
       </div>
@@ -748,7 +1235,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 <div id="page-contact" class="page">
   <div class="phero" style="padding-bottom:1rem">
     <div class="container">
-      <div class="eyebrow" style="margin-bottom:1.1rem">◆ Request Support</div>
+      <div class="eyebrow" style="margin-bottom:1.1rem">&#9670; Request Support</div>
       <h1>Get a free, <span class="grad-text">budget-friendly estimate</span></h1>
       <p>No complex contracts. Tell us what's broken or needs setting up, and we'll handle the rest on a strict No Fix, No Fee basis.</p>
     </div>
@@ -757,47 +1244,49 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     <div class="container">
       <div class="cgrid">
         <div class="cinfo reveal">
-          <h2>Let's get you sorted</h2>
-          <p>Reach out and Naresh will personally review your request — usually within a few hours.</p>
-          <div class="irow"><div class="iico">📍</div><div><div class="l">Service Area</div><div class="v">Greater Sydney, NSW</div></div></div>
-          <div class="irow"><div class="iico">📞</div><div><div class="l">Phone</div><div class="v">0416 XXX XXX</div></div></div>
-          <div class="irow"><div class="iico">✉️</div><div><div class="l">Email</div><div class="v">nareshadhikari06@gmail.com</div></div></div>
-          <div class="irow"><div class="iico">🕐</div><div><div class="l">Availability</div><div class="v">7 days · including evenings</div></div></div>
+          <h2>Let&apos;s get you sorted</h2>
+          <p>Reach out and 1Touch IT will personally review your request, usually within a few hours.</p>
+          <div class="irow"><div class="iico"><svg class="icon icon-md" aria-hidden="true"><use href="#i-map-pin"></use></svg></div><div><div class="l">Service Area</div><div class="v">Greater Sydney, NSW</div></div></div>
+          <div class="irow"><div class="iico"><svg class="icon icon-md" aria-hidden="true"><use href="#i-phone"></use></svg></div><div><div class="l">Phone</div><div class="v">0416 XXX XXX</div></div></div>
+          <div class="irow"><div class="iico"><svg class="icon icon-md" aria-hidden="true"><use href="#i-mail"></use></svg></div><div><div class="l">Email</div><div class="v">nareshadhikari06@gmail.com</div></div></div>
+          <div class="irow"><div class="iico"><svg class="icon icon-md" aria-hidden="true"><use href="#i-clock"></use></svg></div><div><div class="l">Availability</div><div class="v">7 days &middot; including evenings</div></div></div>
           <div class="cprom">
-            <div class="p"><span class="c">✓</span> <span><strong>No Fix, No Fee</strong> — zero-risk diagnostics</span></div>
-            <div class="p"><span class="c">✓</span> <span><strong>100% Ad-Hoc</strong> — pay only for what you need</span></div>
-            <div class="p"><span class="c">✓</span> <span><strong>Free initial assessment</strong> — no obligation</span></div>
+            <div class="p"><span class="c">&#10003;</span> <span><strong>No Fix, No Fee</strong> &mdash; zero-risk diagnostics where the issue is genuinely unfixable</span></div>
+            <div class="p"><span class="c">&#10003;</span> <span><strong>100% Ad-Hoc</strong> &mdash; pay only for what you need</span></div>
+            <div class="p"><span class="c">&#10003;</span> <span><strong>Free initial assessment</strong> &mdash; no obligation before quoting</span></div>
           </div>
         </div>
         <div class="reveal">
           <form class="fcard" id="formCard" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitForm(event)">
             <input type="hidden" name="access_key" value="da46b9b3-0660-46e5-9b03-88b520f70124">
-            <input type="hidden" name="subject" value="New support request from nareshadhikari.com.au">
+            <input type="hidden" name="subject" value="New support request from 1Touch IT website">
             <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <div class="fg"><label for="fname">Full Name / Business Name <span class="req">*</span></label><input type="text" id="fname" name="name" placeholder="e.g. John Smith or Acme Pty Ltd" required></div>
             <div class="fg frow">
-              <div><label for="fphone">Phone <span class="req">*</span></label><input type="tel" id="fphone" name="phone" placeholder="04XX XXX XXX" required></div>
+              <div><label for="fphone">Phone</label><input type="tel" id="fphone" name="phone" placeholder="04XX XXX XXX"></div>
               <div><label for="femail">Email <span class="req">*</span></label><input type="email" id="femail" name="email" placeholder="you@email.com" required></div>
             </div>
             <div class="fg"><label for="fsuburb">Your Sydney Suburb <span class="req">*</span></label><input type="text" id="fsuburb" name="suburb" placeholder="e.g. Parramatta, Penrith, Blacktown" required></div>
-            <div class="fg"><label for="fcat">What track do you need help with? <span class="req">*</span></label>
-              <select id="fcat" name="service_type" required><option value="" disabled selected>Select a service type…</option><option>Home Tech Support</option><option>Custom PC &amp; Repairs</option><option>Business Microsoft 365 &amp; Intune</option><option>Tech Strategy &amp; Advice</option></select>
+            <div class="fg"><label for="fcat">Type of help <span class="req">*</span></label>
+              <select id="fcat" name="service_type" required><option value="" disabled selected>Select a service type...</option><option>Home IT Support</option><option>Business IT Support</option><option>Website or Digital Work</option><option>HomeLife Hub</option><option>General Enquiry</option></select>
             </div>
-            <div class="fg"><label for="fdetails">Describe the issue or project <span class="req">*</span></label><textarea id="fdetails" name="message" placeholder="Tell us what's broken, what you'd like set up, or what you're trying to achieve…" required></textarea></div>
-            <div class="fg"><label for="ftime">Preferred Service Time <span class="req">*</span></label>
-              <select id="ftime" name="preferred_time" required><option value="" disabled selected>When suits you best?</option><option>Standard Business Hours (Mon–Fri 9–5)</option><option>After-Hours / Evenings</option><option>Weekends</option></select>
+            <div class="fg"><label for="fdetails">Description <span class="req">*</span></label><textarea id="fdetails" name="message" placeholder="Tell us what is broken, what you need set up, or what outcome you want." required></textarea></div>
+            <div class="fg frow">
+              <div><label for="fcontactmethod">Preferred contact method <span class="req">*</span></label><select id="fcontactmethod" name="preferred_contact_method" required><option value="" disabled selected>Choose one...</option><option>Email</option><option>Phone</option><option>Either is fine</option></select></div>
+              <div><label for="ftime">Preferred time <span class="req">*</span></label>
+                <select id="ftime" name="preferred_time" required><option value="" disabled selected>When suits you best?</option><option>Standard business hours (Mon-Fri 9-5)</option><option>After-hours / evenings</option><option>Weekends</option></select></div>
             </div>
-            <button class="submit-btn" type="submit">Submit Support Request →</button>
+            <button class="submit-btn" type="submit">Submit Support Request &rarr;</button>
           </form>
           <div class="fsuccess" id="formSuccess">
-            <div class="bc">✓</div><h3>Request received!</h3><p>Thanks for reaching out. Naresh will review your request and get back to you shortly — usually within a few hours.</p>
-            <button class="btn btn-out" style="margin-top:1.5rem" onclick="go('home')">← Back to Home</button>
+            <div class="bc">&#10003;</div><h3>Request received!</h3><p>Thanks for reaching out. 1Touch IT will review your request and get back to you shortly, usually within a few hours.</p>
+            <button class="btn btn-out" style="margin-top:1.5rem" onclick="go('home')">&larr; Back to Home</button>
           </div>
         </div>
       </div>
 
       <div class="shead reveal" style="margin-top:6rem">
-        <div class="eyebrow">◆ FAQ</div>
+        <div class="eyebrow">&#9670; FAQ</div>
         <h2>Common questions</h2>
       </div>
       <div class="faqw">
@@ -805,8 +1294,8 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-2" aria-expanded="false" aria-controls="faq-panel-2" onclick="toggleDisclosure(this)">Do I have to sign a contract or monthly plan?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-2" role="region" aria-labelledby="faq-button-2" hidden><div>Never. Everything is 100% ad-hoc and pay-as-you-go. No retainers, no lock-ins, no minimum spend. You reach out when you need help, and that's it.</div></div></div>
         <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-3" aria-expanded="false" aria-controls="faq-panel-3" onclick="toggleDisclosure(this)">Which areas of Sydney do you cover?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-3" role="region" aria-labelledby="faq-button-3" hidden><div>Greater Sydney, with a focus on Western Sydney and the Parramatta region. Many issues can also be resolved remotely, wherever you are in Sydney.</div></div></div>
         <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-4" aria-expanded="false" aria-controls="faq-panel-4" onclick="toggleDisclosure(this)">Can you help outside business hours?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-4" role="region" aria-labelledby="faq-button-4" hidden><div>Yes. I offer evening and weekend availability specifically to minimise downtime for busy households and small businesses.</div></div></div>
-        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-5" aria-expanded="false" aria-controls="faq-panel-5" onclick="toggleDisclosure(this)">Do you work with both homes and businesses?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-5" role="region" aria-labelledby="faq-button-5" hidden><div>Absolutely. From family Wi-Fi and smart home setups to Microsoft 365 and Intune device management for small teams — the same engineering precision applies either way.</div></div></div>
-        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-6" aria-expanded="false" aria-controls="faq-panel-6" onclick="toggleDisclosure(this)">Can issues be fixed remotely?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-6" role="region" aria-labelledby="faq-button-6" hidden><div>Many software, Microsoft 365, and configuration issues can be resolved quickly and securely over the internet using remote desktop tools — often same-day and at a lower cost than an on-site visit.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-5" aria-expanded="false" aria-controls="faq-panel-5" onclick="toggleDisclosure(this)">Do you work with both homes and businesses?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-5" role="region" aria-labelledby="faq-button-5" hidden><div>Absolutely. From family Wi-Fi and smart home setups to Microsoft 365 and Intune device management for small teams &mdash; the same engineering precision applies either way.</div></div></div>
+        <div class="faq reveal"><button type="button" class="faq-q" id="faq-button-6" aria-expanded="false" aria-controls="faq-panel-6" onclick="toggleDisclosure(this)">Can issues be fixed remotely?<span class="ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-panel-6" role="region" aria-labelledby="faq-button-6" hidden><div>Many software, Microsoft 365, and configuration issues can be resolved quickly and securely over the internet using remote desktop tools &mdash; often same-day and at a lower cost than an on-site visit.</div></div></div>
       </div>
     </div>
   </section>
@@ -816,12 +1305,12 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 <div id="page-resume" class="page">
   <div class="phero" style="padding-bottom:1rem">
     <div class="container">
-      <div class="eyebrow" style="margin-bottom:1.1rem">◆ Technical Resume Portal</div>
-      <h1>Systems &amp; Software <span class="grad-text">Engineering</span> background</h1>
-      <p>The professional side of Naresh Adhikari — over four years across IT support, end-user computing, Microsoft 365, Azure, networking and day-to-day IT operations.</p>
+      <div class="eyebrow" style="margin-bottom:1.1rem">&#9670; Founder Background</div>
+      <h1>Naresh Adhikari <span class="grad-text">founder background</span></h1>
+      <p>The founder perspective behind 1Touch IT, including the service mindset, technical background and experience that shape how the business supports clients.</p>
       <div class="hero-btns" style="justify-content:center;margin-top:2rem">
-        <button onclick="go('contact')" class="btn btn-dark">Contact Us →</button>
-        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-out"><span class="li-mini" aria-hidden="true">in</span>View LinkedIn</a>
+        <button onclick="go('contact')" class="btn btn-dark">Contact Us &rarr;</button>
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-out"><svg class="icon icon-md" aria-hidden="true"><use href="#i-linkedin"></use></svg>View LinkedIn</a>
       </div>
     </div>
   </div>
@@ -830,49 +1319,52 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     <div class="container">
 
       <!-- SUMMARY + CONTACT -->
-      <div class="about" style="margin-bottom:1rem">
-        <div class="av reveal">
-          <div class="pframe"><picture class="portrait-picture"><source type="image/avif" srcset="assets/images/optimized/naresh-profile-320.avif 320w, assets/images/optimized/naresh-profile-640.avif 640w, assets/images/optimized/naresh-profile-960.avif 960w" sizes="(max-width:900px) 100vw, 40vw"><source type="image/webp" srcset="assets/images/optimized/naresh-profile-320.webp 320w, assets/images/optimized/naresh-profile-640.webp 640w, assets/images/optimized/naresh-profile-960.webp 960w" sizes="(max-width:900px) 100vw, 40vw"><img src="assets/images/naresh-profile.png" width="1673" height="2048" alt="Naresh Adhikari" loading="lazy" decoding="async"></picture><div class="ph-fallback" style="display:none"><div class="pinit">NA</div><div class="note">📸 Photo of Naresh Adhikari</div></div></div>
+      <div class="founder-summary">
+        <div class="founder-profile-card reveal">
+          <div class="pframe">
+            <img src="assets/images/naresh-profile.png" alt="Naresh Adhikari, founder of 1Touch IT" loading="lazy" decoding="async">
+          </div>
           <div class="certs">
-            <span class="cert">📍 Sydney, Australia</span>
-            <span class="cert">✉️ nareshadhikari06@gmail.com</span>
-            <span class="cert">📞 0416 XXX XXX</span>
+            <span class="cert">Sydney, Australia</span>
+            <span class="cert">nareshadhikari06@gmail.com</span>
+            <span class="cert">0416 XXX XXX</span>
           </div>
         </div>
-        <div class="about-b reveal">
+        <div class="founder-intro reveal">
+          <span class="founder-mini-note">The person behind the company</span>
           <h2>Practical support with a strong service mindset</h2>
-          <p>I am an IT professional with strong experience in hardware and software support, Microsoft 365, Azure administration, user access management, troubleshooting, and IT service delivery.</p>
-          <p>I enjoy solving technical issues, improving user experience, and supporting smooth day-to-day operations across business systems and end-user environments.</p>
-          <p>I hold a <strong>Bachelor of Information Technology</strong> and certifications including CCNA, Microsoft Azure Administrator Associate, Microsoft 365 Fundamentals, AWS Cloud Practitioner, and ITIL Foundation.</p>
+          <p>1Touch IT is shaped by experience across technical support, end-user computing, Microsoft 365, Azure, networking and day-to-day IT operations. That background helps the business approach problems with a balance of structure, responsiveness and plain-language communication.</p>
+          <p>The founder view behind 1Touch IT is simple: support should feel personal, clear and outcome-focused. The aim is not to overwhelm clients with technical language, but to make the right decisions easier and the right solutions more reliable.</p>
+          <p>Formal study and certifications remain part of the technical foundation, but the real value comes from applying that experience in a practical way for homes, small businesses and digital projects across Greater Sydney.</p>
         </div>
       </div>
 
       <!-- SKILLS -->
       <div class="shead reveal" style="margin-top:5rem">
-        <div class="eyebrow">◆ Skills &amp; Abilities</div>
+        <div class="eyebrow">&#9670; Skills &amp; Abilities</div>
         <h2>Core technical skills</h2>
         <p>A practical mix of cloud, support, infrastructure, systems administration, and customer-facing IT skills.</p>
       </div>
       <div class="why-grid">
-        <div class="why reveal"><div class="wi">☁️</div><div><b>Microsoft 365 &amp; Azure</b><p>Tenant administration, user access management, Azure Administrator Associate certified.</p></div></div>
-        <div class="why reveal"><div class="wi">🌐</div><div><b>Networking</b><p>CCNA certified — LAN/WAN, routing, switching, Wi-Fi, VPN connectivity.</p></div></div>
-        <div class="why reveal"><div class="wi">🛡️</div><div><b>Active Directory</b><p>User accounts, permissions, group policy and access management.</p></div></div>
-        <div class="why reveal"><div class="wi">🖥️</div><div><b>End-User Computing</b><p>Windows, macOS, Android &amp; iOS support, deployments and troubleshooting.</p></div></div>
-        <div class="why reveal"><div class="wi">💾</div><div><b>Backup &amp; Recovery</b><p>Azure Backup, Veeam, data protection and disaster recovery setups.</p></div></div>
-        <div class="why reveal"><div class="wi">📋</div><div><b>IT Service Delivery</b><p>ITIL Foundation — ticketing, incident resolution, documentation &amp; SLAs.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div><b>Microsoft 365 &amp; Azure</b><p>Tenant administration, user access management, Azure Administrator Associate certified.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-network"></use></svg></div><div><b>Networking</b><p>CCNA certified &mdash; LAN/WAN, routing, switching, Wi-Fi and VPN connectivity.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-key"></use></svg></div><div><b>Active Directory</b><p>User accounts, permissions, group policy and access management.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-devices"></use></svg></div><div><b>End-User Computing</b><p>Windows, macOS, Android and iOS support, deployments and troubleshooting.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-database"></use></svg></div><div><b>Backup &amp; Recovery</b><p>Azure Backup, Veeam, data protection and disaster recovery setups.</p></div></div>
+        <div class="why reveal"><div class="wi"><svg class="icon icon-md" aria-hidden="true"><use href="#i-badge"></use></svg></div><div><b>IT Service Delivery</b><p>ITIL Foundation &mdash; ticketing, incident resolution, documentation and SLAs.</p></div></div>
       </div>
 
       <!-- EXPERIENCE -->
       <div class="shead reveal" style="margin-top:5rem">
-        <div class="eyebrow">◆ Professional Experience</div>
-        <h2>Where I've worked</h2>
-        <p>Recent roles across end-user support, desktop engineering, IT operations, and user-facing technical service.</p>
+        <div class="eyebrow">&#9670; Experience in Practice</div>
+        <h2>Experience that shapes how the business works</h2>
+        <p>Roles across technical support, desktop engineering, IT operations and user-facing service continue to influence how 1Touch IT supports clients today.</p>
       </div>
       <div class="timeline">
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <div class="tl-top"><div><h3>IT Technology and Support Officer</h3><div class="tl-org">Carers NSW</div></div><span class="tl-date">Jul 2023 – Present</span></div>
+            <div class="tl-top"><div><h3>IT Technology and Support Officer</h3><div class="tl-org">Carers NSW</div></div><span class="tl-date">Jul 2023 &ndash; Present</span></div>
             <ul class="tl-list">
               <li>Administer and maintain networks, systems, end-user devices, and day-to-day business IT services.</li>
               <li>Support backup, security, upgrades, documentation, staff training, and IT asset management activities.</li>
@@ -883,7 +1375,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <div class="tl-top"><div><h3>EUC Field Service Engineer</h3><div class="tl-org">Transport for NSW</div></div><span class="tl-date">Jan 2023 – Jul 2023</span></div>
+            <div class="tl-top"><div><h3>EUC Field Service Engineer</h3><div class="tl-org">Transport for NSW</div></div><span class="tl-date">Jan 2023 &ndash; Jul 2023</span></div>
             <ul class="tl-list">
               <li>Supported end-user computing environments, field devices, deployments, and enterprise troubleshooting.</li>
               <li>Delivered responsive user support in a fast-paced workplace technology environment.</li>
@@ -893,7 +1385,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <div class="tl-top"><div><h3>Onsite Desktop Engineer</h3><div class="tl-org">FUJIFILM Business Innovation Australia</div></div><span class="tl-date">Jul 2022 – Jan 2023</span></div>
+            <div class="tl-top"><div><h3>Onsite Desktop Engineer</h3><div class="tl-org">FUJIFILM Business Innovation Australia</div></div><span class="tl-date">Jul 2022 &ndash; Jan 2023</span></div>
             <ul class="tl-list">
               <li>Provided support across Windows, Android, iOS, and Mac environments, including remote and onsite resolution.</li>
               <li>Handled ticketing, software troubleshooting, Active Directory access, Office 365 support, and VPN connectivity.</li>
@@ -904,7 +1396,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-card">
-            <div class="tl-top"><div><h3>IT Support Technician</h3><div class="tl-org">ICTBS / The ictX</div></div><span class="tl-date">Jul 2020 – Jul 2022</span></div>
+            <div class="tl-top"><div><h3>IT Support Technician</h3><div class="tl-org">ICTBS / The ictX</div></div><span class="tl-date">Jul 2020 &ndash; Jul 2022</span></div>
             <ul class="tl-list">
               <li>Installed and configured hardware, software, printers, scanners, user accounts, and Microsoft 365 services.</li>
               <li>Supported Active Directory, Azure backup, Veeam backup, VPN access, service requests, and user troubleshooting.</li>
@@ -914,55 +1406,10 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <!-- EDUCATION -->
-      <div class="shead reveal" style="margin-top:5rem">
-        <div class="eyebrow">◆ Education &amp; Certifications</div>
-        <h2>Qualifications</h2>
-        <p>Continuous learning and hands-on experience have shaped my professional growth in IT.</p>
-      </div>
-      <div class="tracks" style="margin-bottom:2rem">
-        <div class="tcard reveal" style="cursor:default">
-          <div class="tbig" style="background:var(--sky)">🎓</div>
-          <h3 style="font-size:1.3rem">Bachelor of Information Technology</h3>
-          <p style="margin-bottom:.5rem">Victoria University · Sydney Campus</p>
-          <span class="cert">2019 – 2022 · Completed</span>
-        </div>
-        <div class="tcard reveal" style="cursor:default">
-          <div class="tbig" style="background:var(--lemon)">📜</div>
-          <h3 style="font-size:1.3rem">Advanced Diploma of Information Technology</h3>
-          <p style="margin-bottom:.5rem">Kingston Institute Australia</p>
-          <span class="cert">2018 – 2019 · Completed</span>
-        </div>
-      </div>
-      <div class="cert-flow" aria-label="Certifications">
-        <div class="cert-track">
-          <span class="cert">ISC2 CC (Certified in Cybersecurity)</span>
-          <span class="cert">AWS Cloud Practitioner</span>
-          <span class="cert">ITIL Foundation</span>
-          <span class="cert">CCNA 200-301</span>
-          <span class="cert">Azure Administrator Associate</span>
-          <span class="cert">Microsoft 365</span>
-          <span class="cert">Introduction to Cybersecurity</span>
-          <span class="cert">Network Defense Essentials (NDE)</span>
-          <span class="cert">Cloud Computing Security</span>
-          <span class="cert">Microsoft Dynamics 365 Basics</span>
-          <span class="cert" aria-hidden="true">ISC2 CC (Certified in Cybersecurity)</span>
-          <span class="cert" aria-hidden="true">AWS Cloud Practitioner</span>
-          <span class="cert" aria-hidden="true">ITIL Foundation</span>
-          <span class="cert" aria-hidden="true">CCNA 200-301</span>
-          <span class="cert" aria-hidden="true">Azure Administrator Associate</span>
-          <span class="cert" aria-hidden="true">Microsoft 365</span>
-          <span class="cert" aria-hidden="true">Introduction to Cybersecurity</span>
-          <span class="cert" aria-hidden="true">Network Defense Essentials (NDE)</span>
-          <span class="cert" aria-hidden="true">Cloud Computing Security</span>
-          <span class="cert" aria-hidden="true">Microsoft Dynamics 365 Basics</span>
-        </div>
-      </div>
-
       <div class="cta reveal" style="margin-top:5rem">
-        <h2>Hiring or collaborating?</h2>
-        <p>I'm open to IT support roles, desktop engineering opportunities, and professional networking. Let's connect.</p>
-        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-coral">Connect on LinkedIn →</a>
+        <h2>Need founder credentials or background context?</h2>
+        <p>Use this page as a secondary reference while the main website remains focused on 1Touch IT services and HomeLife Hub.</p>
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="btn btn-coral">Connect on LinkedIn &rarr;</a>
       </div>
 
     </div>
@@ -973,21 +1420,19 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <div class="container">
     <div class="fgrid">
       <div class="fbrand">
-        <div class="brand"><div class="blogo">
-          <svg viewBox="0 0 58 58" aria-label="Naresh Adhikari logo"><rect x="8" y="12" width="42" height="30" rx="5" fill="url(#lg)"/><rect x="23" y="44" width="12" height="4" rx="2" fill="#7C3AED"/><rect x="18" y="49" width="22" height="3.5" rx="1.75" fill="#7C3AED"/><path d="M21 35 V19 L37 35 V19" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="19" r="2.4" fill="#FF6B4A"/></svg>
-        </div><div>Naresh Adhikari <span class="sub">| IT & Systems</span></div></div>
-        <p>Proudly providing cheap, reliable ad-hoc IT support and device setups across Greater Sydney.</p>
+        <div class="footer-logo-shell"><img src="assets/images/top-band-logo.png" alt="1Touch IT" class="brand-logo-full"></div>
+        <p>Professional IT support and practical technology solutions for homes and small businesses across Greater Sydney.</p>
       </div>
-      <div class="fcol"><h4>Navigate</h4><button type="button" class="footer-action" data-view="home" onclick="go('home')">Home</button><button type="button" class="footer-action" data-view="services" onclick="go('services')">How We Help</button><button type="button" class="footer-action" data-view="about" onclick="go('about')">About & Resume</button><button type="button" class="footer-action" data-view="contact" onclick="go('contact')">Contact Us</button></div>
-      <div class="fcol"><h4>Services</h4><button type="button" class="footer-action" onclick="go('services','home-services')">Home & Family IT</button><button type="button" class="footer-action" onclick="go('services','business-services')">Business Cloud</button><button type="button" class="footer-action" onclick="go('services','home-services')">PC Repairs & Builds</button><button type="button" class="footer-action" onclick="go('services')">Tech Strategy</button></div>
-      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="ficon-link"><span class="li-mini" aria-hidden="true">in</span>LinkedIn Profile</a><button type="button" class="footer-action" data-view="resume" onclick="go('resume')">Technical Resume Portal</button><a href="mailto:nareshadhikari06@gmail.com">Email Naresh</a><span>ABN 28 579 398 740</span></div>
+      <div class="fcol"><h4>Navigate</h4><button type="button" class="footer-action" data-view="home" onclick="go('home')">Home</button><button type="button" class="footer-action" data-view="about" onclick="go('about')">About</button><button type="button" class="footer-action" data-view="services" onclick="go('services')">Services</button><button type="button" class="footer-action" data-view="product" onclick="go('product')">Product</button><button type="button" class="footer-action" data-view="contact" onclick="go('contact')">Contact Us</button></div>
+      <div class="fcol"><h4>Services</h4><button type="button" class="footer-action" onclick="go('services','home-services')">Home IT Support</button><button type="button" class="footer-action" onclick="go('services','business-services')">Business IT Support</button><button type="button" class="footer-action" onclick="go('services','digital-services')">Websites &amp; Digital</button><a href="https://homelifehub.com.au" target="_blank" rel="noopener">HomeLife Hub</a></div>
+      <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="ficon-link"><span class="footer-mark" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-linkedin"></use></svg></span>LinkedIn Profile</a><button type="button" class="footer-action" data-view="resume" onclick="go('resume')">Founder Background</button><a href="mailto:nareshadhikari06@gmail.com" class="ficon-link"><span class="footer-mark" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-mail"></use></svg></span>Email 1Touch IT</a><span>ABN 28 579 398 740</span><span>HomeLife Hub is a product developed by 1Touch IT.</span></div>
     </div>
     <div class="fbot">
-      <div>© 2026 Naresh Adhikari. All Rights Reserved.</div>
+      <div>&copy; 2026 1Touch IT. All rights reserved. Privacy and terms available on request.</div>
       <div class="social">
-        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-        <a href="https://github.com/iamnarace" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
-        <a href="mailto:nareshadhikari06@gmail.com" aria-label="Email">@</a>
+        <a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon icon-md" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
+        <a href="https://github.com/iamnarace" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon icon-md" aria-hidden="true"><use href="#i-github"></use></svg></a>
+        <a href="mailto:nareshadhikari06@gmail.com" aria-label="Email"><svg class="icon icon-md" aria-hidden="true"><use href="#i-mail"></use></svg></a>
       </div>
     </div>
   </div>
@@ -1041,7 +1486,7 @@ function toggleDisclosure(button){
 }
 async function submitForm(event){
   event.preventDefault();
-  const ids=['fname','fphone','femail','fsuburb','fcat','fdetails','ftime'];
+  const ids=['fname','femail','fsuburb','fcat','fdetails','fcontactmethod','ftime'];
   for(const id of ids){if(!document.getElementById(id).value.trim()){alert('Please fill in all required fields before submitting.');return}}
   const form=document.getElementById('formCard');
   const btn=form.querySelector('.submit-btn');
@@ -1088,3 +1533,4 @@ setActiveView('home');initReveal();setTimeout(animateCounters,400);
 </script>
 </body>
 </html>
+
