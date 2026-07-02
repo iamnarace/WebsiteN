@@ -25,11 +25,14 @@ module.exports = function handler(_request, response) {
       )
       .replace(
         '<link rel="icon" type="image/png" href="assets/images/1touch-it-logo-icon.png">',
-        '<link rel="icon" type="image/x-icon" href="/api/favicon">',
+        '<link rel="icon" type="image/x-icon" href="/api/favicon?v=20260702"><link rel="shortcut icon" type="image/x-icon" href="/api/favicon?v=20260702">',
       );
 
     response.setHeader('Content-Type', 'text/html; charset=utf-8');
-    response.setHeader('Cache-Control', 'public, max-age=0, s-maxage=300');
+    response.setHeader(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, max-age=0',
+    );
     response.status(200).send(html);
   } catch (error) {
     response.status(500).send('Unable to load the homepage.');
