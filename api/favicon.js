@@ -3,6 +3,9 @@ const faviconBase64 = 'AAABAAMAEBAAAAAAIAC2AgAANgAAABgYAAAAACAA3wQAAOwCAAAgIAAAA
 module.exports = function handler(_request, response) {
   const favicon = Buffer.from(faviconBase64, 'base64');
   response.setHeader('Content-Type', 'image/x-icon');
-  response.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400');
+  response.setHeader(
+    'Cache-Control',
+    'no-store, no-cache, must-revalidate, max-age=0',
+  );
   response.status(200).send(favicon);
 };
