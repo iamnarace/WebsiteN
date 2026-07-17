@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nareshadhikari.com.au/sitemap.xml
+Sitemap: https://www.1touchit.com.au/sitemap.xml
