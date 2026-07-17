@@ -1,122 +1,158 @@
 # 1Touch IT Domain and Personal Portfolio Restoration
 
-## Goal
-
-Split the current combined website into two clear properties:
+## Final architecture
 
 - `www.1touchit.com.au` — 1Touch IT business website
 - `nareshadhikari.com.au` — Naresh Adhikari personal portfolio and resume
+- GitHub repositories remain private.
+- Vercel hosts both public websites as two separate projects.
+- The only public business mailbox is `support@1touchit.com.au`.
 
-The only public business email should be `support@1touchit.com.au`.
+## Why Vercel
 
-## Preserved source snapshots
+Vercel can deploy private GitHub repositories, creates preview deployments for branches and pull requests, manages HTTPS, and allows each website to have its own custom domain. GitHub remains the source-control system; Vercel is the hosting platform.
 
-- Current 1Touch IT source: `main`
-- Business migration work: `migration/1touchit-domain`
-- Recovered personal portfolio baseline: `restore/personal-portfolio-2026-03-22`
-- Personal baseline commit: `51d81ce2e1df256d2357a21f9a377bc5b54ee4d0`
+## Preserved source
 
-Do not reset or force-push `main`. Do not delete either preservation branch.
+### Business
 
-## Phase 1 — Prepare the 1Touch IT business website
+- Repository: `iamnarace/WebsiteN`
+- Current live baseline: `main`
+- Prepared migration branch: `migration/1touchit-domain`
 
-Work only on `migration/1touchit-domain`.
+### Personal portfolio
 
-1. Set the canonical business hostname to `https://www.1touchit.com.au/`.
-2. Replace every `https://nareshadhikari.com.au` business-site reference in:
-   - Open Graph metadata
-   - Twitter metadata
-   - JSON-LD structured data
-   - sitemap and robots configuration
-3. Replace every displayed and linked personal email with `support@1touchit.com.au`.
-4. Verify the Web3Forms access key sends submissions to `support@1touchit.com.au`. Changing visible HTML text alone does not change the Web3Forms delivery mailbox.
-5. Replace the embedded founder/resume portal with a simple external link to `https://nareshadhikari.com.au` after the personal site is deployed.
-6. Keep HomeLife Hub links pointing to `https://homelifehub.com.au`.
-7. Test navigation, mobile layout, images, contact form, favicon, social preview and sitemap.
+- New private repository: `iamnarace/Naresh-Personal-Website`
+- Recovered source branch: `restore/personal-portfolio-2026-03-22` in `iamnarace/WebsiteN`
+- Recovered baseline commit: `51d81ce2e1df256d2357a21f9a377bc5b54ee4d0`
 
-Already prepared on this branch:
+Do not delete the restore branch until the personal repository has been populated, deployed and verified.
 
-- `CNAME` → `www.1touchit.com.au`
-- `robots.txt` → new business sitemap
-- `sitemap.xml` → business root only
+## Business migration completed in GitHub
 
-## Phase 2 — Create a separate personal-site repository
+The `migration/1touchit-domain` branch now:
 
-Create a new private repository, recommended name: `Naresh-Personal-Website`.
+- Uses `https://www.1touchit.com.au/` in business Open Graph metadata.
+- Uses the new domain in social images and JSON-LD structured data.
+- Displays and links only `support@1touchit.com.au` for business contact.
+- Links founder-background actions to `https://nareshadhikari.com.au`.
+- Removes the embedded founder resume page.
+- Removes the standalone `resume.html` business route.
+- Removes GitHub Pages `CNAME` and Pages deployment workflow.
+- Uses a business-only `robots.txt` and `sitemap.xml`.
+- Includes `vercel.json` with basic security headers.
+- Keeps HomeLife Hub links pointed to `https://homelifehub.com.au`.
 
-Copy the complete tree from `restore/personal-portfolio-2026-03-22` into its `main` branch. Do not copy the 1Touch IT business version.
+## Business deployment workflow
 
-Update the restored content before deployment:
+1. Review the draft pull request from `migration/1touchit-domain` into `main`.
+2. In Vercel, create a project by importing `iamnarace/WebsiteN` from GitHub.
+3. Keep the repository private.
+4. Framework preset: `Other`.
+5. Root directory: repository root.
+6. Build command: leave empty.
+7. Output directory: leave empty.
+8. Use the migration branch preview to inspect the complete site before merging.
+9. After review, merge the pull request into `main`.
+10. Confirm Vercel production deploys from `main`.
+11. Add both domains in the Vercel project:
+    - `1touchit.com.au`
+    - `www.1touchit.com.au`
+12. Set `www.1touchit.com.au` as the primary domain and redirect the apex domain to `www`.
+13. Copy the exact DNS records shown by Vercel into the VentraIP DNS manager.
+14. Do not remove the current `nareshadhikari.com.au` DNS until the 1Touch IT deployment is working over HTTPS.
 
-1. Keep Home, About, Skills, Education/Certifications, Experience and Contact.
-2. Refresh current role, years of experience, certifications and project links.
-3. Add HomeLife Hub and 1Touch IT under Projects / Ventures.
+## Personal repository population
+
+The new repository is private and currently contains only its initial README. The GitHub connector cannot perform a cross-repository binary-tree clone, so this is the one source-transfer step that must be completed through GitHub Importer or local Git.
+
+Preferred local Git method:
+
+```bash
+git clone https://github.com/iamnarace/WebsiteN.git
+cd WebsiteN
+git checkout restore/personal-portfolio-2026-03-22
+git remote add personal https://github.com/iamnarace/Naresh-Personal-Website.git
+git push personal restore/personal-portfolio-2026-03-22:main --force-with-lease
+```
+
+The destination repository currently has only a placeholder README, so replacing its `main` history with the recovered portfolio is intentional. Confirm the source branch name before running the push.
+
+## Personal-site preparation
+
+Before attaching `nareshadhikari.com.au`:
+
+1. Verify Home, About, Skills, Education/Certifications, Experience and Contact.
+2. Refresh current role, certifications and professional summary.
+3. Add HomeLife Hub and 1Touch IT under Projects or Ventures.
 4. Link 1Touch IT to `https://www.1touchit.com.au`.
-5. Decide whether the personal contact should show a personal email, LinkedIn only, or a contact form. Do not show the business support address as the main personal identity unless intentionally desired.
-6. Replace outdated resume images with a current accessible resume page or PDF.
-7. Set personal metadata, structured data, sitemap, favicon and canonical URL to `https://nareshadhikari.com.au/`.
+5. Review whether the personal phone number should remain public.
+6. Replace outdated resume screenshots with the current resume.
+7. Check that any EmailJS contact-form configuration is still valid.
+8. Add personal metadata, social image, sitemap and `vercel.json`.
 
-## Phase 3 — Configure GitHub Pages and DNS
+## Personal deployment workflow
 
-Before changing DNS, add and verify both domains in GitHub account Settings → Pages to reduce domain-takeover risk.
+1. In Vercel, create another project by importing `iamnarace/Naresh-Personal-Website`.
+2. Framework preset: `Other`.
+3. Root directory: repository root.
+4. Build command and output directory: leave empty.
+5. Review the temporary Vercel deployment URL.
+6. Add:
+   - `nareshadhikari.com.au`
+   - `www.nareshadhikari.com.au`
+7. Set `nareshadhikari.com.au` as the primary domain.
+8. Copy the exact DNS records provided by Vercel into VentraIP.
+9. Redirect `www.nareshadhikari.com.au` to the apex domain.
 
-### 1Touch IT
+## Contact-form requirement
 
-In the business repository Pages settings, set custom domain:
+The business form uses Web3Forms. Changing the visible email address does not change the destination mailbox for the existing Web3Forms access key.
 
-`www.1touchit.com.au`
+Manual verification required:
 
-At the DNS provider:
+1. Sign in to Web3Forms.
+2. Confirm that the access key embedded in the website belongs to you.
+3. Set or recreate its delivery address as `support@1touchit.com.au`.
+4. Submit a real test through the Vercel preview.
+5. Confirm receipt and reply-to behaviour.
 
-- `CNAME` record: host `www` → `iamnarace.github.io`
-- Configure the apex `1touchit.com.au` using the GitHub Pages apex records shown in current GitHub documentation, so it redirects to `www.1touchit.com.au`.
-- Do not use wildcard DNS records.
+The personal portfolio uses EmailJS in the recovered baseline. Test or replace that configuration before publishing the personal contact form.
 
-### Personal site
+## Safe cutover order
 
-In the new personal repository Pages settings, set custom domain:
-
-`nareshadhikari.com.au`
-
-At the DNS provider:
-
-- Keep or update the apex records to the GitHub Pages values.
-- Add `CNAME` host `www` → `iamnarace.github.io` so `www.nareshadhikari.com.au` redirects correctly.
-
-Enable **Enforce HTTPS** on both repositories after GitHub issues the certificates.
-
-## Phase 4 — Safe cutover order
-
-1. Finish and preview the business migration branch.
-2. Deploy and validate the new personal repository on its temporary GitHub Pages URL.
-3. Configure and verify `1touchit.com.au` in GitHub before adding its DNS records.
-4. Point `www.1touchit.com.au` and the apex domain to the business site.
-5. Confirm HTTPS, form delivery to `support@1touchit.com.au`, metadata and redirects.
-6. Configure `nareshadhikari.com.au` on the new personal repository.
-7. Move the old domain DNS to the personal repository.
-8. Verify both sites from phone and desktop.
-9. Merge the business migration branch only after all branch checks pass.
+1. Populate and privately preview the personal repository.
+2. Preview the 1Touch IT migration branch in Vercel.
+3. Test the business form and mobile layout.
+4. Merge the 1Touch IT migration pull request.
+5. Attach `1touchit.com.au` and `www.1touchit.com.au` in Vercel.
+6. Update 1Touch IT DNS in VentraIP and confirm HTTPS.
+7. Attach `nareshadhikari.com.au` to the personal Vercel project.
+8. Move the existing personal-domain DNS in VentraIP.
+9. Verify both domains on desktop and mobile.
+10. Keep the recovery branch until both sites have been stable and verified.
 
 ## Acceptance checklist
 
-### Business site
+### 1Touch IT
 
 - [ ] `https://www.1touchit.com.au` loads over HTTPS
-- [ ] `https://1touchit.com.au` redirects correctly
-- [ ] No business metadata references `nareshadhikari.com.au`
-- [ ] Only `support@1touchit.com.au` is displayed for business contact
-- [ ] Contact-form test arrives at `support@1touchit.com.au`
-- [ ] Sitemap and robots use the 1Touch IT domain
-- [ ] Personal resume link opens `nareshadhikari.com.au`
+- [ ] `https://1touchit.com.au` redirects to `www`
+- [ ] Only `support@1touchit.com.au` is displayed
+- [ ] Form submissions arrive at `support@1touchit.com.au`
+- [ ] Metadata, sitemap and robots use the 1Touch IT domain
+- [ ] Founder link opens `nareshadhikari.com.au`
+- [ ] No resume route remains on the business site
 
-### Personal site
+### Personal website
 
 - [ ] `https://nareshadhikari.com.au` loads over HTTPS
-- [ ] Site is clearly a personal portfolio, not an IT-service sales site
-- [ ] Resume and professional history are current
-- [ ] HomeLife Hub and 1Touch IT are linked as projects/ventures
-- [ ] No old 1Touch business forms or sales metadata remain
+- [ ] Site is clearly a personal portfolio
+- [ ] Resume and experience are current
+- [ ] HomeLife Hub and 1Touch IT are linked as ventures/projects
+- [ ] Contact method has been reviewed for privacy
+- [ ] No 1Touch IT sales form or business metadata remains
 
 ## Rollback
 
-If the 1Touch IT cutover fails, restore the previous DNS records for `nareshadhikari.com.au`; `main` has not been rewritten and the recovered personal snapshot remains protected on its restore branch.
+The current business `main` branch has not been overwritten. If the cutover fails, leave or restore the existing VentraIP DNS while correcting the Vercel project. The recovered personal snapshot remains protected on `restore/personal-portfolio-2026-03-22`.
