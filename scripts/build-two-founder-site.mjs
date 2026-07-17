@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -203,21 +202,6 @@ replaceOnce(
 
 if (html === original) throw new Error('No HTML changes were produced');
 
-const imagePartsDir = join(root, 'scripts', 'subash-founder-image');
-const imageData = readdirSync(imagePartsDir)
-  .filter((name) => name.endsWith('.b64'))
-  .sort()
-  .map((name) => readFileSync(join(imagePartsDir, name), 'utf8').trim())
-  .join('')
-  .replace(/\s+/g, '');
-const imageBuffer = Buffer.from(imageData, 'base64');
-const imageHash = createHash('sha256').update(imageBuffer).digest('hex');
-if (imageHash !== 'cb539c20d60c1d3a1ce544a8ddf0e35c3dff53fe40957d8f83d595d9ca877ab0') {
-  throw new Error(`Subash portrait failed integrity check: ${imageHash}`);
-}
-const imagePath = join(dist, 'assets', 'images', 'subash-thapa-founder.jpg');
-mkdirSync(resolve(imagePath, '..'), { recursive: true });
-writeFileSync(imagePath, imageBuffer);
 writeFileSync(indexPath, html.replace(/\r\n/g, '\n'), 'utf8');
 
 console.log('Static two-founder site generated in dist/');
