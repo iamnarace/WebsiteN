@@ -25,15 +25,22 @@ jobs:
         run: |
           from pathlib import Path
           import json
+          import re
 
           index_path = Path("index.html")
           html = index_path.read_text(encoding="utf-8-sig")
 
-          # Move every business-owned URL to the new 1Touch IT domain.
-          html = html.replace(
-              "https://nareshadhikari.com.au",
-              "https://www.1touchit.com.au",
-          )
+          # Update only business-owned metadata and structured-data URLs.
+          targeted_domain_replacements = {
+              '<meta property="og:url" content="https://nareshadhikari.com.au/">':
+                  '<meta property="og:url" content="https://www.1touchit.com.au/">',
+              'https://nareshadhikari.com.au/assets/images/social-share.png':
+                  'https://www.1touchit.com.au/assets/images/social-share.png',
+              '"url": "https://nareshadhikari.com.au/"':
+                  '"url": "https://www.1touchit.com.au/"',
+          }
+          for old, new in targeted_domain_replacements.items():
+              html = html.replace(old, new)
 
           # The business website uses one public mailbox only.
           html = html.replace(
@@ -41,7 +48,7 @@ jobs:
               "support@1touchit.com.au",
           )
 
-          # Founder/resume actions now open the separate personal website.
+          # Founder/resume actions open the separate personal website.
           html = html.replace(
               "go('resume')",
               "window.open('https://nareshadhikari.com.au','_blank')",
@@ -54,6 +61,20 @@ jobs:
               'href="resume.html"',
               'href="https://nareshadhikari.com.au" target="_blank" rel="noopener"',
           )
+          html = html.replace(
+              "window.open('https://www.1touchit.com.au','_blank')",
+              "window.open('https://nareshadhikari.com.au','_blank')",
+          )
+
+          # Remove the duplicate embedded resume/founder page from the business site.
+          html, removed = re.subn(
+              r'\n<!-- ===== RESUME ===== -->.*?\n<footer>',
+              '\n<footer>',
+              html,
+              flags=re.DOTALL,
+          )
+          if removed not in (0, 1):
+              raise RuntimeError(f"Unexpected resume block count: {removed}")
 
           index_path.write_text(html, encoding="utf-8")
 
@@ -101,6 +122,7 @@ jobs:
           assert "support@1touchit.com.au" in html
           assert "nareshadhikari06@gmail.com" not in html
           assert "window.open('https://nareshadhikari.com.au','_blank')" in html
+          assert 'id="page-resume"' not in html
           assert "https://www.1touchit.com.au/sitemap.xml" in Path("robots.txt").read_text()
           assert "https://www.1touchit.com.au/" in Path("sitemap.xml").read_text()
           json.loads(Path("vercel.json").read_text())
@@ -115,5 +137,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html robots.txt sitemap.xml vercel.json
-          git commit -m "feat: prepare 1Touch IT for Vercel and new domain"
+          git commit -m "refactor: separate founder profile from 1Touch IT site"
           git push origin migration/1touchit-domain
