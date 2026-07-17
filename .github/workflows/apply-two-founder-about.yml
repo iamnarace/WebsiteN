@@ -1,0 +1,36 @@
+name: Apply two-founder About design
+
+on:
+  push:
+    branches:
+      - design/two-founder-about
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: design/two-founder-about
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply design update
+        run: python scripts/apply_two_founder_about.py
+
+      - name: Commit generated site changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html assets/images/subash-thapa-founder.jpg
+          git commit -m "feat: add two-founder About section"
+          git push origin HEAD:design/two-founder-about
