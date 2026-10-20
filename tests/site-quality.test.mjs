@@ -17,8 +17,8 @@ test('public metadata assets and crawl files exist', () => {
     assert.ok(exists(path), `${path} missing`);
   }
   assert.ok(statSync(join(root, 'assets/images/social-share.png')).size > 10_000);
-  assert.match(readText('robots.txt'), /Sitemap: https:\/\/nareshadhikari\.com\.au\/sitemap\.xml/);
-  assert.match(readText('sitemap.xml'), /<loc>https:\/\/nareshadhikari\.com\.au\/<\/loc>/);
+  assert.match(readText('robots.txt'), /Sitemap: https:\/\/www\.1touchit\.com\.au\/sitemap\.xml/);
+  assert.match(readText('sitemap.xml'), /<loc>https:\/\/www\.1touchit\.com\.au\/<\/loc>/);
 });
 
 test('founder imagery remains optional while responsive image assets stay available', () => {
