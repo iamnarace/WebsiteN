@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add("js")</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Professional IT support for homes and small businesses across Greater Sydney, including Microsoft 365, Wi-Fi, computer repairs, websites, smart-home support and digital solutions.">
@@ -19,7 +20,7 @@
 <meta name="twitter:title" content="1Touch IT | Professional IT Support in Sydney">
 <meta name="twitter:description" content="Professional IT support for homes and small businesses across Greater Sydney, including Microsoft 365, Wi-Fi, computer repairs, websites, smart-home support and digital solutions.">
 <meta name="twitter:image" content="https://www.1touchit.com.au/assets/images/social-share.png">
-<meta name="theme-color" content="#4F46E5">
+<meta name="theme-color" content="#071018">
 <title>1Touch IT | Professional IT Support in Sydney</title>
 <link rel="icon" type="image/png" href="assets/images/1touch-it-logo-icon.png">
 <script type="application/ld+json">
@@ -51,581 +52,26 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Outfit:wght@400..700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --paper:#FAFAF8;
-  --paper2:#FFFFFF;
-  --ink:#0B0B0F;
-  --ink2:#3A3A44;
-  --muted:#6B6B78;
-  --line:#ECEAE4;
-  --line2:#E2DFD7;
-  --indigo:#4F46E5;
-  --violet:#7C3AED;
-  --coral:#FF6B4A;
-  --mint:#C7F0DB;
-  --mintD:#0F7A52;
-  --lilac:#E6DEFF;
-  --lilacD:#5B3FC4;
-  --peach:#FFE0D2;
-  --peachD:#C2440E;
-  --sky:#D6E9FF;
-  --skyD:#1659B0;
-  --lemon:#FFF0B8;
-  --lemonD:#9A7A00;
-  --grad:linear-gradient(120deg,#4F46E5,#7C3AED);
-  --r:22px;
-  --rs:14px;
   --motion-fast:160ms;
   --motion-base:260ms;
   --motion-page:360ms;
   --ease-gentle:cubic-bezier(.16,1,.3,1);
 }
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
-::selection{background:var(--coral);color:#fff}
-::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--paper)}::-webkit-scrollbar-thumb{background:#D8D5CD;border-radius:10px}::-webkit-scrollbar-thumb:hover{background:var(--indigo)}
-h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.025em;color:var(--ink)}
-a{text-decoration:none;color:inherit}
-.container{max-width:1180px;margin:0 auto;padding:0 2rem}
-.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.mark{position:relative;white-space:nowrap}
-.mark::after{content:'';position:absolute;left:-2px;right:-2px;bottom:.06em;height:.36em;background:var(--coral);opacity:.35;z-index:-1;border-radius:4px}
-
-/* soft floating blobs */
-.blobs{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.sb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
-.sb1{width:420px;height:420px;background:var(--lilac);top:-120px;right:-80px;animation:dr 24s ease-in-out infinite}
-.sb2{width:380px;height:380px;background:var(--peach);top:40%;left:-120px;animation:dr2 28s ease-in-out infinite}
-.sb3{width:340px;height:340px;background:var(--sky);bottom:-100px;right:15%;animation:dr 30s ease-in-out infinite}
-@keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,40px)}}
-@keyframes dr2{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px)}}
-.wrap{position:relative;z-index:2}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000}
-.nav-inner{max-width:1180px;margin:.9rem auto;padding:.65rem 1.4rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.7);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:100px;transition:all .35s;box-shadow:0 4px 24px rgba(0,0,0,.03)}
-nav.scrolled .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 8px 30px rgba(0,0,0,.07)}
-.brand{display:flex;align-items:center;gap:10px;cursor:pointer;font-family:'Space Grotesk';font-weight:700}
-.blogo{width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.blogo svg{width:38px;height:38px;display:block;filter:drop-shadow(0 4px 10px rgba(79,70,229,.3))}
-.brand .sub{color:var(--muted);font-weight:400;font-size:.82rem}
-.nav-links{display:flex;gap:.3rem;list-style:none;align-items:center}
-.nav-action,.footer-action{border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
-.nav-links .nav-action{padding:.55rem 1rem;border-radius:100px;font-size:.9rem;color:var(--ink2);font-weight:500;transition:all .2s}
-.nav-links .nav-action:hover,.nav-links .nav-action[aria-current="page"]{background:var(--paper);color:var(--ink)}
-.nav-cta{background:var(--ink)!important;color:#fff!important;font-weight:600!important;transition:all .3s!important}
-.nav-cta:hover{background:var(--indigo)!important;transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-.hamburger span{width:24px;height:2.5px;background:var(--ink);border-radius:3px;transition:.3s}
-.mobile-menu{position:fixed;top:78px;left:1rem;right:1rem;z-index:999;background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.25rem;flex-direction:column;gap:.4rem;display:flex;box-shadow:0 20px 50px rgba(0,0,0,.12)}.mobile-menu[hidden]{display:none}
-.mobile-menu .nav-action{padding:.85rem 1rem;border-radius:14px;color:var(--ink2);font-weight:500;width:100%}
-.mobile-menu .nav-action:hover{background:var(--paper)}
-
-.page{display:none;opacity:0;transform:translateY(8px)}.page.active{display:block;animation:page-enter var(--motion-page) var(--ease-gentle) both}.page.is-leaving{display:block;animation:page-leave var(--motion-fast) ease both}
-@keyframes page-enter{to{opacity:1;transform:none}}@keyframes page-leave{from{opacity:1;transform:none}to{opacity:0;transform:translateY(-4px)}}
-
-/* HERO */
-.hero{padding:9.5rem 0 4rem}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:8px;background:var(--paper2);border:1px solid var(--line2);padding:.5rem 1rem;border-radius:100px;font-size:.82rem;font-weight:500;margin-bottom:1.75rem;box-shadow:0 2px 10px rgba(0,0,0,.03)}
-.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--mintD);box-shadow:0 0 0 4px rgba(15,122,82,.15);animation:pl 2s infinite}
-@keyframes pl{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:clamp(2.5rem,5.5vw,4.6rem);margin-bottom:1.5rem}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln span{display:block;animation:su .85s cubic-bezier(.16,1,.3,1) both}
-.hero h1 .ln:nth-child(2) span{animation-delay:.1s}.hero h1 .ln:nth-child(3) span{animation-delay:.2s}
-@keyframes su{from{transform:translateY(110%)}to{transform:none}}
-.hero .lede{font-size:1.18rem;color:var(--ink2);max-width:540px;margin-bottom:2.25rem;animation:fi 1s .5s both}
-@keyframes fi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;animation:fi 1s .65s both}
-.btn{padding:.95rem 1.85rem;border-radius:14px;font-weight:600;font-size:.98rem;cursor:pointer;transition:all .28s;border:none;font-family:'Inter';display:inline-flex;align-items:center;gap:8px}
-.btn-dark{background:var(--ink);color:#fff}
-.btn-dark:hover{background:var(--indigo);transform:translateY(-2px);box-shadow:0 12px 28px rgba(79,70,229,.3)}
-.btn-light{background:#fff;color:var(--ink);border:1.5px solid rgba(79,70,229,.1);box-shadow:0 14px 32px rgba(11,11,15,.08)}
-.btn-light:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(79,70,229,.14);border-color:rgba(79,70,229,.2)}
-.btn-coral{background:var(--coral);color:#20100C}
-.btn-coral:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,107,74,.35)}
-.btn-out{background:#fff;color:var(--ink);border:1.5px solid var(--line2)}
-.btn-out:hover{border-color:var(--ink);transform:translateY(-2px)}
-.icon{width:1.1em;height:1.1em;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.icon-sm{width:18px;height:18px}
-.icon-md{width:20px;height:20px}
-.icon-lg{width:24px;height:24px}
-.icon-xl{width:28px;height:28px}
-.hero-trust{display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;animation:fi 1s .8s both}
-.hero-trust .t{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--ink2);font-weight:500}
-.chk{width:20px;height:20px;border-radius:50%;background:var(--mint);color:var(--mintD);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}
-
-/* hero card */
-.hcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:1.6rem;box-shadow:0 30px 70px rgba(0,0,0,.08);animation:fi 1.1s .55s both,fl 6s ease-in-out infinite}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hcard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.25rem}
-.hcard-top b{display:block;font-size:.98rem}.hcard-top small{color:var(--muted);font-size:.8rem}
-.hcard-kicker{display:inline-flex;align-items:center;gap:.45rem;margin-bottom:.35rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
-.hcard-note{font-size:.72rem;color:var(--muted);margin-top:.2rem}
-.hrow{display:flex;align-items:center;gap:11px;padding:.7rem;border-radius:14px;background:var(--paper);margin-bottom:.5rem;transition:.3s}
-.hrow:hover{transform:translateX(4px)}
-.hrow .i{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.hrow .x{flex:1}.hrow .x b{font-size:.85rem;display:block}.hrow .x small{font-size:.72rem;color:var(--muted)}
-.hrow .s{font-size:.68rem;font-weight:700;padding:.2rem .55rem;border-radius:100px;background:var(--mint);color:var(--mintD)}
-
-/* MARQUEE */
-.marquee{border-block:1px solid var(--line);padding:1.4rem 0;margin:2rem 0 0;overflow:hidden;white-space:nowrap}
-.mq-track{display:inline-flex;gap:3.5rem;animation:mq 26s linear infinite;align-items:center}
-.mq-track span{font-family:'Space Grotesk';font-weight:600;font-size:1.05rem;color:var(--muted);display:inline-flex;align-items:center;gap:3.5rem}
-.mq-track span::after{content:'+';color:var(--coral)}
-@keyframes mq{to{transform:translateX(-50%)}}
-
-/* SECTION */
-section.block{padding:6rem 0;position:relative}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:'Space Grotesk';font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);background:var(--lilac);padding:.4rem .9rem;border-radius:100px;margin-bottom:1.1rem}
-.shead{max-width:660px;margin:0 auto 3.5rem;text-align:center}
-.shead.left{text-align:left;margin-left:0}
-.shead h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:1rem}
-.shead p{color:var(--ink2);font-size:1.1rem}
-
-/* GUARANTEE */
-.g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem}
-.gcard{border-radius:var(--r);padding:2.2rem;transition:.4s;border:1px solid transparent}
-.gcard:hover{transform:translateY(-6px)}
-.gcard.c1{background:var(--mint)}.gcard.c1 .gico{background:#fff;color:var(--mintD)}
-.gcard.c2{background:var(--lilac)}.gcard.c2 .gico{background:#fff;color:var(--lilacD)}
-.gcard.c3{background:var(--peach)}.gcard.c3 .gico{background:#fff;color:var(--peachD)}
-.gico{width:54px;height:54px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.4rem;box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.gcard h3{font-size:1.3rem;margin-bottom:.7rem}
-.gcard p{font-size:.94rem;color:var(--ink2)}
-
-/* DUAL TRACK */
-.tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.75rem}
-.tcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:2.5rem;transition:.4s;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.03);width:100%;text-align:left;color:inherit;font:inherit}
-.tcard:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.08);border-color:var(--line2)}
-.tbig{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin-bottom:1.5rem}
-.tcard.home .tbig{background:var(--sky)}.tcard.biz .tbig{background:var(--lemon)}
-.tcard h3{font-size:1.6rem;margin-bottom:.8rem}
-.tcard>p{color:var(--ink2);margin-bottom:1.5rem}
-.tlist{list-style:none;margin-bottom:1.75rem}
-.tlist li{display:flex;gap:10px;align-items:flex-start;padding:.4rem 0;font-size:.93rem;color:var(--ink2)}
-.tlist li .c{color:var(--mintD);font-weight:700;flex-shrink:0}
-.tarrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-family:'Space Grotesk';transition:gap .3s}
-.track-cta{margin-top:.2rem;padding:.7rem 1rem;border-radius:12px;background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.tcard.biz .track-cta{background:var(--indigo)}
-.tcard.digital .tbig{background:var(--lilac)}
-.tcard.digital .track-cta{background:var(--coral);color:#20100C}
-.tcard:hover .tarrow{gap:14px}
-
-/* PROCESS */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem;counter-reset:s}
-.step{position:relative;padding:2rem 1.5rem;background:linear-gradient(180deg,#FFFFFF,#FCFBF8);border:1px solid #E8E4DB;border-radius:var(--r);transition:.35s;box-shadow:0 12px 28px rgba(15,25,45,.05)}
-.step:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
-.step::before{counter-increment:s;content:'0' counter(s);font-family:'Space Grotesk';font-size:2.6rem;font-weight:700;color:var(--line2);display:block;margin-bottom:.6rem;line-height:1}
-.step h4{font-size:1.12rem;margin-bottom:.5rem}
-.step p{font-size:.88rem;color:var(--muted)}
-.step:nth-child(1){background:linear-gradient(180deg,#FFFFFF,#F7FBFF)}
-.step:nth-child(2){background:linear-gradient(180deg,#FFFFFF,#FCFBFF)}
-.step:nth-child(3){background:linear-gradient(180deg,#FFFFFF,#FFF9F5)}
-.step:nth-child(4){background:linear-gradient(180deg,#FFFFFF,#F7FCF8)}
-
-/* WHY / FEATURES small */
-.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
-.why{display:flex;gap:14px;align-items:flex-start;padding:1.5rem;background:linear-gradient(180deg,#FFFFFF,#FCFBF8);border:1px solid #E8E4DB;border-radius:var(--rs);transition:.3s;box-shadow:0 12px 28px rgba(15,25,45,.05)}
-.why:hover{border-color:var(--line2);transform:translateY(-3px);box-shadow:0 18px 36px rgba(15,25,45,.08)}
-.why .wi{width:50px;height:50px;border-radius:14px;background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.65)}
-.why b{display:block;font-family:'Space Grotesk';font-size:1.02rem;margin-bottom:.3rem}
-.why p{font-size:.86rem;color:var(--muted)}
-.why:nth-child(1) .wi{background:#EAF3FF;color:var(--skyD)}
-.why:nth-child(2) .wi{background:#F2EEFF;color:var(--lilacD)}
-.why:nth-child(3) .wi{background:#FFF0EA;color:var(--peachD)}
-.why:nth-child(4) .wi{background:#EEF8F4;color:var(--mintD)}
-.why:nth-child(5) .wi{background:#FFF7DA;color:var(--lemonD)}
-.why:nth-child(6) .wi{background:#EAF7F9;color:#0F7A8B}
-
-/* STATS */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;text-align:center;background:var(--ink);border-radius:32px;padding:3.5rem 2.5rem;color:#fff}
-.stats.stats-light{background:linear-gradient(135deg,#F8FBFF,#EEF4FF 58%,#F6FCFA);border:1px solid var(--line);box-shadow:0 16px 44px rgba(15,25,45,.06);color:var(--ink)}
-.stat{display:grid;justify-items:center;gap:.7rem}
-.stat .n{font-family:'Space Grotesk';font-size:clamp(2.4rem,5vw,3.4rem);font-weight:700;line-height:1;color:#fff}
-.stats.stats-light .stat .n{color:var(--ink)}
-.stat .n em{font-style:normal;color:var(--coral)}
-.stat .l{color:#B5B5C2;font-size:.9rem;margin-top:.1rem}
-.stats.stats-light .stat .l{color:var(--ink2)}
-.stat-icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--indigo);box-shadow:0 12px 24px rgba(79,70,229,.08)}
-.stats.stats-light .stat-icon{background:rgba(255,255,255,.9);border:1px solid rgba(79,70,229,.08)}
-
-/* TESTIMONIALS */
-.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.5rem}
-.testi{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem;transition:.35s}
-.testi:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
-.stars{color:#FFB020;margin-bottom:1rem;letter-spacing:2px}
-.testi q{display:block;font-size:1rem;color:var(--ink2);margin-bottom:1.5rem;line-height:1.7;font-style:normal}
-.tp{display:flex;align-items:center;gap:12px}
-.tav{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-family:'Space Grotesk';font-size:.9rem}
-.tp b{display:block;font-size:.9rem}.tp small{color:var(--muted);font-size:.8rem}
-
-/* SERVICES PAGE */
-.phero{padding:11rem 0 3rem;text-align:center}
-.phero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);margin-bottom:1.2rem}
-.phero p{color:var(--ink2);font-size:1.18rem;max-width:640px;margin:0 auto}
-.service-hero .eyebrow{background:var(--sky);color:var(--skyD)}
-.service-hero h1{font-size:clamp(3rem,6vw,5rem);max-width:1040px;margin:0 auto 1.5rem}
-.service-hero p{max-width:780px;font-size:1.18rem}
-.svc{background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.5rem;margin-bottom:1.75rem;transition:.35s}
-.svc:hover{box-shadow:0 16px 50px rgba(0,0,0,.06);border-color:var(--line2)}
-.svc-h{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.75rem;flex-wrap:wrap}
-.svc-ico{width:60px;height:60px;border-radius:17px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0}
-.si1{background:var(--lemon)}.si2{background:var(--sky)}.si3{background:var(--lilac)}.si4{background:var(--mint)}
-.svc-h .num{font-family:'Space Grotesk';font-size:.76rem;color:var(--muted);letter-spacing:.1em;font-weight:700;text-transform:uppercase}
-.svc-h h2{font-size:1.65rem;margin:.25rem 0}
-.svc-h .tag{color:var(--ink2);font-size:.94rem}
-.svc-intro{color:var(--ink2);font-size:.96rem;margin-bottom:1.5rem;max-width:760px}
-.svc-items{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.sitem{padding:1.25rem 1.4rem;background:var(--paper);border-radius:var(--rs);transition:.3s}
-.sitem:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.05)}
-.sitem b{display:block;font-family:'Space Grotesk';font-size:.98rem;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
-.sitem b .d{width:7px;height:7px;border-radius:50%;background:var(--coral);flex-shrink:0}
-.sitem p{font-size:.86rem;color:var(--muted);line-height:1.55}
-.service-tabs{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin:0 auto 2.5rem}
-.service-tab{border:1px solid var(--line2);background:#fff;border-radius:18px;padding:1rem 1.5rem;font-weight:700;font-family:'Space Grotesk';cursor:pointer;transition:.25s;box-shadow:0 8px 22px rgba(15,25,45,.05)}
-.service-tab:hover{border-color:var(--indigo);color:var(--indigo);transform:translateY(-2px)}
-.service-band{margin:3rem 0 1.5rem;padding:1.6rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.service-band h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:.5rem}
-.service-band p{color:var(--ink2);max-width:720px}
-
-/* ABOUT */
-.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start}
-.av{position:sticky;top:7rem}
-.pframe{aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line2);position:relative;background:linear-gradient(160deg,var(--lilac),var(--sky))}
-.pframe picture,.pframe img{width:100%;height:100%;display:block}.pframe img{object-fit:cover}
-.pframe .ph-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem}
-.pinit{width:104px;height:104px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.3rem;font-weight:700;font-family:'Space Grotesk';box-shadow:0 10px 30px rgba(79,70,229,.3)}
-.pframe .note{font-size:.78rem;color:var(--ink2);text-align:center;padding:0 2rem}
-.certs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
-.cert{font-size:.76rem;padding:.4rem .85rem;border-radius:10px;background:#fff;border:1px solid var(--line2);font-weight:500}
-.cert-flow{overflow:hidden;margin-top:1.5rem;padding:.25rem 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.cert-track{display:flex;width:max-content;gap:.75rem;animation:certslide 32s linear infinite}
-.cert-track:hover{animation-play-state:paused}
-.cert-track .cert{flex:0 0 auto}
-@keyframes certslide{to{transform:translateX(-50%)}}
-.about-b h2{font-size:2.3rem;margin-bottom:1.5rem}
-.about-b p{color:var(--ink2);margin-bottom:1.25rem}
-.about-b p strong{color:var(--ink)}
-.qblock{border-left:4px solid var(--coral);padding:.5rem 0 .5rem 1.5rem;margin:2rem 0;font-family:'Space Grotesk';font-size:1.2rem;font-weight:500;color:var(--ink)}
-.resume-cta{margin-top:2.5rem;border-radius:26px;padding:2.5rem;background:var(--lemon);position:relative;overflow:hidden}
-.resume-cta h3{font-size:1.35rem;margin-bottom:.75rem}
-.resume-cta p{color:var(--ink2);margin-bottom:1.5rem;font-size:.94rem}
-.about-company{max-width:920px;margin:0 auto}
-.about-company .qblock{max-width:720px}
-.founder-summary{display:grid;grid-template-columns:.78fr 1.22fr;gap:3rem;align-items:start;margin-bottom:1rem}
-.founder-profile-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:1.75rem;box-shadow:0 14px 34px rgba(15,25,45,.05)}
-.founder-profile-card .pframe{aspect-ratio:4/4.65}
-.founder-profile-card .certs{justify-content:flex-start}
-.founder-intro h2{font-size:2.2rem;margin-bottom:1.25rem}
-.founder-intro p{color:var(--ink2);margin-bottom:1.2rem}
-.founder-mini-note{display:inline-flex;padding:.5rem .9rem;border-radius:999px;background:var(--sky);color:var(--skyD);font-weight:700;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
-
 /* FAQ */
-.faqw{max-width:780px;margin:0 auto}
-.faq{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:.9rem;overflow:hidden;transition:.3s}
-.faq:hover{border-color:var(--line2)}
-.faq-q{padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Space Grotesk';font-weight:600;font-size:1.02rem;gap:1rem;width:100%;text-align:left;color:inherit;border:0;background:none}
-.faq-q .ic{color:var(--coral);font-size:1.4rem;transition:transform .35s;flex-shrink:0}
-.faq.open .faq-q .ic{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--ink2);font-size:.94rem}
-.faq-a div{padding:0 1.6rem 1.4rem}
-.faq.open .faq-a{max-height:340px}
-
-/* HELPFUL GUIDES */
-.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
-.guide-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform var(--motion-base) var(--ease-gentle),box-shadow var(--motion-base) ease}
-.guide-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
-.guide-toggle{width:100%;padding:2rem;border:0;background:none;color:inherit;text-align:left;cursor:pointer;font:inherit}
-.guide-toggle h3{font-size:1.35rem;margin:.8rem 0}.guide-toggle p,.guide-panel{color:var(--ink2)}
-.guide-panel{padding:0 2rem 2rem}.guide-panel h4{margin:1.2rem 0 .5rem}.guide-panel ul{padding-left:1.2rem}
-.section-panel{background:#fff;border:1px solid var(--line);border-radius:34px;padding:clamp(2rem,4vw,3rem);box-shadow:0 18px 52px rgba(10,16,31,.05)}
-.section-panel h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:1rem}
-.section-panel p{color:var(--ink2);font-size:1.05rem;max-width:640px;margin:0 auto 2rem}
-
-/* CTA */
-.cta{border-radius:34px;padding:5rem 3rem;text-align:center;background:var(--grad);color:#fff;position:relative;overflow:hidden}
-.cta::after{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,.12);border-radius:50%;top:-100px;right:-60px}
-.cta h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.1rem;color:#fff;position:relative}
-.cta p{font-size:1.15rem;opacity:.9;max-width:560px;margin:0 auto 2.25rem;position:relative}
-.cta .btn-coral{position:relative}
-.cta.cta-light{background:linear-gradient(135deg,#F8FBFF,#F3F7FC 58%,#FFFFFF);color:var(--ink);border:1px solid var(--line);box-shadow:0 24px 54px rgba(15,25,45,.06)}
-.cta.cta-light::after{background:rgba(79,70,229,.08)}
-.cta.cta-light h2{color:var(--ink)}
-.cta.cta-light p{color:var(--ink2);opacity:1}
-
-/* CONTACT */
-.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
-.cinfo h2{font-size:2.2rem;margin-bottom:1.1rem}
-.cinfo>p{color:var(--ink2);margin-bottom:2.25rem}
-.irow{display:flex;align-items:center;gap:14px;margin-bottom:1.4rem}
-.iico{width:48px;height:48px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
-.irow .l{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
-.irow .v{font-size:.98rem;font-weight:500}
-.cprom{margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--line)}
-.cprom .p{display:flex;gap:10px;align-items:flex-start;padding:.4rem 0;font-size:.9rem;color:var(--ink2)}
-.cprom .p .c{color:var(--mintD);font-weight:700}
-.fcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:2.5rem;box-shadow:0 10px 40px rgba(0,0,0,.04)}
-.fg{margin-bottom:1.3rem}
-.fg label{display:block;font-size:.82rem;font-weight:600;color:var(--ink2);margin-bottom:.5rem}
-.fg .req{color:var(--coral)}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-input,select,textarea{width:100%;background:var(--paper);border:1.5px solid var(--line2);border-radius:13px;padding:.85rem 1rem;color:var(--ink);font-size:.93rem;font-family:'Inter';transition:.22s;outline:none}
-input:focus,select:focus,textarea:focus{border-color:var(--indigo);background:#fff;box-shadow:0 0 0 3px rgba(79,70,229,.12)}
-input::placeholder,textarea::placeholder{color:#A8A8B3}
-select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%236B6B78' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
-textarea{resize:vertical;min-height:120px}
-.submit-btn{width:100%;background:var(--ink);color:#fff;padding:1.1rem;border-radius:15px;font-weight:600;font-size:1rem;border:none;cursor:pointer;transition:.3s;font-family:'Inter'}
-.submit-btn:hover{background:var(--indigo);transform:translateY(-2px);box-shadow:0 12px 30px rgba(79,70,229,.3)}
-.fsuccess{display:none;text-align:center;padding:3rem 1rem}
-.fsuccess .bc{width:80px;height:80px;border-radius:50%;background:var(--mint);color:var(--mintD);display:flex;align-items:center;justify-content:center;font-size:2.4rem;margin:0 auto 1.5rem}
-.fsuccess h3{font-size:1.6rem;margin-bottom:.75rem}.fsuccess p{color:var(--ink2)}
-
-/* FOOTER */
-footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
-.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
-.fbrand{display:flex;flex-direction:column;justify-content:flex-start}
-.fbrand .brand{margin-bottom:1rem}
-.fbrand p{color:var(--muted);font-size:.9rem;max-width:320px;line-height:1.75}
-.fcol h4{font-family:'Space Grotesk';font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:1.1rem}
-.fcol a,.fcol .footer-action,.fcol>span{display:block;color:var(--ink2);font-size:.9rem;padding:.35rem 0;transition:color .2s}
-.fcol a,.fcol .footer-action{cursor:pointer}
-.fcol a:hover,.fcol .footer-action:hover{color:var(--indigo)}
-.fcol a.ficon-link{display:flex;align-items:center;gap:.5rem}
-.footer-mark{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;color:#0A66C2}
-.fcol{display:flex;flex-direction:column;align-items:flex-start}
-.fbot{border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.85rem}
-.social{display:flex;gap:.6rem}
-.social a{width:40px;height:40px;border-radius:12px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.3s;font-weight:600}
-.social a:hover{background:var(--ink);color:#fff;transform:translateY(-3px)}
-
-.reveal{opacity:0;transform:translateY(18px);transition:opacity var(--motion-page) var(--ease-gentle),transform var(--motion-page) var(--ease-gentle)}
-
-/* TIMELINE (resume) */
-.timeline{position:relative;padding-left:2rem}
-.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--line2)}
-.tl-item{position:relative;margin-bottom:1.5rem}
-.tl-dot{position:absolute;left:-2rem;top:1.8rem;width:14px;height:14px;border-radius:50%;background:var(--grad);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--line2);z-index:1}
-.tl-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.75rem 2rem;transition:.35s}
-.tl-card:hover{box-shadow:0 16px 40px rgba(0,0,0,.06);border-color:var(--line2);transform:translateX(4px)}
-.tl-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
-.tl-top h3{font-size:1.2rem;margin-bottom:.2rem}
-.tl-org{color:var(--violet);font-weight:600;font-family:'Space Grotesk';font-size:.95rem}
-.tl-date{font-size:.8rem;color:var(--muted);font-weight:600;background:var(--paper);padding:.35rem .8rem;border-radius:100px;white-space:nowrap;flex-shrink:0}
-.tl-list{list-style:none}
-.tl-list li{position:relative;padding-left:1.25rem;font-size:.92rem;color:var(--ink2);margin-bottom:.5rem;line-height:1.55}
-.tl-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--coral)}
-.reveal.in{opacity:1;transform:none}
-:focus-visible{outline:3px solid var(--indigo);outline-offset:4px}
-.submit-btn{color:#20100C}
-
+:focus-visible{outline:3px solid #0c7c74;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-  .sb,.hcard,.mq-track,.cert-track,.pill .dot{animation:none!important;transform:none!important}
   .reveal,.page{opacity:1;transform:none}
 }
-
-@media(max-width:920px){
-  .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hcard{max-width:460px}
-  .tracks{grid-template-columns:1fr}.about{grid-template-columns:1fr;gap:2.5rem}.av{position:static}
-  .cgrid{grid-template-columns:1fr;gap:2.5rem}.svc-items{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr 1fr;gap:2rem}
-}
-@media(max-width:768px){
-  .nav-links{display:none}.hamburger{display:flex}.container{padding:0 1.25rem}
-  section.block{padding:4rem 0}.svc,.fcard{padding:1.75rem}.cta{padding:3rem 1.5rem}
-  .frow{grid-template-columns:1fr}.stats{padding:2.5rem 1.5rem}.fgrid{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}.guide-grid{grid-template-columns:1fr}
-}
-
-/* 1TOUCH BRAND PATCH */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: .7rem;
-  min-width: 185px;
-  padding: .25rem .55rem !important;
-  border-radius: 999px;
-}
-
-.brand-logo-full {
-  width: clamp(190px, 22vw, 290px);
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: left center;
-  flex-shrink: 0;
-}
-
-.footer-logo-shell {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 0 .75rem 0;
-}
-
-.product-preview {
-  background: linear-gradient(
-    135deg,
-    #F7F9FC 0%,
-    #EEF4FF 50%,
-    #F4FBFA 100%
-  );
-  border-block: 1px solid var(--line);
-}
-
-.product-preview-grid {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 3rem;
-  align-items: center;
-}
-
-.product-preview-grid h2 {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  margin: .6rem 0;
-}
-
-.product-preview-grid h3 {
-  font-size: 1.35rem;
-  margin-bottom: 1rem;
-}
-
-.product-preview-grid p {
-  color: var(--ink2);
-  font-size: 1.08rem;
-  max-width: 580px;
-  margin-bottom: 1.75rem;
-}
-
-.product-mini-card {
-  background: #111E3D;
-  color: white;
-  border-radius: 28px;
-  padding: 2rem;
-  box-shadow: 0 28px 70px rgba(17, 30, 61, .18);
-}
-
-.product-mini-card h3 {
-  color: white;
-  font-size: 1.7rem;
-  margin: .9rem 0 1.3rem;
-}
-
-.product-chip {
-  display: inline-flex;
-  padding: .4rem .75rem;
-  border-radius: 999px;
-  background: rgba(25, 169, 181, .16);
-  color: #7BE0E5;
-  font-size: .78rem;
-  font-weight: 700;
-}
-
-.product-feature-list {
-  list-style: none;
-  display: grid;
-  gap: .8rem;
-}
-
-.product-feature-list li {
-  padding: .85rem 1rem;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, .05);
-}
-
-.product-page-intro {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.product-page-intro h1,
-.product-page-intro h2{
-  font-size:clamp(2.8rem,5.2vw,4.9rem);
-  line-height:1.04;
-  letter-spacing:-.03em;
-  margin:.35rem 0 1rem;
-}
-
-.product-page-intro .lede{
-  font-size:1.14rem;
-  color:var(--ink2);
-  max-width:760px;
-  margin:0 auto;
-}
-
-.product-feature-grid {
-  display:none;
-}
-.product-showcase-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.2rem;align-items:center}
-.product-copy-stack h2{font-size:clamp(2.2rem,4vw,3.8rem);margin-bottom:1rem}
-.product-copy-stack>p{font-size:1.08rem;color:var(--ink2);max-width:540px;margin-bottom:1.7rem}
-.product-feature-stack{display:grid;gap:.8rem}
-.product-feature-item{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:1rem 1rem 1rem .9rem;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 24px rgba(15,25,45,.04)}
-.product-feature-icon{width:36px;height:36px;border-radius:12px;background:#EAF3FF;color:var(--skyD);display:flex;align-items:center;justify-content:center;font-weight:700}
-.product-feature-item h3{font-size:1.02rem;margin-bottom:.2rem}
-.product-feature-item p{font-size:.88rem;color:var(--muted)}
-.product-screen-frame{background:linear-gradient(135deg,#132544,#17365D 55%,#1CA7BA);border-radius:28px;padding:1.2rem;box-shadow:0 24px 60px rgba(15,25,45,.16)}
-.product-screen-frame img{display:block;width:100%;height:auto;border-radius:22px}
-.product-screen-frame.tight{padding:0}
-.product-screen-frame.tight img{border-radius:24px}
-.product-story-grid{display:grid;gap:2rem}
-.product-story{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:center}
-.product-story.reverse .product-story-copy{order:2}
-.product-story.reverse .product-story-media{order:1}
-.product-story-copy h3{font-size:clamp(1.8rem,3vw,2.7rem);margin-bottom:.85rem}
-.product-story-copy p{color:var(--ink2);font-size:1.03rem;margin-bottom:.75rem}
-.product-story-copy ul{padding-left:1.2rem;color:var(--ink2)}
-.product-story-copy li{margin:.4rem 0}
-.product-stage-note{display:inline-flex;margin-top:1.25rem;padding:1rem 1.2rem;border-radius:18px;background:#D7F1EC;color:#235C54;font-size:.95rem}
-.product-cta-panel{max-width:840px;margin:0 auto}
-
-@media (max-width: 1120px) {
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .founder-summary{grid-template-columns:1fr;gap:2rem}
-}
-
-@media (max-width: 920px) {
-  .product-preview-grid,
-  .product-showcase-grid,
-  .product-story {
-    grid-template-columns: 1fr;
-  }
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .product-story.reverse .product-story-copy,
-  .product-story.reverse .product-story-media{order:initial}
-}
-
-@media (max-width: 768px) {
-  .steps,
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .brand {
-    min-width: 0;
-  }
-
-  .brand-logo-full {
-    width: 176px;
-  }
-}
-
-@media (max-width: 420px) {
-  .brand-logo-full {
-    width: 160px;
-  }
-}
 </style>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 
 <div class="blobs"><div class="sb sb1"></div><div class="sb sb2"></div><div class="sb sb3"></div></div>
 
@@ -659,31 +105,34 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 
 <nav id="nav">
   <div class="nav-inner">
-    <button type="button" class="brand nav-action" data-view="home" onclick="go('home')" aria-label="1Touch IT home">
+    <a class="brand" data-view="home" href="/" onclick="go('home',event)" aria-label="1Touch IT home">
       <img
         src="assets/images/top-band-logo.png"
         alt="1Touch IT"
         class="brand-logo-full"
+        width="964"
+        height="270"
       >
-    </button>
+    </a>
     <ul class="nav-links">
-  <li><button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button></li>
-  <li><button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button></li>
-  <li><button type="button" class="nav-action" data-view="services" onclick="go('services')">Services</button></li>
-  <li><button type="button" class="nav-action" data-view="product" onclick="go('product')">Product</button></li>
-  <li><button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')">Contact Us →</button></li>
+  <li><a class="nav-action" data-view="home" href="/" onclick="go('home',event)">Home</a></li>
+  <li><a class="nav-action" data-view="about" href="/about" onclick="go('about',event)">About</a></li>
+  <li><a class="nav-action" data-view="services" href="/services" onclick="go('services',event)">Services</a></li>
+  <li><a class="nav-action" data-view="product" href="/product" onclick="go('product',event)">Product</a></li>
+  <li><a class="nav-action nav-cta" data-view="contact" href="/contact" onclick="go('contact',event)">Contact Us →</a></li>
 </ul>
     <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mm" hidden>
-  <button type="button" class="nav-action" data-view="home" onclick="go('home')">Home</button>
-  <button type="button" class="nav-action" data-view="about" onclick="go('about')">About</button>
-  <button type="button" class="nav-action" data-view="services" onclick="go('services')">Services</button>
-  <button type="button" class="nav-action" data-view="product" onclick="go('product')">Product</button>
-  <button type="button" class="nav-action nav-cta" data-view="contact" onclick="go('contact')" style="text-align:center;border-radius:14px">Contact Us →</button>
+  <a class="nav-action" data-view="home" href="/" onclick="go('home',event)">Home</a>
+  <a class="nav-action" data-view="about" href="/about" onclick="go('about',event)">About</a>
+  <a class="nav-action" data-view="services" href="/services" onclick="go('services',event)">Services</a>
+  <a class="nav-action" data-view="product" href="/product" onclick="go('product',event)">Product</a>
+  <a class="nav-action nav-cta" data-view="contact" href="/contact" onclick="go('contact',event)">Contact Us →</a>
 </div>
 
+<main id="content">
 <!-- ===== HOME ===== -->
 <div id="page-home" class="page active">
   <section class="hero">
@@ -701,8 +150,8 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   From Microsoft 365 and business IT to Wi-Fi, computer repairs, and home technology, get reliable expert support without lock-in contracts or monthly retainers. With transparent pricing, a No Fix, No Fee guarantee, and 100% ad-hoc service, you only pay for the help you need, when you need it.
 </p>
           <div class="hero-btns">
-            <button class="btn btn-light" onclick="go('contact')">Request Tech Help &rarr;</button>
-            <button class="btn btn-out" onclick="go('services')">Explore Our Services</button>
+            <a class="btn btn-light" href="/contact" onclick="go('contact',event)">Request Tech Help &rarr;</a>
+            <a class="btn btn-out" href="/services" onclick="go('services',event)">Explore Our Services</a>
           </div>
           <div class="hero-trust">
             <div class="t"><span class="chk">&#10003;</span> No Fix, No Fee</div>
@@ -734,7 +183,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 
   <!-- TRIPLE FREEDOM -->
-  <section class="block">
+  <section class="block promise">
     <div class="container">
       <div class="shead reveal">
         <div class="eyebrow">&#9670; Our Triple-Freedom Promise</div>
@@ -750,7 +199,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 
   <!-- WHO WE HELP -->
-  <section class="block">
+  <section class="block audience">
     <div class="container">
       <div class="shead reveal">
         <div class="eyebrow">&#9670; Who We Help</div>
@@ -799,24 +248,27 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 
   <!-- PROCESS -->
-  <section class="block">
+  <section class="block process">
     <div class="container">
       <div class="shead reveal">
         <div class="eyebrow">&#9670; How It Works</div>
         <h2>Getting help is refreshingly simple</h2>
         <p>No call centres, no ticket queues, no jargon. Just a clear, honest process from first contact to fixed.</p>
       </div>
+      <div class="steps-wrap">
+        <div class="process-line" aria-hidden="true"><span class="process-line-fill"></span></div>
       <div class="steps">
         <div class="step reveal"><h4>Tell us what you need</h4><p>Send a short description of the issue, setup or improvement you have in mind.</p></div>
         <div class="step reveal"><h4>Receive an assessment</h4><p>We review the situation and explain the practical options before work begins.</p></div>
         <div class="step reveal"><h4>We fix it, your way</h4><p>Remote or on-site, business hours or weekends. You choose the time that minimises your downtime.</p></div>
         <div class="step reveal"><h4>Only pay for results</h4><p>No Fix, No Fee. No contracts. You pay only for the assistance you actually received.</p></div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- WHY CHOOSE -->
-  <section class="block">
+  <section class="block why-section">
     <div class="container">
       <div class="shead reveal">
         <div class="eyebrow">&#9670; Why 1Touch IT</div>
@@ -835,28 +287,25 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 
   <!-- STATS -->
-  <section class="block">
+  <section class="block stats-band">
     <div class="container">
       <div class="stats stats-light reveal">
-        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div class="n" data-count="4" data-suffix="+">0</div><div class="l">Years of professional IT experience</div></div>
-        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-wallet"></use></svg></div><div class="n" data-count="100" data-suffix="%">0</div><div class="l">Ad-hoc support available</div></div>
+        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div class="n" data-count="4" data-suffix="+">4+</div><div class="l">Years of professional IT experience</div></div>
+        <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-wallet"></use></svg></div><div class="n" data-count="100" data-suffix="%">100%</div><div class="l">Ad-hoc support available</div></div>
         <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-clock"></use></svg></div><div class="n">7<em>/7</em></div><div class="l">Evening and weekend options</div></div>
         <div class="stat"><div class="stat-icon"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-message"></use></svg></div><div class="n">1</div><div class="l">Direct point of contact from first enquiry to resolution</div></div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="homelife-preview">
+  <section class="block homelife" id="homelife-preview">
     <div class="container">
-      <div class="product-page-intro reveal" style="margin-bottom:3.2rem">
-        <div class="eyebrow">Product by 1Touch IT</div>
-        <h2>Meet <span class="grad-text">HomeLife Hub</span></h2>
-        <p class="lede" style="max-width:720px;margin:0 auto">A private household dashboard for tasks, routines, groceries, reminders, property information and everyday home management.</p>
-      </div>
       <div class="product-showcase-grid reveal">
         <div class="product-copy-stack">
-          <div class="eyebrow">Product Preview</div>
+          <div class="eyebrow">Product by 1Touch IT</div>
+          <p class="homelife-kicker">Meet HomeLife Hub</p>
           <h2>Everything at home, in one place</h2>
+          <p>A private household dashboard for tasks, routines, groceries, reminders, property information and everyday home management.</p>
           <p>HomeLife Hub is designed for the everyday information and routines that are often spread across notes, calendars, messages and different applications.</p>
           <div class="product-feature-stack">
             <article class="product-feature-item">
@@ -877,20 +326,20 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
             </article>
           </div>
           <div class="hero-btns" style="margin-top:1.7rem">
-            <button class="btn btn-light" onclick="go('product')">Discover HomeLife Hub</button>
+            <a class="btn btn-light" href="/product" onclick="go('product',event)">Discover HomeLife Hub</a>
             <a class="btn btn-out" href="https://homelifehub.com.au" target="_blank" rel="noopener">Visit product website</a>
           </div>
           <div class="product-stage-note"><strong>Current stage:</strong>&nbsp;HomeLife Hub is preparing for private testing. The dedicated product website will be expanded separately.</div>
         </div>
         <div class="product-screen-frame">
-          <img src="assets/homelife/showcase/dashboard-browser.png" alt="HomeLife Hub browser dashboard preview">
+          <img src="assets/homelife/showcase/dashboard-browser.png" width="1408" height="768" alt="HomeLife Hub browser dashboard preview">
         </div>
       </div>
     </div>
   </section>
 
   <!-- HELPFUL GUIDES -->
-  <section class="block" id="helpful-guides">
+  <section class="block guides" id="helpful-guides">
     <div class="container">
       <div class="shead reveal">
         <div class="eyebrow">&#9670; Helpful Local Guides</div>
@@ -933,7 +382,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="block">
+  <section class="block voices">
     <div class="container">
       <div class="shead reveal">
         <div class="eyebrow">&#9670; Trusted Locally</div>
@@ -949,12 +398,12 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 
   <!-- CTA -->
-  <section class="block">
+  <section class="block finale">
     <div class="container">
       <div class="cta cta-light reveal">
         <h2>Need practical help with your technology?</h2>
         <p>Tell us what is not working, what you want to improve or what you are planning to set up.</p>
-        <button class="btn btn-light" onclick="go('contact')">Request Tech Help &rarr;</button>
+        <a class="btn btn-light" href="/contact" onclick="go('contact',event)">Request Tech Help &rarr;</a>
       </div>
     </div>
   </section>
@@ -981,7 +430,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     </div>
   </section>
 
-  <section class="block" id="product-features">
+  <section class="block product-feature" id="product-features">
     <div class="container">
       <div class="product-showcase-grid reveal">
         <div class="product-copy-stack">
@@ -1008,18 +457,18 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           </div>
           <div class="hero-btns" style="margin-top:1.7rem">
             <a class="btn btn-dark" href="https://homelifehub.com.au" target="_blank" rel="noopener">Visit homelifehub.com.au &rarr;</a>
-            <button class="btn btn-out" onclick="go('contact')">Product Enquiry</button>
+            <a class="btn btn-out" href="/contact" onclick="go('contact',event)">Product Enquiry</a>
           </div>
           <div class="product-stage-note"><strong>Current stage:</strong>&nbsp;HomeLife Hub is preparing for private testing. The dedicated product website will be expanded separately.</div>
         </div>
         <div class="product-screen-frame">
-          <img src="assets/homelife/showcase/dashboard-browser.png" alt="HomeLife Hub browser dashboard preview">
+          <img src="assets/homelife/showcase/dashboard-browser.png" width="1408" height="768" alt="HomeLife Hub browser dashboard preview">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block">
+  <section class="block product-stories">
     <div class="container">
       <div class="product-story-grid">
         <article class="product-story reveal">
@@ -1035,7 +484,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           </div>
           <div class="product-story-media">
             <div class="product-screen-frame tight">
-              <img src="assets/homelife/showcase/dashboard-tablet.png" alt="HomeLife Hub tablet dashboard on a table">
+              <img src="assets/homelife/showcase/dashboard-tablet.png" width="1408" height="768" alt="HomeLife Hub tablet dashboard on a table">
             </div>
           </div>
         </article>
@@ -1053,7 +502,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           </div>
           <div class="product-story-media">
             <div class="product-screen-frame tight">
-              <img src="assets/homelife/showcase/tasks-calendar-groceries.png" alt="HomeLife Hub tasks, calendar and groceries view across devices">
+              <img src="assets/homelife/showcase/tasks-calendar-groceries.png" width="1408" height="768" alt="HomeLife Hub tasks, calendar and groceries view across devices">
             </div>
           </div>
         </article>
@@ -1061,7 +510,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
     </div>
   </section>
 
-  <section class="block">
+  <section class="block product-close">
     <div class="container">
       <div class="cta reveal product-cta-panel">
         <h2>HomeLife Hub has its own home</h2>
@@ -1083,18 +532,19 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   <section class="block" style="padding-top:1.5rem">
     <div class="container">
       <div class="service-tabs reveal">
-        <button class="service-tab" onclick="document.getElementById('home-services').scrollIntoView({behavior:'smooth',block:'start'})">Home &amp; Family</button>
-        <button class="service-tab" onclick="document.getElementById('business-services').scrollIntoView({behavior:'smooth',block:'start'})">Small Business</button>
-        <button class="service-tab" onclick="document.getElementById('digital-services').scrollIntoView({behavior:'smooth',block:'start'})">Websites &amp; Digital</button>
+        <button class="service-tab" onclick="document.getElementById('home-services').scrollIntoView({behavior:motionReduced.matches?'auto':'smooth',block:'start'})">Home &amp; Family</button>
+        <button class="service-tab" onclick="document.getElementById('business-services').scrollIntoView({behavior:motionReduced.matches?'auto':'smooth',block:'start'})">Small Business</button>
+        <button class="service-tab" onclick="document.getElementById('digital-services').scrollIntoView({behavior:motionReduced.matches?'auto':'smooth',block:'start'})">Websites &amp; Digital</button>
       </div>
 
+      <div class="service-group group-home">
       <div class="service-band reveal" id="home-services">
         <div class="eyebrow">HOME SERVICES</div>
         <h2>Everyday technology that works properly</h2>
         <p>Practical support for connectivity, devices, repairs, security, smart-home setups and family technology.</p>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-wifi reveal">
         <div class="svc-h"><div class="svc-ico si2"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-wifi"></use></svg></div><div><div class="num">HOME SERVICE 01</div><h2>Wi-Fi, NBN &amp; Home Networks</h2><div class="tag">Stable connections and better whole-home coverage.</div></div></div>
         <p class="svc-intro">Diagnose unreliable connections, improve router placement and configure the right network for your home.</p>
         <div class="svc-items">
@@ -1105,7 +555,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-repair reveal">
         <div class="svc-h"><div class="svc-ico si3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-laptop"></use></svg></div><div><div class="num">HOME SERVICE 02</div><h2>Computer Repairs, Upgrades &amp; Setup</h2><div class="tag">Keep useful devices running well for longer.</div></div></div>
         <p class="svc-intro">Troubleshooting and practical improvement for Windows computers, laptops, peripherals and common software issues.</p>
         <div class="svc-items">
@@ -1116,7 +566,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-smart reveal">
         <div class="svc-h"><div class="svc-ico si1"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-home"></use></svg></div><div><div class="num">HOME SERVICE 03</div><h2>Smart Home &amp; Family Technology</h2><div class="tag">Connected devices that are useful, secure and manageable.</div></div></div>
         <p class="svc-intro">Setup and troubleshooting for smart-home devices, cameras, lighting, voice assistants and family controls.</p>
         <div class="svc-items">
@@ -1127,13 +577,15 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
+      </div>
+      <div class="service-group group-biz">
       <div class="service-band reveal" id="business-services">
         <div class="eyebrow">BUSINESS SERVICES</div>
         <h2>Business systems, support, cloud and security</h2>
         <p>Flexible help for small teams that need professional IT support without a large managed-services contract.</p>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-m365 reveal">
         <div class="svc-h"><div class="svc-ico si4"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-briefcase"></use></svg></div><div><div class="num">BUSINESS SERVICE 01</div><h2>Microsoft 365, Cloud &amp; User Support</h2><div class="tag">A practical on-demand IT contact for your business.</div></div></div>
         <p class="svc-intro">Support for business email, accounts, Microsoft 365 applications, SharePoint, OneDrive and user access.</p>
         <div class="svc-items">
@@ -1144,7 +596,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-security reveal">
         <div class="svc-h"><div class="svc-ico si2"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-shield"></use></svg></div><div><div class="num">BUSINESS SERVICE 02</div><h2>Devices, Networks, Backup &amp; Cybersecurity</h2><div class="tag">Practical protection for users, devices and business information.</div></div></div>
         <p class="svc-intro">Improve core security, business connectivity and recoverability without unnecessary complexity.</p>
         <div class="svc-items">
@@ -1155,7 +607,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-plan reveal">
         <div class="svc-h"><div class="svc-ico si3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-search"></use></svg></div><div><div class="num">BUSINESS SERVICE 03</div><h2>Technology Review &amp; Improvement Planning</h2><div class="tag">Make sensible improvements in the right order.</div></div></div>
         <p class="svc-intro">Review recurring issues, software subscriptions, risks and manual processes to create a realistic improvement plan.</p>
         <div class="svc-items">
@@ -1166,13 +618,15 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
+      </div>
+      <div class="service-group group-digital">
       <div class="service-band reveal" id="digital-services">
         <div class="eyebrow">WEBSITES &amp; DIGITAL</div>
         <h2>Useful digital tools for small organisations</h2>
         <p>Build or improve the customer-facing and internal tools that support your business.</p>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-web reveal">
         <div class="svc-h"><div class="svc-ico si3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-globe"></use></svg></div><div><div class="num">DIGITAL SERVICE 01</div><h2>Websites, Domains &amp; Business Email</h2><div class="tag">A modern online presence that is clear and maintainable.</div></div></div>
         <p class="svc-intro">Website design and refreshes for small businesses, including practical setup of domains, contact forms and email.</p>
         <div class="svc-items">
@@ -1183,7 +637,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <div class="svc reveal">
+      <div class="svc svc-auto reveal">
         <div class="svc-h"><div class="svc-ico si4"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-settings"></use></svg></div><div><div class="num">DIGITAL SERVICE 02</div><h2>Workflow, Integration &amp; AI-Assisted Automation</h2><div class="tag">Reduce repetitive administration with sensible automation.</div></div></div>
         <p class="svc-intro">Connect common tools and simplify small, repetitive processes without building an unnecessarily complex system.</p>
         <div class="svc-items">
@@ -1194,10 +648,11 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         </div>
       </div>
 
-      <div class="cta reveal" style="margin-top:2rem">
+      </div>
+      <div class="cta reveal services-end" style="margin-top:2rem">
         <h2>Not sure what you need?</h2>
         <p>Book a free initial assessment and we&apos;ll figure out the smartest, most budget-friendly path together.</p>
-        <button class="btn btn-coral" onclick="go('contact')">Request Free Assessment &rarr;</button>
+        <a class="btn btn-coral" href="/contact" onclick="go('contact',event)">Request Free Assessment &rarr;</a>
       </div>
     </div>
   </section>
@@ -1233,7 +688,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 
 <!-- ===== CONTACT ===== -->
 <div id="page-contact" class="page">
-  <div class="phero" style="padding-bottom:1rem">
+  <div class="phero contact-hero">
     <div class="container">
       <div class="eyebrow" style="margin-bottom:1.1rem">&#9670; Request Support</div>
       <h1>Get a free, <span class="grad-text">budget-friendly estimate</span></h1>
@@ -1280,7 +735,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
           </form>
           <div class="fsuccess" id="formSuccess">
             <div class="bc">&#10003;</div><h3>Request received!</h3><p>Thanks for reaching out. 1Touch IT will review your request and get back to you shortly, usually within a few hours.</p>
-            <button class="btn btn-out" style="margin-top:1.5rem" onclick="go('home')">&larr; Back to Home</button>
+            <a class="btn btn-out" style="margin-top:1.5rem" href="/" onclick="go('home',event)">&larr; Back to Home</a>
           </div>
         </div>
       </div>
@@ -1301,6 +756,7 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
   </section>
 </div>
 
+</main>
 <footer>
   <div class="container">
     <div class="fgrid">
@@ -1308,8 +764,8 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
         <div class="footer-logo-shell"><img src="assets/images/top-band-logo.png" alt="1Touch IT" class="brand-logo-full"></div>
         <p>Professional IT support and practical technology solutions for homes and small businesses across Greater Sydney.</p>
       </div>
-      <div class="fcol"><h4>Navigate</h4><button type="button" class="footer-action" data-view="home" onclick="go('home')">Home</button><button type="button" class="footer-action" data-view="about" onclick="go('about')">About</button><button type="button" class="footer-action" data-view="services" onclick="go('services')">Services</button><button type="button" class="footer-action" data-view="product" onclick="go('product')">Product</button><button type="button" class="footer-action" data-view="contact" onclick="go('contact')">Contact Us</button></div>
-      <div class="fcol"><h4>Services</h4><button type="button" class="footer-action" onclick="go('services','home-services')">Home IT Support</button><button type="button" class="footer-action" onclick="go('services','business-services')">Business IT Support</button><button type="button" class="footer-action" onclick="go('services','digital-services')">Websites &amp; Digital</button><a href="https://homelifehub.com.au" target="_blank" rel="noopener">HomeLife Hub</a></div>
+      <div class="fcol"><h4>Navigate</h4><a class="footer-action" data-view="home" href="/" onclick="go('home',event)">Home</a><a class="footer-action" data-view="about" href="/about" onclick="go('about',event)">About</a><a class="footer-action" data-view="services" href="/services" onclick="go('services',event)">Services</a><a class="footer-action" data-view="product" href="/product" onclick="go('product',event)">Product</a><a class="footer-action" data-view="contact" href="/contact" onclick="go('contact',event)">Contact Us</a></div>
+      <div class="fcol"><h4>Services</h4><a class="footer-action" href="/services#home-services" onclick="go('services','home-services',event)">Home IT Support</a><a class="footer-action" href="/services#business-services" onclick="go('services','business-services',event)">Business IT Support</a><a class="footer-action" href="/services#digital-services" onclick="go('services','digital-services',event)">Websites &amp; Digital</a><a href="https://homelifehub.com.au" target="_blank" rel="noopener">HomeLife Hub</a></div>
       <div class="fcol"><h4>Connect</h4><a href="https://www.linkedin.com/in/iamnarace/" target="_blank" rel="noopener" class="ficon-link"><span class="footer-mark" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-linkedin"></use></svg></span>LinkedIn Profile</a><button type="button" class="footer-action" data-view="resume" onclick="window.open('https://nareshadhikari.com.au','_blank')">Founder Background</button><a href="mailto:support@1touchit.com.au" class="ficon-link"><span class="footer-mark" aria-hidden="true"><svg class="icon icon-sm"><use href="#i-mail"></use></svg></span>Email 1Touch IT</a><span>ABN 28 579 398 740</span><span>HomeLife Hub is a product developed by 1Touch IT.</span></div>
     </div>
     <div class="fbot">
@@ -1327,19 +783,37 @@ footer{border-top:1px solid var(--line);padding:4rem 0 2rem;margin-top:5rem}
 
 <script>
 const motionReduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+const routes={home:'/',about:'/about',services:'/services',product:'/product',contact:'/contact'};
+function viewFromPath(path){
+  const clean=(path||'/').replace(/\/index\.html$/,'').replace(/\.html$/,'').replace(/\/$/,'')||'/';
+  const map={'/':'home','/about':'about','/services':'services','/product':'product','/homelife-hub':'product','/contact':'contact'};
+  return map[clean]||'home';
+}
 function setActiveView(id){
   document.querySelectorAll('[data-view]').forEach(control=>{
     if(control.dataset.view===id)control.setAttribute('aria-current','page');
     else control.removeAttribute('aria-current');
   });
 }
-function go(id,target){
-  const current=document.querySelector('.page.active'),next=document.getElementById(`page-${id}`);
-  if(!next)return;
+function go(id,target,event){
+  if(target&&typeof target==='object'){event=target;target=undefined}
+  const next=document.getElementById(`page-${id}`);
+  if(!next){
+    const anchor=event&&event.currentTarget&&event.currentTarget.tagName==='A';
+    if(!anchor)window.location.href=(routes[id]||'/')+(target?'#'+target:'');
+    return;
+  }
+  if(event&&event.preventDefault)event.preventDefault();
+  const current=document.querySelector('.page.active');
   const scrollToDestination=()=>{
     const destination=target?document.getElementById(target):next;
     destination?.scrollIntoView({behavior:motionReduced.matches?'auto':'smooth',block:'start'});
   };
+  if(history.pushState){
+    const url=(routes[id]||'/')+(target?'#'+target:'');
+    const same=location.pathname=== (routes[id]||'/') && (!target || location.hash==='#'+target);
+    if(!same)history.pushState({view:id,target:target||''},'',url);
+  }
   if(current===next){setActiveView(id);toggleMenu(false);scrollToDestination();return}
   const activate=()=>{
     current?.classList.remove('active','is-leaving');
@@ -1402,20 +876,16 @@ function initReveal(){
   revObs=new IntersectionObserver(en=>{en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');revObs.unobserve(x.target)}})},{threshold:.12});
   document.querySelectorAll('.page.active .reveal').forEach(el=>revObs.observe(el));
 }
-function animateCounters(){
-  document.querySelectorAll('.n[data-count]').forEach(el=>{
-    if(el.dataset.done)return;
-    const r=el.getBoundingClientRect();
-    if(r.top<window.innerHeight&&r.bottom>0){
-      el.dataset.done='1';
-      const t=+el.dataset.count,suf=el.dataset.suffix||'';let c=0;const st=t/40;
-      const tk=()=>{c+=st;if(c<t){el.textContent=Math.round(c)+suf;requestAnimationFrame(tk)}else{el.textContent=t+suf}};tk();
-    }
-  });
-}
-window.addEventListener('scroll',animateCounters);
-setActiveView('home');initReveal();setTimeout(animateCounters,400);
+window.addEventListener('popstate',()=>{
+  const id=viewFromPath(location.pathname);
+  if(document.getElementById('page-'+id))go(id,(location.hash||'').slice(1));
+});
+const bootId=viewFromPath(location.pathname);
+const bootPage=document.getElementById('page-'+bootId);
+if(bootPage&&!bootPage.classList.contains('active'))go(bootId,(location.hash||'').slice(1));
+else{setActiveView(document.querySelector('.page.active')?.id.replace('page-','')||bootId);initReveal()}
 </script>
+<script type="module" src="assets/js/motion-ui.js"></script>
 </body>
 </html>
 

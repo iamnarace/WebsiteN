@@ -17,8 +17,11 @@ test('public metadata assets and crawl files exist', () => {
     assert.ok(exists(path), `${path} missing`);
   }
   assert.ok(statSync(join(root, 'assets/images/social-share.png')).size > 10_000);
-  assert.match(readText('robots.txt'), /Sitemap: https:\/\/nareshadhikari\.com\.au\/sitemap\.xml/);
-  assert.match(readText('sitemap.xml'), /<loc>https:\/\/nareshadhikari\.com\.au\/<\/loc>/);
+  assert.match(readText('robots.txt'), /Sitemap: https:\/\/www\.1touchit\.com\.au\/sitemap\.xml/);
+  assert.match(readText('sitemap.xml'), /<loc>https:\/\/www\.1touchit\.com\.au\/<\/loc>/);
+  for (const path of ['/services', '/about', '/product', '/contact']) {
+    assert.match(readText('sitemap.xml'), new RegExp(`<loc>https://www\\.1touchit\\.com\\.au${path}</loc>`));
+  }
 });
 
 test('founder imagery remains optional while responsive image assets stay available', () => {
@@ -72,6 +75,15 @@ test('home contains two useful local guides', () => {
   assert.equal((html.match(/class="guide-card reveal"/g) || []).length, 2);
   assert.match(html, /id="guide-panel-wifi"/);
   assert.match(html, /id="guide-panel-m365"/);
+});
+
+test('stats publish their final values in the markup', () => {
+  const html = readText('index.html');
+  assert.match(html, /data-count="4" data-suffix="\+">4\+/);
+  assert.match(html, /data-count="100" data-suffix="%">100%/);
+  assert.doesNotMatch(html, /data-count="4"[^>]*>0</);
+  assert.doesNotMatch(html, /data-count="100"[^>]*>0</);
+  assert.match(html, /0416 XXX XXX/);
 });
 
 test('homepage merges preferred local sections in the requested order', () => {
