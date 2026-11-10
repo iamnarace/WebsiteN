@@ -3,6 +3,13 @@
   "outputDirectory": "dist",
   "cleanUrls": false,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/product", "destination": "/product.html" },
+    { "source": "/homelife-hub", "destination": "/product.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

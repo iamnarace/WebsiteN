@@ -30,3 +30,67 @@ if (!html.includes('linkedin-brand-icon')) {
 
 writeFileSync(indexPath, html, 'utf8');
 console.log('Founder portrait and LinkedIn brand icons prepared in dist output');
+
+splitRoutes(html);
+
+function splitRoutes(source) {
+  const markers = [
+    ['home', '<!-- ===== HOME ===== -->', '<!-- ===== PRODUCT ===== -->'],
+    ['product', '<!-- ===== PRODUCT ===== -->', '<!-- ===== SERVICES ===== -->'],
+    ['services', '<!-- ===== SERVICES ===== -->', '<!-- ===== ABOUT ===== -->'],
+    ['about', '<!-- ===== ABOUT ===== -->', '<!-- ===== CONTACT ===== -->'],
+    ['contact', '<!-- ===== CONTACT ===== -->', '</main>'],
+  ];
+  const prefixEnd = source.indexOf('<!-- ===== HOME ===== -->');
+  const footerAt = source.indexOf('<footer>');
+  if (prefixEnd < 0 || footerAt < 0) throw new Error('Could not split routes: missing page markers');
+  const prefix = source.slice(0, prefixEnd);
+  const footer = `\n</main>\n${source.slice(footerAt)}`;
+  const pages = {
+    home: {
+      file: 'index.html',
+      title: '1Touch IT | Professional IT Support in Sydney',
+      canonical: 'https://www.1touchit.com.au/',
+    },
+    about: {
+      file: 'about.html',
+      title: 'About | 1Touch IT | Professional IT Support in Sydney',
+      canonical: 'https://www.1touchit.com.au/about',
+    },
+    services: {
+      file: 'services.html',
+      title: 'Services | 1Touch IT | Professional IT Support in Sydney',
+      canonical: 'https://www.1touchit.com.au/services',
+    },
+    product: {
+      file: 'product.html',
+      title: 'HomeLife Hub | 1Touch IT',
+      canonical: 'https://www.1touchit.com.au/product',
+    },
+    contact: {
+      file: 'contact.html',
+      title: 'Contact | 1Touch IT | Professional IT Support in Sydney',
+      canonical: 'https://www.1touchit.com.au/contact',
+    },
+  };
+
+  for (const [id, start, end] of markers) {
+    const from = source.indexOf(start);
+    const to = source.indexOf(end);
+    if (from < 0 || to < 0 || to <= from) throw new Error(`Could not split routes: missing ${id}`);
+    let block = source.slice(from, to);
+    block = block.replace(`id="page-${id}" class="page"`, `id="page-${id}" class="page active"`);
+    const meta = pages[id];
+    let doc = `${prefix}${block}${footer}`;
+    doc = doc.replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`);
+    if (!doc.includes('rel="canonical"')) {
+      doc = doc.replace('</title>', `</title>\n<link rel="canonical" href="${meta.canonical}">`);
+    }
+    doc = doc.replace(
+      '<meta property="og:url" content="https://www.1touchit.com.au/">',
+      `<meta property="og:url" content="${meta.canonical}">`,
+    );
+    writeFileSync(join(root, 'dist', meta.file), doc, 'utf8');
+  }
+  console.log('Route pages written: /, /about, /services, /product, /contact');
+}
